@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schema/audits-file.schema.json",
+  "title": "audits.json",
+  "description": "Full shape of data/audits.json: a protected location registry plus an append-only audit history. See docs/JSON_SCHEMA.md for the full explanation and docs/WEEKLY_AUDIT_GUIDE.md for how to add a new audit run.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "updatedAt", "practices", "locations", "auditHistory"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time", "description": "UTC timestamp of the last commit to this file. Bump this every time you append an entry." },
+    "updatedBy": { "type": "string" },
+
+    "practices": {
+      "type": "array",
+      "description": "PROTECTED. The two general practices. Do not add, remove, rename, or re-id these outside of a deliberate, reviewed change — see data/registry-lock.json.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" }
+        }
+      }
+    },
+
+    "locations": {
+      "type": "array",
+      "description": "PROTECTED. The 14-location registry, its expected appointment types, and scheduler URLs. Do not add, remove, or edit outside of a deliberate, reviewed change — see data/registry-lock.json. The weekly audit process must never write to this array.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "practiceId", "websiteUrl", "googleMapsUrl", "expectedAppointmentTypes"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "practiceId": { "type": "string" },
+          "websiteUrl": { "type": "string", "format": "uri" },
+          "googleMapsUrl": { "type": "string", "format": "uri" },
+          "expectedAppointmentTypes": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1
+          }
+        }
+      }
+    },
+
+    "auditHistory": {
+      "type": "array",
+      "description": "APPEND-ONLY. Every completed audit run, ever. New entries are pushed to the end (or anywhere — order doesn't matter, the dashboard sorts by checkedAt); existing entries must never be edited or removed.",
+      "items": { "$ref": "audit-entry.schema.json" }
+    }
+  }
+}

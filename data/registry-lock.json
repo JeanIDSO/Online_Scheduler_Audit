@@ -1,0 +1,196 @@
+{
+  "practices": [
+    {
+      "id": "lakewood-family-dental",
+      "name": "Lakewood Family Dental"
+    },
+    {
+      "id": "dental-team-florida",
+      "name": "Dental Team Florida"
+    }
+  ],
+  "locations": [
+    {
+      "id": "lakewood-anderson",
+      "name": "Lakewood Anderson",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
+      "expectedAppointmentTypes": [
+        "Invisalign Consultation",
+        "Dental Consultation",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "New Patient Exam and Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-carmel",
+      "name": "Lakewood Carmel",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-carmel/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/RyBkBswG71W5ebVv7",
+      "expectedAppointmentTypes": [
+        "Invisalign Consultation",
+        "Limited/Emergency Exam",
+        "Existing Patient Cleaning",
+        "New Patient Exam and Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-fort-wayne",
+      "name": "Lakewood Fort Wayne",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-fort-wayne/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/BHjHemyj2Kuh8zbt7",
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ]
+    },
+    {
+      "id": "lakewood-kokomo",
+      "name": "Lakewood Kokomo",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-kokomo/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/9R9FAPmc3heG9wzG8",
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-lafayette",
+      "name": "Lakewood Lafayette",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+      "expectedAppointmentTypes": [
+        "Existing Patient Child (12 - Below)",
+        "New Patient Exam & Cleaning (12 - Below)",
+        "Existing Patient Exam & Cleaning",
+        "New Patient Adult (Ages 13+)",
+        "Emergency Exam"
+      ]
+    },
+    {
+      "id": "dental-team-abacoa",
+      "name": "Dental Team of Florida Abacoa",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-abacoa/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/uz3PDy7JmUFL7huR8",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-atlantic",
+      "name": "Dental Team of Florida Atlantic",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-atlantic/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/cJfrEUhY3nZmWBpS9",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-bayview",
+      "name": "Dental Team of Florida Bayview",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-bayview/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/CPDQwdKv3k7PaQ8M7",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-coconut-creek",
+      "name": "Dental Team of Coconut Creek",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-coconut-creek/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/hJGq6FjqrjoRQxZJ6",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-delray-east",
+      "name": "Dental Team of Florida East Delray Beach",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-delray-beach/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/Naxjt5oQYHXF67A37",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-miami",
+      "name": "Dental Team of Florida Miami",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-miami/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/Q3fRaFa1Z3Bu6EDE9",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-plantation",
+      "name": "Dental Team of Florida Plantation",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-plantation/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/ndQmqU6Ke5g2G8476",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-delray-west",
+      "name": "Dental Team of Florida West Delray Beach",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-west-delray-beach/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/7EqjVZFT1FfKhQty8",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    },
+    {
+      "id": "dental-team-west-palm-beach",
+      "name": "Dental Team of Florida West Palm Beach",
+      "practiceId": "dental-team-florida",
+      "websiteUrl": "https://book.modento.io/dental-team-of-west-palm-beach/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/KHQhAvzL4AM9RbxA7",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ]
+    }
+  ]
+}

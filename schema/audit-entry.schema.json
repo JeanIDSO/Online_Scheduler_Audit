@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schema/audit-entry.schema.json",
+  "title": "Audit history entry",
+  "description": "One completed audit of one location, as appended to the auditHistory array in data/audits.json. Contains only raw observations — the dashboard computes status, missing/unexpected appointment types, and label differences itself.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "auditId",
+    "locationId",
+    "checkedAt",
+    "auditedBy",
+    "auditSource",
+    "websiteSchedulerStatus",
+    "googleSchedulerStatus",
+    "observedWebsiteAppointmentTypes",
+    "observedGoogleAppointmentTypes",
+    "manualReviewNeeded"
+  ],
+  "properties": {
+    "auditId": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique id for this audit entry. Recommended format: \"<locationId>__<checkedAt>\", e.g. \"lakewood-anderson__2026-09-12T18:04:00Z\". Must be unique across the entire auditHistory array, forever — never reused, never removed.",
+      "pattern": "^[A-Za-z0-9_.:+-]+$"
+    },
+    "locationId": {
+      "type": "string",
+      "description": "Must exactly match an \"id\" in the locations array in data/audits.json. See data/registry-lock.json for the authoritative list of valid ids."
+    },
+    "checkedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp the audit was performed, RFC 3339 / ISO 8601, e.g. \"2026-09-12T18:04:00Z\". Always write in UTC (Z suffix)."
+    },
+    "auditedBy": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Who or what performed the audit, e.g. \"Claude Cowork Weekly Audit\" or a person's name. Never a patient name."
+    },
+    "auditSource": {
+      "type": "string",
+      "enum": ["Website + Google", "Website Only", "Google Only"],
+      "description": "Which surfaces were actually checked in this run."
+    },
+    "websiteSchedulerStatus": {
+      "type": "string",
+      "enum": ["Working", "Broken", "WrongLocation", "NotChecked"],
+      "description": "Working: the scheduler loaded and led to the correct location. Broken: link error, timeout, or the reason-for-visit page did not load. WrongLocation: it loaded but pointed at the wrong office. NotChecked: the website leg of this audit was skipped (audit could not be completed reliably — pair with manualReviewNeeded=true)."
+    },
+    "googleSchedulerStatus": {
+      "type": "string",
+      "enum": ["Working", "Broken", "WrongLocation", "NoBookingLink", "Ambiguous", "NotChecked"],
+      "description": "Working: the Google Business Profile booking link worked and led to the correct location. Broken: link error. WrongLocation: wrong office. NoBookingLink: the listing has no booking link/button at all. Ambiguous: the Google listing itself is unclear (e.g. duplicate or merged listings) and needs a human to sort out. NotChecked: skipped this run."
+    },
+    "observedWebsiteAppointmentTypes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Appointment/reason-for-visit types observed on the website scheduler, exactly as displayed (do not pre-normalize casing/punctuation — the dashboard does that). Empty array if none were visible or the website leg was not checked."
+    },
+    "observedGoogleAppointmentTypes": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Appointment/service types observed through the Google Business Profile booking flow, exactly as displayed. Empty array if none were visible or the Google leg was not checked."
+    },
+    "manualReviewNeeded": {
+      "type": "boolean",
+      "description": "True if a CAPTCHA, login wall, browser restriction, ambiguous listing, or any other obstacle meant the audit could not be completed reliably. When true, overall status is always \"Manual Review\" regardless of the other fields."
+    },
+    "manualReviewReason": {
+      "type": "string",
+      "description": "Required in practice whenever manualReviewNeeded is true. Short human explanation, e.g. \"CAPTCHA blocked the website scheduler\" or \"Google listing appears duplicated for this address\"."
+    },
+    "brokenOrIncorrectLinks": {
+      "type": "array",
+      "description": "Secondary link problems worth flagging even if they don't break the primary booking flow (e.g. a footer link, a wrong phone-book link). Contributes to a \"Warning\" status when non-empty and nothing else failed.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "issue"],
+        "properties": {
+          "url": { "type": "string", "format": "uri" },
+          "issue": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-text audit notes. MUST NOT contain any patient information (names, contact details, appointment specifics for real patients, etc.) — this dashboard is public-facing configuration data only."
+    },
+    "evidenceLinks": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" },
+      "description": "Optional links to supporting evidence (e.g. a screenshot hosted elsewhere, an archive.org capture). Never a link to anything containing patient data."
+    }
+  }
+}
