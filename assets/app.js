@@ -136,10 +136,27 @@
     return "Passed";
   }
 
+  /**
+   * An entry only records appointment types when it actually checked them.
+   * A "load-check only" audit run (confirming the scheduler link loads,
+   * without walking through to the appointment-type list) legitimately
+   * leaves both observed lists empty — that must not be read as "every
+   * expected appointment type is missing". Treat empty/empty as "not
+   * checked this run" and skip the appointment-type comparison entirely,
+   * so status is driven only by the scheduler load statuses.
+   */
+  function appointmentTypesCheckedThisRun(entry) {
+    return (entry.observedWebsiteAppointmentTypes && entry.observedWebsiteAppointmentTypes.length > 0) ||
+      (entry.observedGoogleAppointmentTypes && entry.observedGoogleAppointmentTypes.length > 0);
+  }
+
   function evaluateEntry(entry, location) {
-    var diff = computeDiff(location.expectedAppointmentTypes, entry.observedWebsiteAppointmentTypes, entry.observedGoogleAppointmentTypes);
+    var typesChecked = appointmentTypesCheckedThisRun(entry);
+    var diff = typesChecked
+      ? computeDiff(location.expectedAppointmentTypes, entry.observedWebsiteAppointmentTypes, entry.observedGoogleAppointmentTypes)
+      : { missing: [], unexpected: [], labelDifferences: [] };
     var status = computeStatus(entry, diff);
-    return { entry: entry, diff: diff, status: status };
+    return { entry: entry, diff: diff, status: status, typesChecked: typesChecked };
   }
 
   function reasonText(view) {
@@ -518,9 +535,11 @@
       detail.querySelector(".website-link").href = v.location.websiteUrl;
       detail.querySelector(".gmaps-link").href = v.location.googleMapsUrl;
 
+      var typesChecked = v.latest ? v.latest.typesChecked : false;
+      var notCheckedHtml = '<span class="dd-empty">Not checked this run</span>';
       detail.querySelector(".dd-expected").innerHTML = tagListHtml(v.location.expectedAppointmentTypes);
-      detail.querySelector(".dd-observed-website").innerHTML = entry ? tagListHtml(entry.observedWebsiteAppointmentTypes) : '<span class="dd-empty">Not yet checked</span>';
-      detail.querySelector(".dd-observed-google").innerHTML = entry ? tagListHtml(entry.observedGoogleAppointmentTypes) : '<span class="dd-empty">Not yet checked</span>';
+      detail.querySelector(".dd-observed-website").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedWebsiteAppointmentTypes) : notCheckedHtml;
+      detail.querySelector(".dd-observed-google").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedGoogleAppointmentTypes) : notCheckedHtml;
       detail.querySelector(".dd-missing").innerHTML = tagListHtml(diff.missing, "tag-missing");
       detail.querySelector(".dd-unexpected").innerHTML = tagListHtml(diff.unexpected.map(function (u) { return u.type + " (" + u.source + ")"; }), "tag-unexpected");
       detail.querySelector(".dd-labeldiff").innerHTML = diff.labelDifferences.length
