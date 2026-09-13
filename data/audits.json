@@ -1,13 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-12T00:00:00Z",
-  "updatedBy": "initial-setup",
-
+  "updatedAt": "2026-09-13T00:20:00Z",
+  "updatedBy": "Claude Cowork Weekly Audit",
   "practices": [
-    { "id": "lakewood-family-dental", "name": "Lakewood Family Dental" },
-    { "id": "dental-team-florida", "name": "Dental Team Florida" }
+    {
+      "id": "lakewood-family-dental",
+      "name": "Lakewood Family Dental"
+    },
+    {
+      "id": "dental-team-florida",
+      "name": "Dental Team Florida"
+    }
   ],
-
   "locations": [
     {
       "id": "lakewood-anderson",
@@ -192,6 +196,364 @@
       ]
     }
   ],
-
-  "auditHistory": []
+  "auditHistory": [
+    {
+      "auditId": "lakewood-anderson__2026-09-13T00:15:00Z",
+      "locationId": "lakewood-anderson",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Denture Consultation",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Denture Consultation",
+        "Invisalign Consult"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-carmel__2026-09-13T00:15:00Z",
+      "locationId": "lakewood-carmel",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consultation",
+        "Limited/Emergency Exam",
+        "Existing Patient Exam and Cleaning",
+        "New Patient Exam and Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and Cleaning",
+        "Limited/Emergency Exam",
+        "Existing Patient Exam and Cleaning",
+        "Invisalign Consultation"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-fort-wayne__2026-09-13T00:15:00Z",
+      "locationId": "lakewood-fort-wayne",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-kokomo__2026-09-13T00:15:00Z",
+      "locationId": "lakewood-kokomo",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-lafayette__2026-09-13T00:15:00Z",
+      "locationId": "lakewood-lafayette",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "WrongLocation",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Child (12 - Below)",
+        "New Patient Exam & Cleaning (12- Below)",
+        "Existing Patient Exam & Cleaning",
+        "New Patient Adult (Ages 13+)",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [
+        {
+          "url": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+          "issue": "This Google Maps listing (meant for the Lafayette office) resolves to the Lakewood Family Dental - Anderson Google Business Profile instead (address shown: 1537 S Scatterfield Rd Ste a, Anderson, IN 46016; same place as the lakewood-anderson listing). Its 'Book online' link also points to the Anderson booking flow (book.modento.io/lakewood-family-dental-anderson/...), not Lafayette (2 Executive Dr Suite A, Lafayette, IN 47905). Verified in a fresh browser tab to rule out a caching artifact."
+        }
+      ],
+      "notes": "Website scheduler is correct and complete for Lafayette. The Google Maps short link on file for this location points at the wrong Google Business Profile (Anderson's), so observedGoogleAppointmentTypes is left empty rather than recording Anderson's appointment types under the Lafayette entry.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-abacoa__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-abacoa",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Business Profile 'Book online' link (book.modento.io/dental-team-of-abacoa/g/google-schedule-link) resolved to the correct address (1155 Main St Ste 105, Jupiter, FL 33458) but then requires entering patient first name, last name, and birthday on a 'Patient details' step before the reason-for-visit/appointment-type list is shown. The audit does not enter any patient information, so the Google-flow appointment types could not be verified this run.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-atlantic__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-atlantic",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "New Patient Exam and X-Rays Only",
+        "New Patient Exam, X-Rays & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-bayview__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-bayview",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Invisalign Consult",
+        "New Patient Exam, X-Rays & Cleaning"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-coconut-creek__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-coconut-creek",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Business Profile 'Book online' link (book.modento.io/dental-team-of-coconut-creek/g/google-schedule-link) resolved to the correct address (1507 Lyons Rd, Coconut Creek, FL 33063) but then requires entering patient first name, last name, and birthday on a 'Patient details' step before the reason-for-visit/appointment-type list is shown. The audit does not enter any patient information, so the Google-flow appointment types could not be verified this run.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-delray-east__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-delray-east",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "Invisalign Consult"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google listing shows a phone number, (561) 782-1561, that doesn't match the number shown on the website scheduler and in the Google booking flow itself, (561) 272-2424. Worth a human double-checking which number is current.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-miami__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-miami",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "Invisalign Consult",
+        "New Patient Exam, X-Rays & Cleaning"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-plantation__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-plantation",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "This listing has no highlighted 'Book online' button like the other locations - the scheduler link (modento.io) is only listed as a plain row alongside address/phone/website. It does work and lead to the correct location once followed, but is less discoverable than on other listings. Also: Google shows the address city as 'Plantation, FL' and phone (954) 719-0348, while the website scheduler itself shows the same street address under 'Fort Lauderdale, FL 33322' and phone (954) 791-0330 - worth a human double-checking which city/phone is current.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-delray-west__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-delray-west",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-west-palm-beach__2026-09-13T00:15:00Z",
+      "locationId": "dental-team-west-palm-beach",
+      "checkedAt": "2026-09-13T00:15:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "",
+      "evidenceLinks": []
+    }
+  ]
 }
