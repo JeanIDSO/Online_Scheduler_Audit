@@ -40,6 +40,7 @@
           "googleMapsUrl": { "type": "string", "format": "uri" },
           "expectedAppointmentTypes": {
             "type": "array",
+            "description": "Reference metadata only. Has proven unreliable (stale/incorrect labels) and is not compared against observed appointment types or used to compute status.",
             "items": { "type": "string", "minLength": 1 },
             "minItems": 1
           }
