@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.org/schema/audit-entry.schema.json",
   "title": "Audit history entry",
-  "description": "One completed audit of one location, as appended to the auditHistory array in data/audits.json. Contains only raw observations — the dashboard computes status, missing/unexpected appointment types, and label differences itself.",
+  "description": "One completed audit of one location, as appended to the auditHistory array in data/audits.json. Contains only raw observations — the dashboard computes status itself, from scheduler load state and per-appointment-type availability only (never from a comparison against the location registry's expectedAppointmentTypes list).",
   "type": "object",
   "additionalProperties": false,
   "required": [
