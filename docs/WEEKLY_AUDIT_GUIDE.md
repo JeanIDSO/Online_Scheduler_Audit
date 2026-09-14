@@ -4,7 +4,7 @@ Instructions for whoever (or whatever) performs the weekly audit — a
 person, or a scheduled Claude Cowork task using Claude in Chrome to check
 each scheduler and the GitHub connector to commit the results. Follow this
 exactly so `data/audits.json` stays valid and the dashboard's automatic
-status/diff logic works correctly.
+status logic works correctly.
 
 ## Before you start
 
@@ -27,8 +27,9 @@ locations in the `locations` array, you already have:
 - `id` — use this exact value as `locationId` in your new entry.
 - `websiteUrl` — the public scheduler to check.
 - `googleMapsUrl` — the Google Maps listing to check for a booking link.
-- `expectedAppointmentTypes` — what you're comparing against (don't
-  re-derive or guess this; it's already in the registry).
+- `expectedAppointmentTypes` — reference metadata only. It has proven
+  unreliable and is **not** used for comparison or status; just record
+  what you actually observe on each site (Step 2/3) and ignore this list.
 
 ## Step 2 — Audit each location
 
@@ -149,13 +150,13 @@ For each location, produce one object like this:
 ```
 
 (Without the `availabilityLoaded: false` entry, this example would come out
-**Warning**, not Failed — "New Patient Exam & Cleaning" and "New Patient
-Exam and Cleaning" normalize to the same thing, so it's a label difference,
-not a mismatch. Nothing is actually missing or unexpected here. But because
-one appointment type failed to show real availability, the dashboard
-computes **Failed** overall — a no-availability finding always outranks a
-mere label difference. The dashboard works all of this out on its own from
-the fields above; you never compute or write `status` yourself.)
+**Passed** — the dashboard doesn't compare observed appointment-type labels
+against `expectedAppointmentTypes` at all, so wording differences like
+"New Patient Exam & Cleaning" vs. "New Patient Exam and Cleaning" are not
+flagged. Because one appointment type failed to show real availability,
+though, the dashboard computes **Failed** overall. The dashboard works all
+of this out on its own from the fields above; you never compute or write
+`status` yourself.)
 
 `checkedAt` and the timestamp suffix of `auditId` should be the same UTC
 time you performed the check.
