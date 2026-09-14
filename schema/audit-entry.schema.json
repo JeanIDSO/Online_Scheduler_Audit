@@ -92,6 +92,34 @@
       "type": "array",
       "items": { "type": "string", "format": "uri" },
       "description": "Optional links to supporting evidence (e.g. a screenshot hosted elsewhere, an archive.org capture). Never a link to anything containing patient data."
+    },
+    "websiteAppointmentAvailability": {
+      "type": "array",
+      "description": "Deep check: one entry per appointment type clicked into on the website scheduler this run, recording whether choosing it actually surfaced real appointment availability (an open day/time to pick), not just that the page advanced. Empty array if this deeper check was not performed this run (e.g. a load-check-only audit, or websiteSchedulerStatus was not \"Working\").",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["appointmentType", "availabilityLoaded"],
+        "properties": {
+          "appointmentType": { "type": "string", "minLength": 1, "description": "The appointment type exactly as clicked, matching an entry in observedWebsiteAppointmentTypes." },
+          "availabilityLoaded": { "type": "boolean", "description": "True if selecting this type led to a time-slot/calendar step showing at least one real open slot. False if it showed no availability, an error, a dead end, or otherwise failed to surface bookable times." },
+          "issue": { "type": "string", "minLength": 1, "description": "Required in practice when availabilityLoaded is false. Short description of what happened instead (e.g. \"No open slots shown for 60+ days\", \"Selecting this type returned to reason-for-visit with no error\")." }
+        }
+      }
+    },
+    "googleAppointmentAvailability": {
+      "type": "array",
+      "description": "Deep check: one entry per appointment type clicked into via the Google Business Profile booking flow this run, recording whether choosing it actually surfaced real appointment availability. Empty array if this deeper check was not performed this run (e.g. a load-check-only audit, googleSchedulerStatus was not \"Working\", or a patient-details gate could not be passed).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["appointmentType", "availabilityLoaded"],
+        "properties": {
+          "appointmentType": { "type": "string", "minLength": 1, "description": "The appointment type exactly as clicked, matching an entry in observedGoogleAppointmentTypes." },
+          "availabilityLoaded": { "type": "boolean", "description": "True if selecting this type led to a time-slot/calendar step showing at least one real open slot. False if it showed no availability, an error, a dead end, or otherwise failed to surface bookable times." },
+          "issue": { "type": "string", "minLength": 1, "description": "Required in practice when availabilityLoaded is false. Short description of what happened instead." }
+        }
+      }
     }
   }
 }
