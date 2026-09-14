@@ -35,18 +35,22 @@ locations on the dashboard.
 ## `locations` — protected
 
 The 14-location registry: each location's id, display name, practice, the
-public website scheduler URL, the Google Maps listing URL, and its
-**expected appointment types** (the source of truth the audit compares
-against).
+public website scheduler URL, the Google Maps listing URL, and an
+**expected appointment types** list.
+
+That list is reference metadata only — it has proven unreliable (stale or
+incorrect labels) and is **not** compared against what an audit observes.
+Status is driven entirely by what's actually seen on the live site each
+run: whether the schedulers load, and whether every appointment type
+clicked into shows real availability. See "Status rules" below.
 
 **This array must never be modified by an automated audit run.** It's
 locked in [`data/registry-lock.json`](../data/registry-lock.json), and
 `scripts/validate-data.js` fails the build if `practices` or `locations` in
-`data/audits.json` drift from that lock file. If a location's real-world
-expected appointment types genuinely change (a practice adds a new service),
-update `data/registry-lock.json` **and** `data/audits.json` together in a
-deliberate, human-reviewed commit or PR — never as a side effect of a
-routine audit.
+`data/audits.json` drift from that lock file. If a location's registry data
+genuinely needs to change, update `data/registry-lock.json` **and**
+`data/audits.json` together in a deliberate, human-reviewed commit or PR —
+never as a side effect of a routine audit.
 
 ## `auditHistory` — append-only
 
@@ -76,38 +80,25 @@ Each entry:
 | `notes` | string | Free text. **Never patient information.** |
 | `evidenceLinks` | string[] | Optional supporting links. Never anything containing patient data. |
 
-**Deliberately not stored:** overall status, missing/unexpected appointment
-types, and label differences are *never* written by the audit — the
-dashboard computes all of them from the raw fields above, every time it
+**Deliberately not stored:** overall status is *never* written by the
+audit — the dashboard computes it from the raw fields above, every time it
 loads. This keeps the schema simple for an automated audit to fill in
-correctly, and guarantees the comparison rules are applied consistently no
+correctly, and guarantees the status rules are applied consistently no
 matter who or what ran the audit.
 
-## Comparison rules (applied by the dashboard, not the data)
-
-When comparing an expected appointment type against what was observed:
-
-- Capitalization, extra spaces, and harmless punctuation are ignored.
-- `"and"` and `"&"` are treated as equivalent.
-- Wording that differs after normalizing (e.g. "New Patient Exam and
-  Cleaning" vs. "New Patient Exam & Cleaning") is **not** missing or
-  unexpected — it's recorded as a **label difference** instead.
-- Similar-but-different services are **not** treated as equivalent (e.g.
-  "New Patient Exam and X-Rays Only" vs. "New Patient Exam, X-Rays &
-  Cleaning" are different services, and are compared separately).
-- Missing and unexpected appointment types are always reported as two
-  separate lists, never merged.
-
 ## Status rules (applied by the dashboard, not the data)
+
+Status depends only on what an audit run actually observed — never on the
+registry's `expectedAppointmentTypes` list:
 
 1. **Manual Review** — `manualReviewNeeded` is true, or `googleSchedulerStatus`
    is `Ambiguous`, or either scheduler status is `NotChecked`.
 2. **Failed** — otherwise, if either scheduler is `Broken`/`WrongLocation`,
-   Google has `NoBookingLink`, there is any missing or unexpected
-   appointment type, or any entry in `websiteAppointmentAvailability` /
-   `googleAppointmentAvailability` has `availabilityLoaded: false`.
-3. **Warning** — otherwise, if there are label differences or any noted
-   `brokenOrIncorrectLinks` (no functional problem, but something to review).
+   Google has `NoBookingLink`, or any entry in `websiteAppointmentAvailability` /
+   `googleAppointmentAvailability` has `availabilityLoaded: false` (an
+   appointment type that was clicked into but showed no real availability).
+3. **Warning** — otherwise, if there are any noted `brokenOrIncorrectLinks`
+   (no functional problem, but something to review).
 4. **Passed** — otherwise.
 5. **Not Yet Audited** — a location with no entries in `auditHistory` at all.
 
