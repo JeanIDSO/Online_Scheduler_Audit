@@ -102,6 +102,22 @@ function validateEntry(entry, idx, validLocationIds) {
       fail(`${where}: "evidenceLinks" must be an array of http(s) URIs`);
     }
   }
+  function validateAvailability(fieldName) {
+    const arr = entry[fieldName];
+    if (arr === undefined) return;
+    if (!Array.isArray(arr)) { fail(`${where}: "${fieldName}" must be an array`); return; }
+    arr.forEach((a, i) => {
+      if (typeof a !== "object" || a === null || !isNonEmptyString(a.appointmentType) || !isBoolean(a.availabilityLoaded)) {
+        fail(`${where}.${fieldName}[${i}]: must be {appointmentType: <non-empty string>, availabilityLoaded: <boolean>, issue?: <non-empty string>}`);
+        return;
+      }
+      if (a.availabilityLoaded === false && !isNonEmptyString(a.issue)) {
+        fail(`${where}.${fieldName}[${i}]: "issue" should explain why when availabilityLoaded is false`);
+      }
+    });
+  }
+  validateAvailability("websiteAppointmentAvailability");
+  validateAvailability("googleAppointmentAvailability");
 
   const NOTES_RED_FLAGS = /\b(ssn|social security|dob|date of birth|patient name|medical record)\b/i;
   if (isString(entry.notes) && NOTES_RED_FLAGS.test(entry.notes)) {
