@@ -487,6 +487,8 @@ select {
 }
 .tag.tag-missing { color: var(--failed); border-color: var(--failed-border); background: var(--failed-tint); }
 .tag.tag-unexpected { color: var(--warning); border-color: var(--warning-border); background: var(--warning-tint); }
+.tag.tag-avail-ok { color: var(--passed); border-color: var(--passed-border); background: var(--passed-tint); }
+.tag.tag-avail-fail { color: var(--failed); border-color: var(--failed-border); background: var(--failed-tint); font-weight: 600; cursor: help; }
 
 .links-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 10px 0 0; font-size: 0.85rem; }
 
