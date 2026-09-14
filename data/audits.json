@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-14T13:03:02Z",
+  "updatedAt": "2026-09-14T18:31:00Z",
   "updatedBy": "Claude Cowork Weekly Audit",
   "practices": [
     {
@@ -1246,6 +1246,895 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "Load-check only this run: navigated to the website scheduler link and the Google Business Profile booking link and confirmed each reached a legitimate booking step within 30s. Appointment types were not re-verified or recorded this run (see prior audit entries for last-observed appointment types).",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-anderson__2026-09-14T18:31:00Z",
+      "locationId": "lakewood-anderson",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Denture Consultation",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Denture Consultation",
+        "Invisalign Consult"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Denture Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Denture Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-carmel__2026-09-14T18:31:00Z",
+      "locationId": "lakewood-carmel",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consultation",
+        "Limited/Emergency Exam",
+        "Existing Patient Exam and Cleaning",
+        "New Patient Exam and Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and Cleaning",
+        "Limited/Emergency Exam",
+        "Existing Patient Exam and Cleaning",
+        "Invisalign Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Limited/Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam and Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam and Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Limited/Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam and Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-fort-wayne__2026-09-14T18:31:00Z",
+      "locationId": "lakewood-fort-wayne",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-kokomo__2026-09-14T18:31:00Z",
+      "locationId": "lakewood-kokomo",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-lafayette__2026-09-14T18:31:00Z",
+      "locationId": "lakewood-lafayette",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Child (12 - Below)",
+        "New Patient Exam & Cleaning (12- Below)",
+        "Existing Patient Exam & Cleaning",
+        "New Patient Adult (Ages 13+)",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning (12- Below)",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Child (12 - Below)",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning (12- Below)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Adult (Ages 13+)",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning (12- Below)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler. 3 of 5 website appointment types (Existing Patient Child, New Patient Adult, Emergency Exam) and 1 of 3 Google appointment types (Emergency Exam) show no online availability and direct callers to the office phone instead.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-abacoa__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-abacoa",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Emergency Exam",
+        "Invisalign Consult"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow gates the appointment-type list behind a Patient details step (first/last name, birthdate, phone, email); obviously fake placeholder info was used solely to get past that step and observe availability, and no booking was submitted. Website's Existing Patient Cleaning shows no online availability and directs callers to the office phone instead; all other types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-atlantic__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-atlantic",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "New Patient Exam and X-Rays Only",
+        "New Patient Exam, X-Rays & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow (5 types) offers more appointment types than the website scheduler (3 types), which is a label/inventory difference for the dashboard to flag, not an availability problem. 2 of 5 Google appointment types (New Patient Exam X-Rays & Cleaning, Existing Patient Cleaning) show no online availability and direct callers to the office phone instead; all website types show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-bayview__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-bayview",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Invisalign Consult",
+        "New Patient Exam, X-Rays & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler, with no Patient details gate. All 5 appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-coconut-creek__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-coconut-creek",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Emergency Exam",
+        "Invisalign Consult"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow gates the appointment-type list behind a Patient details step (first/last name, birthdate, phone, email); obviously fake placeholder info was used solely to get past that step and observe availability, and no booking was submitted. Google flow offers 3 types vs. the website's 4 (missing Existing Patient Cleaning), which is an inventory difference for the dashboard to flag, not an availability problem. All appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-delray-east__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-delray-east",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "Invisalign Consult"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking link routes through the same Modento widget as the website scheduler, with no Patient details gate. All 4 appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-miami__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-miami",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam and X-Rays Only",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "Invisalign Consult",
+        "New Patient Exam, X-Rays & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow (5 types) offers more appointment types than the website scheduler (4 types), which is an inventory difference for the dashboard to flag, not an availability problem. Google's New Patient Exam, X-Rays & Cleaning shows no online availability and directs callers to the office phone instead; all other appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-plantation__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-plantation",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow (5 types) offers more appointment types than the website scheduler (4 types), which is an inventory difference for the dashboard to flag, not an availability problem. Google's New Patient Exam, X-Rays & Cleaning shows no online availability and directs callers to the office phone instead; all other appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-delray-west__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-delray-west",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website scheduler has an Insurance step (select \"I'll pay myself\") between Reason for visit and Time slot; Google flow skips it entirely. Google booking flow (5 types) offers more appointment types than the website scheduler (4 types), which is an inventory difference for the dashboard to flag, not an availability problem. Google's New Patient Exam, X-Rays & Cleaning shows no online availability and directs callers to the office phone instead; all other appointment types on both channels show real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "dental-team-west-palm-beach__2026-09-14T18:31:00Z",
+      "locationId": "dental-team-west-palm-beach",
+      "checkedAt": "2026-09-14T18:31:00Z",
+      "auditedBy": "Claude Cowork Weekly Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google booking flow (5 types) offers more appointment types than the website scheduler (4 types), which is an inventory difference for the dashboard to flag, not an availability problem. Google's New Patient Exam, X-Rays & Cleaning shows no online availability and directs callers to the office phone instead; all other appointment types on both channels show real availability.",
       "evidenceLinks": []
     }
   ]
