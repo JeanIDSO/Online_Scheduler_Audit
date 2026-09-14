@@ -117,7 +117,7 @@
   // Status rules
   // ---------------------------------------------------------------------
 
-  function computeStatus(entry, diff) {
+  function computeStatus(entry, diff, availIssues) {
     if (entry.manualReviewNeeded) return "Manual Review";
     if (entry.googleSchedulerStatus === "Ambiguous") return "Manual Review";
     if (entry.websiteSchedulerStatus === "NotChecked" || entry.googleSchedulerStatus === "NotChecked") return "Manual Review";
@@ -129,6 +129,7 @@
 
     if (websiteBad || googleBad) return "Failed";
     if (diff.missing.length > 0 || diff.unexpected.length > 0) return "Failed";
+    if (availIssues && availIssues.length > 0) return "Failed";
 
     var hasMinorLinkNote = Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0;
     if (diff.labelDifferences.length > 0 || hasMinorLinkNote) return "Warning";
@@ -150,13 +151,37 @@
       (entry.observedGoogleAppointmentTypes && entry.observedGoogleAppointmentTypes.length > 0);
   }
 
+  /**
+   * Deep check: appointment types that were clicked into this run but did
+   * not surface real, bookable availability (an empty calendar, an error,
+   * a dead end). Populated only on runs that performed the deeper
+   * per-appointment-type availability check — older/lighter audit runs
+   * simply have empty (or absent) websiteAppointmentAvailability /
+   * googleAppointmentAvailability arrays and contribute no issues here.
+   */
+  function availabilityIssues(entry) {
+    var issues = [];
+    (entry.websiteAppointmentAvailability || []).forEach(function (a) {
+      if (a && a.availabilityLoaded === false) {
+        issues.push({ appointmentType: a.appointmentType, source: "Website", issue: a.issue || "" });
+      }
+    });
+    (entry.googleAppointmentAvailability || []).forEach(function (a) {
+      if (a && a.availabilityLoaded === false) {
+        issues.push({ appointmentType: a.appointmentType, source: "Google", issue: a.issue || "" });
+      }
+    });
+    return issues;
+  }
+
   function evaluateEntry(entry, location) {
     var typesChecked = appointmentTypesCheckedThisRun(entry);
     var diff = typesChecked
       ? computeDiff(location.expectedAppointmentTypes, entry.observedWebsiteAppointmentTypes, entry.observedGoogleAppointmentTypes)
       : { missing: [], unexpected: [], labelDifferences: [] };
-    var status = computeStatus(entry, diff);
-    return { entry: entry, diff: diff, status: status, typesChecked: typesChecked };
+    var availIssues = availabilityIssues(entry);
+    var status = computeStatus(entry, diff, availIssues);
+    return { entry: entry, diff: diff, status: status, typesChecked: typesChecked, availIssues: availIssues };
   }
 
   function reasonText(view) {
@@ -175,6 +200,9 @@
       if (entry.googleSchedulerStatus === "NoBookingLink") parts.push("No Google booking link found");
       if (diff.missing.length) parts.push(diff.missing.length + " missing appointment type" + (diff.missing.length > 1 ? "s" : ""));
       if (diff.unexpected.length) parts.push(diff.unexpected.length + " unexpected appointment type" + (diff.unexpected.length > 1 ? "s" : ""));
+      if (view.latest.availIssues && view.latest.availIssues.length) {
+        parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " with no availability");
+      }
       return parts.length ? parts.join("; ") : "Audit failed.";
     }
     if (status === "Warning") {
@@ -222,6 +250,14 @@
     var resolvedL = prev.diff.labelDifferences.filter(function (l) { return currLKeys.indexOf(keyL(l)) === -1; });
     if (newL.length) parts.push("New label difference: " + newL.map(function (l) { return "“" + l.observed + "” for “" + l.expected + "”"; }).join(", "));
     if (resolvedL.length) parts.push("Resolved label difference: " + resolvedL.map(function (l) { return "“" + l.expected + "”"; }).join(", "));
+
+    var keyA = function (a) { return a.appointmentType + "|" + a.source; };
+    var currAKeys = (curr.availIssues || []).map(keyA);
+    var prevAKeys = (prev.availIssues || []).map(keyA);
+    var newA = (curr.availIssues || []).filter(function (a) { return prevAKeys.indexOf(keyA(a)) === -1; });
+    var resolvedA = (prev.availIssues || []).filter(function (a) { return currAKeys.indexOf(keyA(a)) === -1; });
+    if (newA.length) parts.push("New no-availability: " + newA.map(function (a) { return a.appointmentType + " (" + a.source + ")"; }).join(", "));
+    if (resolvedA.length) parts.push("Resolved no-availability: " + resolvedA.map(function (a) { return a.appointmentType + " (" + a.source + ")"; }).join(", "));
 
     if (parts.length === 0) parts.push("No change since previous audit");
 
@@ -273,6 +309,18 @@
     if (!items || !items.length) return '<span class="dd-empty">None</span>';
     return '<span class="tag-list">' + items.map(function (t) {
       return '<span class="tag ' + (cls || "") + '">' + escapeHtml(t) + "</span>";
+    }).join("") + "</span>";
+  }
+
+  /** Renders the per-appointment-type deep availability check as a small pass/fail list. */
+  function availabilityListHtml(items) {
+    if (!items || !items.length) return '<span class="dd-empty">Not checked this run</span>';
+    return '<span class="tag-list">' + items.map(function (a) {
+      var ok = a.availabilityLoaded !== false;
+      var cls = ok ? "tag-avail-ok" : "tag-avail-fail";
+      var label = escapeHtml(a.appointmentType) + (ok ? " ✓" : " ✗");
+      var title = ok ? "" : ' title="' + escapeHtml(a.issue || "No availability shown") + '"';
+      return '<span class="tag ' + cls + '"' + title + ">" + label + "</span>";
     }).join("") + "</span>";
   }
 
@@ -429,7 +477,6 @@
     });
 
     refreshLocationOptions("");
-
     var sourceSel = document.getElementById("filter-source");
     var sources = Array.from(new Set(data.auditHistory.map(function (e) { return e.auditSource; }).filter(Boolean))).sort();
     sources.forEach(function (s) {
@@ -547,6 +594,9 @@
             return '<span class="tag">“' + escapeHtml(l.observed) + '” for “' + escapeHtml(l.expected) + '” (' + escapeHtml(l.sources.join(", ")) + ")</span>";
           }).join("") + "</span>"
         : '<span class="dd-empty">None</span>';
+
+      detail.querySelector(".dd-avail-website").innerHTML = availabilityListHtml(entry && entry.websiteAppointmentAvailability);
+      detail.querySelector(".dd-avail-google").innerHTML = availabilityListHtml(entry && entry.googleAppointmentAvailability);
 
       var brokenLinks = entry && entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length
         ? entry.brokenOrIncorrectLinks.map(function (b) {
