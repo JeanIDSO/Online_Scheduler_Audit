@@ -68,6 +68,8 @@ Each entry:
 | `googleSchedulerStatus` | `Working` \| `Broken` \| `WrongLocation` \| `NoBookingLink` \| `Ambiguous` \| `NotChecked` | Raw observation only. |
 | `observedWebsiteAppointmentTypes` | string[] | Exactly as displayed on the website. |
 | `observedGoogleAppointmentTypes` | string[] | Exactly as displayed via Google. |
+| `websiteAppointmentAvailability` | `{appointmentType, availabilityLoaded, issue?}[]` | Deep check: one entry per website appointment type actually clicked into, recording whether it led to a real time-slot/calendar view with open availability. Empty on runs that didn't perform this deeper check. |
+| `googleAppointmentAvailability` | `{appointmentType, availabilityLoaded, issue?}[]` | Same as above, for the Google booking flow. |
 | `manualReviewNeeded` | boolean | True on CAPTCHA / login wall / browser block / ambiguous listing / any incomplete audit. |
 | `manualReviewReason` | string | Required in practice when `manualReviewNeeded` is true. |
 | `brokenOrIncorrectLinks` | `{url, issue}[]` | Secondary link problems (not the primary scheduler). |
@@ -101,8 +103,9 @@ When comparing an expected appointment type against what was observed:
 1. **Manual Review** — `manualReviewNeeded` is true, or `googleSchedulerStatus`
    is `Ambiguous`, or either scheduler status is `NotChecked`.
 2. **Failed** — otherwise, if either scheduler is `Broken`/`WrongLocation`,
-   Google has `NoBookingLink`, or there is any missing or unexpected
-   appointment type.
+   Google has `NoBookingLink`, there is any missing or unexpected
+   appointment type, or any entry in `websiteAppointmentAvailability` /
+   `googleAppointmentAvailability` has `availabilityLoaded: false`.
 3. **Warning** — otherwise, if there are label differences or any noted
    `brokenOrIncorrectLinks` (no functional problem, but something to review).
 4. **Passed** — otherwise.
