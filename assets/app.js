@@ -9,9 +9,15 @@
  *
  * Business rules implemented here (kept in one place so the JSON the
  * weekly audit writes can stay simple — raw observations only):
- *   - appointment-type comparison / normalization
  *   - overall status derivation
  *   - week-over-week change summaries
+ *
+ * Status is based only on what an audit run actually observes: does the
+ * website scheduler / Google booking link load (and land on the right
+ * location), and does every appointment type clicked into show real
+ * availability. The location registry's `expectedAppointmentTypes` list
+ * is reference metadata only and is never compared against what's
+ * observed or used to compute status — it has proven unreliable.
  */
 
 (function () {
@@ -59,65 +65,23 @@
   };
 
   // ---------------------------------------------------------------------
-  // Comparison rules
-  // ---------------------------------------------------------------------
-
-  /** Case-insensitive, whitespace- and punctuation-insensitive; "and" == "&". */
-  function normalize(s) {
-    return String(s || "")
-      .toLowerCase()
-      .replace(/&/g, " and ")
-      .replace(/[^\p{L}\p{N}\s]/gu, " ")
-      .replace(/\s+/g, " ")
-      .trim();
-  }
-
-  function computeDiff(expectedList, observedWebsite, observedGoogle) {
-    var expected = (expectedList || []).map(function (e) {
-      return { raw: e, norm: normalize(e) };
-    });
-    var observed = []
-      .concat((observedWebsite || []).map(function (o) { return { raw: o, norm: normalize(o), source: "Website" }; }))
-      .concat((observedGoogle || []).map(function (o) { return { raw: o, norm: normalize(o), source: "Google" }; }));
-
-    var missing = expected
-      .filter(function (e) { return e.norm && !observed.some(function (o) { return o.norm === e.norm; }); })
-      .map(function (e) { return e.raw; });
-
-    var unexpectedMap = {};
-    observed.forEach(function (o) {
-      if (!o.norm) return;
-      var isExpected = expected.some(function (e) { return e.norm === o.norm; });
-      if (!isExpected) {
-        var key = o.raw + "|" + o.source;
-        unexpectedMap[key] = { type: o.raw, source: o.source };
-      }
-    });
-    var unexpected = Object.keys(unexpectedMap).map(function (k) { return unexpectedMap[k]; });
-
-    var labelDiffMap = {};
-    expected.forEach(function (e) {
-      observed.forEach(function (o) {
-        if (o.norm && o.norm === e.norm && o.raw.trim() !== e.raw.trim()) {
-          var key = e.raw + "=>" + o.raw;
-          if (!labelDiffMap[key]) labelDiffMap[key] = { expected: e.raw, observed: o.raw, sources: {} };
-          labelDiffMap[key].sources[o.source] = true;
-        }
-      });
-    });
-    var labelDifferences = Object.keys(labelDiffMap).map(function (k) {
-      var d = labelDiffMap[k];
-      return { expected: d.expected, observed: d.observed, sources: Object.keys(d.sources) };
-    });
-
-    return { missing: missing, unexpected: unexpected, labelDifferences: labelDifferences };
-  }
-
-  // ---------------------------------------------------------------------
   // Status rules
   // ---------------------------------------------------------------------
 
-  function computeStatus(entry, diff, availIssues) {
+  /**
+   * Status is driven only by things actually observed this run:
+   *   1. Did the website scheduler and the Google booking link load
+   *      (and land on the right location)?
+   *   2. For every appointment type that was clicked into, did it show
+   *      real, bookable availability?
+   *
+   * The location registry's `expectedAppointmentTypes` list is kept as
+   * reference metadata only — it is intentionally NOT compared against
+   * what's observed, and never affects status. That list has proven
+   * unreliable (stale/incorrect labels), so it is not used as a pass/fail
+   * test; only what the audit actually sees on the live site counts.
+   */
+  function computeStatus(entry, availIssues) {
     if (entry.manualReviewNeeded) return "Manual Review";
     if (entry.googleSchedulerStatus === "Ambiguous") return "Manual Review";
     if (entry.websiteSchedulerStatus === "NotChecked" || entry.googleSchedulerStatus === "NotChecked") return "Manual Review";
@@ -128,11 +92,10 @@
       entry.googleSchedulerStatus === "NoBookingLink";
 
     if (websiteBad || googleBad) return "Failed";
-    if (diff.missing.length > 0 || diff.unexpected.length > 0) return "Failed";
     if (availIssues && availIssues.length > 0) return "Failed";
 
     var hasMinorLinkNote = Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0;
-    if (diff.labelDifferences.length > 0 || hasMinorLinkNote) return "Warning";
+    if (hasMinorLinkNote) return "Warning";
 
     return "Passed";
   }
@@ -176,17 +139,14 @@
 
   function evaluateEntry(entry, location) {
     var typesChecked = appointmentTypesCheckedThisRun(entry);
-    var diff = typesChecked
-      ? computeDiff(location.expectedAppointmentTypes, entry.observedWebsiteAppointmentTypes, entry.observedGoogleAppointmentTypes)
-      : { missing: [], unexpected: [], labelDifferences: [] };
     var availIssues = availabilityIssues(entry);
-    var status = computeStatus(entry, diff, availIssues);
-    return { entry: entry, diff: diff, status: status, typesChecked: typesChecked, availIssues: availIssues };
+    var status = computeStatus(entry, availIssues);
+    return { entry: entry, status: status, typesChecked: typesChecked, availIssues: availIssues };
   }
 
   function reasonText(view) {
     if (!view.latest) return "No audit has been completed for this location yet.";
-    var entry = view.latest.entry, diff = view.latest.diff, status = view.status;
+    var entry = view.latest.entry, status = view.status;
 
     if (status === "Manual Review") {
       return entry.manualReviewReason || "Audit could not be completed automatically and needs manual review.";
@@ -198,15 +158,12 @@
       if (entry.googleSchedulerStatus === "Broken") parts.push("Google booking link is broken");
       if (entry.googleSchedulerStatus === "WrongLocation") parts.push("Google booking link leads to the wrong location");
       if (entry.googleSchedulerStatus === "NoBookingLink") parts.push("No Google booking link found");
-      if (diff.missing.length) parts.push(diff.missing.length + " missing appointment type" + (diff.missing.length > 1 ? "s" : ""));
-      if (diff.unexpected.length) parts.push(diff.unexpected.length + " unexpected appointment type" + (diff.unexpected.length > 1 ? "s" : ""));
       if (view.latest.availIssues && view.latest.availIssues.length) {
         parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " with no availability");
       }
       return parts.length ? parts.join("; ") : "Audit failed.";
     }
     if (status === "Warning") {
-      if (diff.labelDifferences.length) parts.push(diff.labelDifferences.length + " label wording difference" + (diff.labelDifferences.length > 1 ? "s" : ""));
       if (entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length) parts.push(entry.brokenOrIncorrectLinks.length + " secondary link note" + (entry.brokenOrIncorrectLinks.length > 1 ? "s" : ""));
       return parts.length ? parts.join("; ") : "Minor issue flagged for review.";
     }
@@ -229,27 +186,6 @@
     if (curr.entry.googleSchedulerStatus !== prev.entry.googleSchedulerStatus) {
       parts.push("Google: " + labelFor(prev.entry.googleSchedulerStatus) + " → " + labelFor(curr.entry.googleSchedulerStatus));
     }
-
-    var newMissing = curr.diff.missing.filter(function (m) { return prev.diff.missing.indexOf(m) === -1; });
-    var resolvedMissing = prev.diff.missing.filter(function (m) { return curr.diff.missing.indexOf(m) === -1; });
-    if (newMissing.length) parts.push("New missing: " + newMissing.join(", "));
-    if (resolvedMissing.length) parts.push("Resolved missing: " + resolvedMissing.join(", "));
-
-    var keyU = function (u) { return u.type + "|" + u.source; };
-    var currUKeys = curr.diff.unexpected.map(keyU);
-    var prevUKeys = prev.diff.unexpected.map(keyU);
-    var newU = curr.diff.unexpected.filter(function (u) { return prevUKeys.indexOf(keyU(u)) === -1; });
-    var resolvedU = prev.diff.unexpected.filter(function (u) { return currUKeys.indexOf(keyU(u)) === -1; });
-    if (newU.length) parts.push("New unexpected: " + newU.map(function (u) { return u.type + " (" + u.source + ")"; }).join(", "));
-    if (resolvedU.length) parts.push("Resolved unexpected: " + resolvedU.map(function (u) { return u.type + " (" + u.source + ")"; }).join(", "));
-
-    var keyL = function (l) { return l.expected + "=>" + l.observed; };
-    var currLKeys = curr.diff.labelDifferences.map(keyL);
-    var prevLKeys = prev.diff.labelDifferences.map(keyL);
-    var newL = curr.diff.labelDifferences.filter(function (l) { return prevLKeys.indexOf(keyL(l)) === -1; });
-    var resolvedL = prev.diff.labelDifferences.filter(function (l) { return currLKeys.indexOf(keyL(l)) === -1; });
-    if (newL.length) parts.push("New label difference: " + newL.map(function (l) { return "“" + l.observed + "” for “" + l.expected + "”"; }).join(", "));
-    if (resolvedL.length) parts.push("Resolved label difference: " + resolvedL.map(function (l) { return "“" + l.expected + "”"; }).join(", "));
 
     var keyA = function (a) { return a.appointmentType + "|" + a.source; };
     var currAKeys = (curr.availIssues || []).map(keyA);
@@ -575,7 +511,6 @@
       // Detail fields
       var detail = node.querySelector(".location-card-detail");
       var entry = v.latest ? v.latest.entry : null;
-      var diff = v.latest ? v.latest.diff : { missing: [], unexpected: [], labelDifferences: [] };
 
       detail.querySelector(".dd-website-status").textContent = entry ? labelFor(entry.websiteSchedulerStatus) : "Not yet checked";
       detail.querySelector(".dd-google-status").textContent = entry ? labelFor(entry.googleSchedulerStatus) : "Not yet checked";
@@ -584,16 +519,8 @@
 
       var typesChecked = v.latest ? v.latest.typesChecked : false;
       var notCheckedHtml = '<span class="dd-empty">Not checked this run</span>';
-      detail.querySelector(".dd-expected").innerHTML = tagListHtml(v.location.expectedAppointmentTypes);
       detail.querySelector(".dd-observed-website").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedWebsiteAppointmentTypes) : notCheckedHtml;
       detail.querySelector(".dd-observed-google").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedGoogleAppointmentTypes) : notCheckedHtml;
-      detail.querySelector(".dd-missing").innerHTML = tagListHtml(diff.missing, "tag-missing");
-      detail.querySelector(".dd-unexpected").innerHTML = tagListHtml(diff.unexpected.map(function (u) { return u.type + " (" + u.source + ")"; }), "tag-unexpected");
-      detail.querySelector(".dd-labeldiff").innerHTML = diff.labelDifferences.length
-        ? '<span class="tag-list">' + diff.labelDifferences.map(function (l) {
-            return '<span class="tag">“' + escapeHtml(l.observed) + '” for “' + escapeHtml(l.expected) + '” (' + escapeHtml(l.sources.join(", ")) + ")</span>";
-          }).join("") + "</span>"
-        : '<span class="dd-empty">None</span>';
 
       detail.querySelector(".dd-avail-website").innerHTML = availabilityListHtml(entry && entry.websiteAppointmentAvailability);
       detail.querySelector(".dd-avail-google").innerHTML = availabilityListHtml(entry && entry.googleAppointmentAvailability);
