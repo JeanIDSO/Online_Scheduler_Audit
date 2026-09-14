@@ -48,6 +48,19 @@ For each location, using Claude in Chrome (or manually):
      footer link, a "call us" link that's wrong) as `brokenOrIncorrectLinks`
      — `{url, issue}` pairs. These don't need to be the primary scheduler
      link.
+   - **Deep check — click into every appointment type.** For each option in
+     `observedWebsiteAppointmentTypes`, select it and proceed to the next
+     step (time slot / calendar). Record one entry per type in
+     `websiteAppointmentAvailability`:
+     - `availabilityLoaded: true` if a real time-slot/calendar view appears
+       with at least one open day or time to pick.
+     - `availabilityLoaded: false` if it shows no open slots, an error, a
+       dead end, or otherwise never surfaces bookable times — this is a
+       real problem even if the scheduler "loaded" in step 1's sense, so
+       flag it. Fill in `issue` with a short description (e.g. `"No open
+       slots shown 60+ days out"`).
+     Do not actually submit a booking or enter real patient details at any
+     point.
 
 2. **Open the Google Maps listing.** Look for a booking/appointment link or
    button on the listing. Note:
@@ -62,6 +75,19 @@ For each location, using Claude in Chrome (or manually):
      - `NotChecked` if you couldn't complete this step.
    - `observedGoogleAppointmentTypes`: list every appointment/service type
      shown in the Google booking flow, exactly as written.
+   - Some Google booking flows gate the appointment-type list behind a
+     "Patient details" step (first name / last name / birthdate) before
+     you can even see the types. It's fine to enter obviously fake
+     placeholder data purely to get past that step and observe the types
+     and their availability — e.g. `Test Patient`, `01/01/1990` — and
+     never proceed past it to actually submit a booking. This placeholder
+     text must never appear in `notes`, `manualReviewReason`, or anywhere
+     else in the entry.
+   - **Deep check — click into every appointment type**, same as the
+     website: for each option in `observedGoogleAppointmentTypes`, select
+     it, proceed to the time-slot step, and record one entry per type in
+     `googleAppointmentAvailability` with the same `availabilityLoaded` /
+     `issue` rules as above.
 
 3. **If you hit a CAPTCHA, a login wall, a browser restriction, or
    anything else that stops you from completing either check reliably:**
@@ -103,6 +129,17 @@ For each location, produce one object like this:
     "New Patient Exam and Cleaning",
     "Emergency Exam"
   ],
+  "websiteAppointmentAvailability": [
+    { "appointmentType": "Invisalign Consultation", "availabilityLoaded": true },
+    { "appointmentType": "Dental Consultation", "availabilityLoaded": true },
+    { "appointmentType": "Emergency Exam", "availabilityLoaded": true },
+    { "appointmentType": "Existing Patient Cleaning", "availabilityLoaded": true },
+    { "appointmentType": "New Patient Exam & Cleaning", "availabilityLoaded": false, "issue": "No open slots shown 60+ days out" }
+  ],
+  "googleAppointmentAvailability": [
+    { "appointmentType": "New Patient Exam and Cleaning", "availabilityLoaded": true },
+    { "appointmentType": "Emergency Exam", "availabilityLoaded": true }
+  ],
   "manualReviewNeeded": false,
   "manualReviewReason": "",
   "brokenOrIncorrectLinks": [],
@@ -111,11 +148,14 @@ For each location, produce one object like this:
 }
 ```
 
-(This example would come out **Warning**, not Failed — "New Patient Exam &
-Cleaning" and "New Patient Exam and Cleaning" normalize to the same thing,
-so it's a label difference, not a mismatch. Nothing is actually missing or
-unexpected here. The dashboard works this out on its own from the fields
-above.)
+(Without the `availabilityLoaded: false` entry, this example would come out
+**Warning**, not Failed — "New Patient Exam & Cleaning" and "New Patient
+Exam and Cleaning" normalize to the same thing, so it's a label difference,
+not a mismatch. Nothing is actually missing or unexpected here. But because
+one appointment type failed to show real availability, the dashboard
+computes **Failed** overall — a no-availability finding always outranks a
+mere label difference. The dashboard works all of this out on its own from
+the fields above; you never compute or write `status` yourself.)
 
 `checkedAt` and the timestamp suffix of `auditId` should be the same UTC
 time you performed the check.
@@ -156,6 +196,13 @@ time you performed the check.
 - [ ] No existing `auditHistory` entry was edited, reordered, or removed.
 - [ ] `practices` and `locations` are untouched.
 - [ ] No patient information anywhere in `notes`, `manualReviewReason`,
-      or `evidenceLinks`.
+      or `evidenceLinks` (placeholder test data used to get past a
+      "Patient details" gate is fine to *use*, but never write it into
+      any field).
+- [ ] Every appointment type in `observedWebsiteAppointmentTypes` /
+      `observedGoogleAppointmentTypes` was actually clicked into, with a
+      matching entry in `websiteAppointmentAvailability` /
+      `googleAppointmentAvailability` recording whether real availability
+      loaded.
 - [ ] `node scripts/validate-data.js` passes locally before you push.
 - [ ] `updatedAt` / `updatedBy` bumped.
