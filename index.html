@@ -3,246 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Scheduler Audit</title>
-<meta name="description" content="Public weekly audit dashboard for website schedulers and Google Business Profile booking links across every managed dental practice and regional location.">
+<title>Scheduler Command Center</title>
+<meta name="description" content="Live website and Google booking-flow audit dashboard for every managed dental practice and location.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=20260916-reinvention-1">
 </head>
 <body>
-
 <a class="skip-link" href="#main">Skip to dashboard</a>
 
-<header class="site-header">
-  <div class="wrap header-row">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
-          <circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="2"/>
-          <path d="M10 16.5l4 4 8-9" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#main" aria-label="Scheduler Command Center home">
+      <span class="brand-symbol" aria-hidden="true">
+        <svg viewBox="0 0 36 36" width="24" height="24" fill="none">
+          <path d="M9 18.5l5.2 5.2L27 11" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
-      <div class="brand-text">
-        <h1>Online Scheduler Audit</h1>
-        <p class="subtitle">Website &amp; Google booking checks &middot; 41 locations across 19 practices</p>
-      </div>
-    </div>
-    <div class="header-meta">
-      <div class="meta-item">
-        <span class="meta-label">Data last updated</span>
-        <span class="meta-value" id="data-updated-at">—</span>
-      </div>
-      <span class="privacy-badge" title="This dashboard never collects, displays, or stores patient information.">
-        <svg viewBox="0 0 20 20" width="14" height="14" fill="none" aria-hidden="true"><path d="M10 2l6 2.4v4.6c0 4.2-2.6 7.6-6 8.6-3.4-1-6-4.4-6-8.6V4.4L10 2z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-        No patient data
+      <span>
+        <strong>Scheduler</strong>
+        <small>Command Center</small>
       </span>
+    </a>
+    <nav class="topnav" aria-label="Dashboard navigation">
+      <a href="#portfolio">Practices</a>
+      <a href="#attention-section">Issues</a>
+      <a href="#locations-section">Audits</a>
+      <a href="#history-section">History</a>
+    </nav>
+    <div class="topbar-meta">
+      <span class="live-indicator"><i></i> Live dashboard</span>
+      <span class="updated-label">Updated <strong id="data-updated-at">—</strong></span>
     </div>
   </div>
 </header>
 
-<main id="main" class="wrap">
-
-  <section class="dashboard-hero" aria-labelledby="dashboard-title">
-    <div class="hero-copy">
-      <span class="eyebrow">Scheduling quality control</span>
-      <h2 id="dashboard-title">Every booking path, checked in one place.</h2>
-      <p>Monitor website and Google booking performance across every practice, identify appointment types without availability, and open the exact audit evidence without digging through spreadsheets.</p>
-    </div>
-    <div class="hero-key">
-      <span class="hero-key-label">Audit standard</span>
-      <strong>Both links + every appointment type</strong>
-      <span>Anything over 30 seconds, the wrong office, or no available times is flagged.</span>
-    </div>
-  </section>
-
-  <!-- KPI ROW -->
-  <section class="kpi-row" aria-label="Summary metrics">
-    <div class="kpi-card kpi-total">
-      <span class="kpi-label">Total locations</span>
-      <span class="kpi-value" id="kpi-total">—</span>
-    </div>
-    <div class="kpi-card kpi-passed">
-      <span class="kpi-label">Locations passing</span>
-      <span class="kpi-value" id="kpi-passed">—</span>
-    </div>
-    <div class="kpi-card kpi-failed">
-      <span class="kpi-label">Locations with problems</span>
-      <span class="kpi-value" id="kpi-failed">—</span>
-    </div>
-    <div class="kpi-card kpi-manual">
-      <span class="kpi-label">Requiring manual review</span>
-      <span class="kpi-value" id="kpi-manual">—</span>
-    </div>
-    <div class="kpi-card kpi-last">
-      <span class="kpi-label">Last completed audit</span>
-      <span class="kpi-value kpi-value-sm" id="kpi-last">—</span>
-    </div>
-  </section>
-  <p class="kpi-footnote">
-    <span id="kpi-warning-footnote">Warning: —</span>
-    &nbsp;&middot;&nbsp;
-    <span id="kpi-notyet-footnote">Not yet audited: —</span>
-  </p>
-
-  <!-- PRACTICE SUMMARY CARDS -->
-  <section aria-labelledby="practices-heading">
-    <h2 id="practices-heading" class="section-heading">General practices</h2>
-    <div class="practice-grid" id="practice-grid"></div>
-  </section>
-
-  <!-- NEEDS ATTENTION -->
-  <section aria-labelledby="attention-heading" id="attention-section">
-    <h2 id="attention-heading" class="section-heading section-heading-alert">
-      Needs attention
-      <span class="count-pill" id="attention-count">0</span>
-    </h2>
-    <div id="attention-list" class="attention-list"></div>
-    <p id="attention-empty" class="empty-note" hidden>Nothing needs attention right now — every completed audit is passing.</p>
-  </section>
-
-  <!-- FILTERS -->
-  <section aria-labelledby="filters-heading" class="filters-section">
-    <h2 id="filters-heading" class="visually-hidden">Filters</h2>
-    <div class="filters-bar">
-      <div class="filter-field">
-        <label for="filter-practice">Practice</label>
-        <select id="filter-practice"><option value="">All practices</option></select>
+<main id="main">
+  <section class="hero-shell">
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Digital scheduling operations</span>
+        <h1>Know exactly where patients can—and can’t—book.</h1>
+        <p>One command center for every website scheduler, Google booking path, regional office, and appointment type.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#attention-section">Review active issues</a>
+          <a class="secondary-action" href="#portfolio">Browse practices</a>
+        </div>
       </div>
-      <div class="filter-field">
-        <label for="filter-location">Location</label>
-        <select id="filter-location"><option value="">All locations</option></select>
-      </div>
-      <div class="filter-field">
-        <label for="filter-status">Status</label>
-        <select id="filter-status">
-          <option value="">All statuses</option>
-          <option value="Passed">Passed</option>
-          <option value="Warning">Warning</option>
-          <option value="Failed">Failed</option>
-          <option value="Manual Review">Manual Review</option>
-          <option value="Not Yet Audited">Not Yet Audited</option>
-        </select>
-      </div>
-      <div class="filter-field">
-        <label for="filter-source">Audit source</label>
-        <select id="filter-source"><option value="">All sources</option></select>
-      </div>
-      <div class="filter-field">
-        <label for="filter-date">Audit date</label>
-        <select id="filter-date"><option value="">All dates</option></select>
-      </div>
-      <button type="button" id="filter-reset" class="btn-reset">Clear filters</button>
+      <aside class="audit-standard">
+        <span class="standard-label">A complete audit checks</span>
+        <ol>
+          <li><b>01</b><span>Website scheduler loads within 30 seconds</span></li>
+          <li><b>02</b><span>Google booking reaches the correct office</span></li>
+          <li><b>03</b><span>Every appointment type displays real times</span></li>
+        </ol>
+        <p>No real patient data is entered or stored.</p>
+      </aside>
     </div>
   </section>
 
-  <!-- LOCATIONS -->
-  <section aria-labelledby="locations-heading">
-    <div class="section-heading-row">
-      <h2 id="locations-heading" class="section-heading">Locations</h2>
-      <span class="result-count" id="locations-result-count"></span>
+  <div class="dashboard-container">
+    <section class="metric-strip" aria-label="Current audit summary">
+      <article class="metric metric-total">
+        <span class="metric-icon">◆</span>
+        <div><span class="metric-label">Locations monitored</span><strong id="kpi-total">—</strong></div>
+      </article>
+      <article class="metric metric-passed">
+        <span class="metric-icon">✓</span>
+        <div><span class="metric-label">Passing completely</span><strong id="kpi-passed">—</strong></div>
+      </article>
+      <article class="metric metric-failed">
+        <span class="metric-icon">!</span>
+        <div><span class="metric-label">Active failures</span><strong id="kpi-failed">—</strong></div>
+      </article>
+      <article class="metric metric-manual">
+        <span class="metric-icon">?</span>
+        <div><span class="metric-label">Needs review</span><strong id="kpi-manual">—</strong></div>
+      </article>
+      <article class="metric metric-last">
+        <span class="metric-icon">↻</span>
+        <div><span class="metric-label">Latest audit</span><strong id="kpi-last">—</strong></div>
+      </article>
+    </section>
+    <div class="metric-notes">
+      <span id="kpi-warning-footnote">Warning: —</span>
+      <span id="kpi-notyet-footnote">Not yet audited: —</span>
     </div>
-    <div class="legend" aria-hidden="false">
-      <span class="legend-item"><span class="status-dot status-passed"></span>Passed</span>
-      <span class="legend-item"><span class="status-dot status-warning"></span>Warning</span>
-      <span class="legend-item"><span class="status-dot status-failed"></span>Failed</span>
-      <span class="legend-item"><span class="status-dot status-manual"></span>Manual Review</span>
-      <span class="legend-item"><span class="status-dot status-notyet"></span>Not Yet Audited</span>
-    </div>
-    <div id="location-grid" class="location-grid"></div>
-    <p id="locations-empty" class="empty-note" hidden>No locations match the current filters.</p>
-  </section>
 
-  <!-- AUDIT HISTORY -->
-  <section aria-labelledby="history-heading">
-    <div class="section-heading-row">
-      <h2 id="history-heading" class="section-heading">Audit history</h2>
-      <span class="result-count" id="history-result-count"></span>
-    </div>
-    <div class="history-table-wrap">
-      <table class="history-table" id="history-table">
-        <thead>
-          <tr>
-            <th scope="col">Checked</th>
-            <th scope="col">Location</th>
-            <th scope="col">Practice</th>
-            <th scope="col">Status</th>
-            <th scope="col">Source</th>
-            <th scope="col">Audited by</th>
-            <th scope="col">Change from previous</th>
-          </tr>
-        </thead>
-        <tbody id="history-tbody"></tbody>
-      </table>
-    </div>
-    <p id="history-empty" class="empty-note" hidden>No audit runs recorded yet.</p>
-  </section>
+    <section class="overview-grid">
+      <div class="panel portfolio-panel" id="portfolio">
+        <div class="panel-heading">
+          <div>
+            <span class="panel-kicker">Portfolio</span>
+            <h2>Practices and regional offices</h2>
+            <p>Open a practice to see every location and its latest result.</p>
+          </div>
+        </div>
+        <div class="practice-grid" id="practice-grid"></div>
+      </div>
 
-  <footer class="site-footer">
-    <p>This dashboard tracks only public scheduler links and publicly displayed appointment-type labels. It does not collect, display, or store any patient information.</p>
-    <p>Data source: <code>data/audits.json</code> — see the repository README for the full JSON schema and the weekly audit process.</p>
-  </footer>
+      <aside class="panel attention-panel" id="attention-section" aria-labelledby="attention-heading">
+        <div class="panel-heading attention-heading-row">
+          <div>
+            <span class="panel-kicker alert-kicker">Action queue</span>
+            <h2 id="attention-heading">Needs attention</h2>
+          </div>
+          <span class="count-pill" id="attention-count">0</span>
+        </div>
+        <div id="attention-list" class="attention-list"></div>
+        <p id="attention-empty" class="empty-note" hidden>Everything checked is currently passing.</p>
+      </aside>
+    </section>
 
+    <section class="audit-workspace" id="locations-section">
+      <div class="workspace-heading">
+        <div>
+          <span class="panel-kicker">Audit explorer</span>
+          <h2>Location-level results</h2>
+          <p>Filter the portfolio, then open any location for appointment-level evidence.</p>
+        </div>
+        <span class="result-count" id="locations-result-count"></span>
+      </div>
+
+      <div class="filter-console">
+        <div class="filter-field">
+          <label for="filter-practice">Practice</label>
+          <select id="filter-practice"><option value="">All practices</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-location">Location</label>
+          <select id="filter-location"><option value="">All locations</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-status">Result</label>
+          <select id="filter-status">
+            <option value="">All results</option>
+            <option value="Passed">Passed</option>
+            <option value="Warning">Warning</option>
+            <option value="Failed">Failed</option>
+            <option value="Manual Review">Manual Review</option>
+            <option value="Not Yet Audited">Not Yet Audited</option>
+          </select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-source">Audit source</label>
+          <select id="filter-source"><option value="">All sources</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="filter-date">Audit date</label>
+          <select id="filter-date"><option value="">All dates</option></select>
+        </div>
+        <button type="button" id="filter-reset" class="reset-button">Reset</button>
+      </div>
+
+      <div class="status-legend" aria-label="Status legend">
+        <span><i class="legend-passed"></i>Passed</span>
+        <span><i class="legend-warning"></i>Warning</span>
+        <span><i class="legend-failed"></i>Failed</span>
+        <span><i class="legend-manual"></i>Manual review</span>
+        <span><i class="legend-notyet"></i>Not audited</span>
+      </div>
+
+      <div id="location-grid" class="location-grid"></div>
+      <p id="locations-empty" class="empty-note empty-card" hidden>No locations match these filters.</p>
+    </section>
+
+    <details class="history-drawer" id="history-section">
+      <summary>
+        <span><small>Audit archive</small><strong>View complete history</strong></span>
+        <span class="history-summary-right"><span id="history-result-count"></span><i>⌄</i></span>
+      </summary>
+      <div class="history-content">
+        <div class="history-table-wrap">
+          <table class="history-table" id="history-table">
+            <thead>
+              <tr>
+                <th scope="col">Checked</th>
+                <th scope="col">Location</th>
+                <th scope="col">Practice</th>
+                <th scope="col">Status</th>
+                <th scope="col">Source</th>
+                <th scope="col">Audited by</th>
+                <th scope="col">Change from previous</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody"></tbody>
+          </table>
+        </div>
+        <p id="history-empty" class="empty-note" hidden>No audit runs recorded yet.</p>
+      </div>
+    </details>
+
+    <footer class="site-footer">
+      <span>Scheduler Command Center</span>
+      <p>Public booking-path checks only. No patient information is collected, displayed, or stored.</p>
+    </footer>
+  </div>
 </main>
 
-<!-- Location detail template -->
 <template id="location-card-template">
   <article class="location-card">
     <button type="button" class="location-card-summary" aria-expanded="false">
-      <span class="location-card-name-row">
-        <span class="location-name"></span>
-        <span class="status-pill"></span>
+      <span class="location-status-rail" aria-hidden="true"></span>
+      <span class="location-card-copy">
+        <span class="location-card-name-row">
+          <span class="location-name"></span>
+          <span class="status-pill"></span>
+        </span>
+        <span class="location-card-sub">
+          <span class="location-practice"></span>
+          <span class="location-checked"></span>
+        </span>
+        <span class="change-badge" hidden></span>
       </span>
-      <span class="location-card-sub">
-        <span class="location-practice"></span>
-        <span class="location-checked"></span>
-      </span>
-      <span class="change-badge" hidden></span>
-      <svg class="chev" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="open-audit-label">Open audit</span>
+      <svg class="chev" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="location-card-detail" hidden>
+      <div class="audit-detail-header">
+        <span>Latest audit evidence</span>
+        <span>Click any external link to verify the live booking path</span>
+      </div>
       <div class="detail-grid">
-        <div class="detail-block">
-          <h3>Scheduler status</h3>
+        <section class="detail-block scheduler-block">
+          <h3>Booking paths</h3>
           <dl class="kv-list">
             <div><dt>Website scheduler</dt><dd class="dd-website-status"></dd></div>
             <div><dt>Google Business Profile</dt><dd class="dd-google-status"></dd></div>
           </dl>
-          <p class="links-row">
-            <a class="website-link" href="#" target="_blank" rel="noopener">Open website scheduler ↗</a>
-            <a class="gmaps-link" href="#" target="_blank" rel="noopener">Open Google Maps listing ↗</a>
-          </p>
-        </div>
-        <div class="detail-block">
+          <div class="links-row">
+            <a class="website-link" href="#" target="_blank" rel="noopener">Website scheduler ↗</a>
+            <a class="gmaps-link" href="#" target="_blank" rel="noopener">Google listing ↗</a>
+          </div>
+        </section>
+        <section class="detail-block">
           <h3>Appointment types observed</h3>
           <dl class="kv-list">
-            <div><dt>Observed — website</dt><dd class="dd-observed-website"></dd></div>
-            <div><dt>Observed — Google</dt><dd class="dd-observed-google"></dd></div>
+            <div><dt>Website</dt><dd class="dd-observed-website"></dd></div>
+            <div><dt>Google</dt><dd class="dd-observed-google"></dd></div>
           </dl>
-        </div>
-                <div class="detail-block">
-          <h3>Appointment availability (per type)</h3>
+        </section>
+        <section class="detail-block availability-block">
+          <h3>Availability by appointment type</h3>
           <dl class="kv-list">
-            <div><dt>Website — clicked into each type</dt><dd class="dd-avail-website"></dd></div>
-            <div><dt>Google — clicked into each type</dt><dd class="dd-avail-google"></dd></div>
+            <div><dt>Website results</dt><dd class="dd-avail-website"></dd></div>
+            <div><dt>Google results</dt><dd class="dd-avail-google"></dd></div>
           </dl>
-        </div>
-
-        <div class="detail-block">
-          <h3>Notes &amp; evidence</h3>
+        </section>
+        <section class="detail-block evidence-block">
+          <h3>Notes and evidence</h3>
           <dl class="kv-list">
-            <div><dt>Broken / incorrect links</dt><dd class="dd-brokenlinks"></dd></div>
+            <div><dt>Broken or incorrect links</dt><dd class="dd-brokenlinks"></dd></div>
             <div><dt>Audit notes</dt><dd class="dd-notes"></dd></div>
             <div><dt>Evidence links</dt><dd class="dd-evidence"></dd></div>
-            <div><dt>Change from previous audit</dt><dd class="dd-change"></dd></div>
+            <div><dt>Change from previous</dt><dd class="dd-change"></dd></div>
             <div><dt>Audited by</dt><dd class="dd-auditedby"></dd></div>
           </dl>
-        </div>
+        </section>
       </div>
     </div>
   </article>
 </template>
 
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=20260916-reinvention-1"></script>
 </body>
 </html>
