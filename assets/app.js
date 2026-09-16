@@ -546,6 +546,7 @@
 
       node.querySelector(".location-name").textContent = v.location.name;
       node.querySelector(".status-pill").outerHTML = statusPillHtml(v.status);
+      node.querySelector(".location-status-rail").className = "location-status-rail rail-" + v.status.toLowerCase().replace(/[^a-z]+/g, "-");
       node.querySelector(".location-practice").textContent = practiceNameFor(v.location.practiceId);
       node.querySelector(".location-checked").textContent = v.latest ? "Checked " + formatDateTime(v.latest.entry.checkedAt) : "Not yet checked";
 
@@ -669,7 +670,7 @@
     });
   }
 
-  fetch("data/audits.json", { cache: "no-store" })
+  fetch("data/audits.json?v=" + Date.now(), { cache: "no-store" })
     .then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.json();
