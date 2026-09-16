@@ -85,11 +85,11 @@
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
       "expectedAppointmentTypes": [
-        "Invisalign Consultation",
-        "Dental Consultation",
+        "Invisalign Consult",
+        "Denture Consultation",
         "Emergency Exam",
         "Existing Patient Cleaning",
-        "New Patient Exam and Cleaning"
+        "New Patient Exam & Cleaning"
       ]
     },
     {
@@ -101,7 +101,7 @@
       "expectedAppointmentTypes": [
         "Invisalign Consultation",
         "Limited/Emergency Exam",
-        "Existing Patient Cleaning",
+        "Existing Patient Exam and Cleaning",
         "New Patient Exam and Cleaning"
       ]
     },
@@ -134,12 +134,10 @@
       "name": "Lakewood Lafayette",
       "practiceId": "lakewood-family-dental",
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
-      "googleMapsUrl": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+      "googleMapsUrl": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
       "expectedAppointmentTypes": [
-        "Existing Patient Child (12 - Below)",
-        "New Patient Exam & Cleaning (12 - Below)",
         "Existing Patient Exam & Cleaning",
-        "New Patient Adult (Ages 13+)",
+        "New Patient Exam & Cleaning",
         "Emergency Exam"
       ]
     },
@@ -164,6 +162,7 @@
       "googleMapsUrl": "https://maps.app.goo.gl/cJfrEUhY3nZmWBpS9",
       "expectedAppointmentTypes": [
         "Invisalign Consult",
+        "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ]
