@@ -341,21 +341,71 @@
         }
       });
 
-      var card = document.createElement("div");
-      card.className = "practice-card";
+      var panelId = "practice-panel-" + practice.id;
+      var card = document.createElement("article");
+      card.className = "practice-card practice-accordion";
       card.innerHTML =
-        "<h3>" + escapeHtml(practice.name) + "</h3>" +
-        '<p class="practice-sub">' + views.length + " location" + (views.length === 1 ? "" : "s") +
-        (lastAudited ? " · last audited " + formatDateTime(lastAudited.toISOString()) : " · no audits completed yet") + "</p>" +
-        '<div class="practice-stat-row">' +
-        statChip("Passed", counts["Passed"], "st-passed") +
-        statChip("Warning", counts["Warning"], "st-warning") +
-        statChip("Failed", counts["Failed"], "st-failed") +
-        statChip("Manual review", counts["Manual Review"], "st-manual") +
-        statChip("Not yet audited", counts["Not Yet Audited"], "st-notyet") +
+        '<button type="button" class="practice-summary" aria-expanded="false" aria-controls="' + escapeHtml(panelId) + '">' +
+          '<span class="practice-summary-copy">' +
+            "<h3>" + escapeHtml(practice.name) + "</h3>" +
+            '<span class="practice-sub">' + views.length + " location" + (views.length === 1 ? "" : "s") +
+              (lastAudited ? " · updated " + formatDateOnly(lastAudited.toISOString()) : " · no audits yet") + "</span>" +
+          "</span>" +
+          '<span class="practice-stat-row">' +
+            statChip("Passed", counts["Passed"], "st-passed") +
+            statChip("Warning", counts["Warning"], "st-warning") +
+            statChip("Failed", counts["Failed"], "st-failed") +
+            statChip("Manual", counts["Manual Review"], "st-manual") +
+            statChip("Not audited", counts["Not Yet Audited"], "st-notyet") +
+          "</span>" +
+          '<svg class="practice-chev" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M6 8l4 4 4-4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        "</button>" +
+        '<div class="practice-locations" id="' + escapeHtml(panelId) + '" hidden>' +
+          '<div class="practice-locations-head"><span>Location</span><span>Latest result</span><span></span></div>' +
+          views.map(function (v) {
+            return '<div class="practice-location-row">' +
+              '<span class="practice-location-name">' + escapeHtml(v.location.name) + "</span>" +
+              statusPillHtml(v.status) +
+              '<button type="button" class="practice-location-view" data-location-id="' + escapeHtml(v.location.id) + '">View audit</button>' +
+            "</div>";
+          }).join("") +
         "</div>";
+
+      var summary = card.querySelector(".practice-summary");
+      var panel = card.querySelector(".practice-locations");
+      summary.addEventListener("click", function () {
+        var expanded = summary.getAttribute("aria-expanded") === "true";
+        summary.setAttribute("aria-expanded", String(!expanded));
+        panel.hidden = expanded;
+      });
+      Array.from(card.querySelectorAll(".practice-location-view")).forEach(function (button) {
+        button.addEventListener("click", function () {
+          showLocationFromPractice(button.getAttribute("data-location-id"));
+        });
+      });
       grid.appendChild(card);
     });
+  }
+
+  function showLocationFromPractice(locationId) {
+    var location = state.data.locations.filter(function (l) { return l.id === locationId; })[0];
+    if (!location) return;
+    document.getElementById("filter-practice").value = location.practiceId;
+    refreshLocationOptions(location.practiceId);
+    document.getElementById("filter-location").value = locationId;
+    document.getElementById("filter-status").value = "";
+    document.getElementById("filter-source").value = "";
+    document.getElementById("filter-date").value = "";
+    renderAll();
+
+    var card = document.querySelector('.location-card[data-location-id="' + CSS.escape(locationId) + '"]');
+    if (card) {
+      var summary = card.querySelector(".location-card-summary");
+      var detail = card.querySelector(".location-card-detail");
+      summary.setAttribute("aria-expanded", "true");
+      detail.hidden = false;
+      card.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   function statChip(label, count, cls) {
@@ -491,6 +541,7 @@
     filtered.forEach(function (v) {
       var node = tpl.content.cloneNode(true);
       var article = node.querySelector(".location-card");
+      article.setAttribute("data-location-id", v.location.id);
       var summaryBtn = node.querySelector(".location-card-summary");
 
       node.querySelector(".location-name").textContent = v.location.name;
