@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T18:32:12Z",
+  "updatedAt": "2026-09-16T18:38:31.226Z",
   "updatedBy": "Codex Google Scheduler Retry",
   "practices": [
     {
@@ -4006,28 +4006,28 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Consultation with Doctor",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Visit",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4055,7 +4055,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4143,23 +4143,23 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4183,7 +4183,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4207,18 +4207,18 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Appointment (under 18)",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "New Patient Appointment (under 18)",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4238,7 +4238,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4264,23 +4264,23 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4304,7 +4304,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4330,23 +4330,23 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Exam & Xrays",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "New Patient Exam, Xrays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4370,7 +4370,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4415,8 +4415,8 @@
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4448,7 +4448,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4472,18 +4472,18 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Exam & Teeth Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4503,7 +4503,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4531,13 +4531,13 @@
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4557,7 +4557,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4638,8 +4638,8 @@
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Cleaning & Exam",
@@ -4647,8 +4647,8 @@
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4668,7 +4668,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4696,13 +4696,13 @@
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient - Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [
@@ -4722,7 +4722,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4746,18 +4746,18 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning (Adult)",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning (Child)",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "New Patient - Exam & X-rays",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Exam",
@@ -4777,7 +4777,7 @@
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -4909,23 +4909,23 @@
         },
         {
           "appointmentType": "Returning Patient Teeth Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Veneer Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Wisdom Teeth Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "TMJ Consultation",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Invisalign Consultation",
@@ -4956,7 +4956,7 @@
       "manualReviewNeeded": true,
       "manualReviewReason": "Google appointment menu rendered, but repeated attempts did not reliably complete every availability check.",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google appointment menu rendered, but repeated attempts did not reliably complete every availability check.",
+      "notes": "Google appointment menu rendered, but repeated attempts did not reliably complete every availability check. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     },
     {
@@ -5006,25 +5006,25 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Xrays",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No bookable appointment availability was shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": true,
       "manualReviewReason": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
+      "notes": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit. Website appointment availability corrected after Jean manually confirmed times were displayed on September 16, 2026.",
       "evidenceLinks": []
     }
   ]
