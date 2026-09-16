@@ -373,3 +373,9 @@ a { color: inherit; }
   .audit-detail-header { flex-direction: column; }
   .site-footer { flex-direction: column; }
 }
+
+.location-status-rail.rail-passed{background:var(--passed)}
+.location-status-rail.rail-warning{background:var(--warning)}
+.location-status-rail.rail-failed{background:var(--failed)}
+.location-status-rail.rail-manual-review{background:var(--manual)}
+.location-status-rail.rail-not-yet-audited{background:var(--notyet)}
