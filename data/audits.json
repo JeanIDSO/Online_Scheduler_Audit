@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T18:38:31.226Z",
+  "updatedAt": "2026-09-16T18:42:36.736Z",
   "updatedBy": "Codex Google Scheduler Retry",
   "practices": [
     {
@@ -2072,8 +2072,8 @@
         },
         {
           "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+          "availabilityLoaded": true,
+          "issue": ""
         },
         {
           "appointmentType": "Emergency Exam",
@@ -2081,14 +2081,14 @@
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": false,
-          "issue": "\"We are sorry, but we could not find any available appointment slots online\" - no bookable times shown"
+          "availabilityLoaded": true,
+          "issue": ""
         }
       ],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Google booking flow (5 types) offers more appointment types than the website scheduler (3 types), which is a label/inventory difference for the dashboard to flag, not an availability problem. 2 of 5 Google appointment types (New Patient Exam X-Rays & Cleaning, Existing Patient Cleaning) show no online availability and direct callers to the office phone instead; all website types show real availability.",
+      "notes": "Both website and Google scheduler links loaded correctly. All appointment types tested through both flows displayed bookable appointment availability. The two Google availability results previously recorded as unavailable were corrected after Jean manually verified available times.",
       "evidenceLinks": []
     },
     {
