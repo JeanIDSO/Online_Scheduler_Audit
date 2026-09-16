@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T16:45:46.060Z",
-  "updatedBy": "Claude Cowork Weekly Audit",
+  "updatedAt": "2026-09-16T18:00:18Z",
+  "updatedBy": "Codex scheduler re-audit",
   "practices": [
     {
       "id": "lakewood-family-dental",
@@ -88,11 +88,11 @@
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
       "expectedAppointmentTypes": [
-        "Invisalign Consultation",
-        "Dental Consultation",
+        "Invisalign Consult",
+        "Denture Consultation",
         "Emergency Exam",
         "Existing Patient Cleaning",
-        "New Patient Exam and Cleaning"
+        "New Patient Exam & Cleaning"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "expectedAppointmentTypes": [
         "Invisalign Consultation",
         "Limited/Emergency Exam",
-        "Existing Patient Cleaning",
+        "Existing Patient Exam and Cleaning",
         "New Patient Exam and Cleaning"
       ]
     },
@@ -137,12 +137,10 @@
       "name": "Lakewood Lafayette",
       "practiceId": "lakewood-family-dental",
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
-      "googleMapsUrl": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+      "googleMapsUrl": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
       "expectedAppointmentTypes": [
-        "Existing Patient Child (12 - Below)",
-        "New Patient Exam & Cleaning (12 - Below)",
         "Existing Patient Exam & Cleaning",
-        "New Patient Adult (Ages 13+)",
+        "New Patient Exam & Cleaning",
         "Emergency Exam"
       ]
     },
@@ -167,6 +165,7 @@
       "googleMapsUrl": "https://maps.app.goo.gl/cJfrEUhY3nZmWBpS9",
       "expectedAppointmentTypes": [
         "Invisalign Consult",
+        "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ]
@@ -2481,6 +2480,58 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "Correction to the prior entry: this location's Google Business Profile listing has no distinct Reserve-with-Google booking widget — its \"Book online\" link points to the exact same page as the public website scheduler (book.modento.io/dental-team-of-plantation/reason-for-visit). The prior entry recorded a fifth Google appointment type, \"New Patient Exam, X-Rays & Cleaning\", marked as having no availability; that type does not actually exist on this page — only the same 4 types the website offers. That was a data error, not a genuine availability problem. Re-checked directly: both legs show the same 4 appointment types, each with real online availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-lafayette__2026-09-16T18:00:18Z",
+      "locationId": "lakewood-lafayette",
+      "checkedAt": "2026-09-16T18:00:18Z",
+      "auditedBy": "Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Corrected the stored Google Maps listing, which previously opened the Anderson office. The verified Lafayette listing at 2 Executive Dr routes to the Lafayette Modento scheduler. All three current appointment types produced real availability through both the website and Google-origin routes; no appointment was submitted.",
       "evidenceLinks": []
     }
   ]
