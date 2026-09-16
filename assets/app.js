@@ -73,7 +73,8 @@
    *   1. Did the website scheduler and the Google booking link load
    *      (and land on the right location)?
    *   2. For every appointment type that was clicked into, did it show
-   *      real, bookable availability?
+   *      real, bookable availability? Appointment-level misses are shown
+   *      as a Warning; they do not mean the scheduler itself failed.
    *
    * The location registry's `expectedAppointmentTypes` list is kept as
    * reference metadata only — it is intentionally NOT compared against
@@ -91,11 +92,15 @@
       entry.googleSchedulerStatus === "WrongLocation" ||
       entry.googleSchedulerStatus === "NoBookingLink";
 
+    // Reserve Failed for an unusable, incorrect, or missing scheduler link.
+    // A scheduler can load correctly while a particular appointment type
+    // has no times. Keep that evidence, but surface it as Warning so the
+    // location is not incorrectly described as a broken scheduler.
     if (websiteBad || googleBad) return "Failed";
-    if (availIssues && availIssues.length > 0) return "Failed";
 
+    var hasAvailabilityIssue = availIssues && availIssues.length > 0;
     var hasMinorLinkNote = Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0;
-    if (hasMinorLinkNote) return "Warning";
+    if (hasAvailabilityIssue || hasMinorLinkNote) return "Warning";
 
     return "Passed";
   }
@@ -164,6 +169,9 @@
       return parts.length ? parts.join("; ") : "Audit failed.";
     }
     if (status === "Warning") {
+      if (view.latest.availIssues && view.latest.availIssues.length) {
+        parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " with no availability observed");
+      }
       if (entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length) parts.push(entry.brokenOrIncorrectLinks.length + " secondary link note" + (entry.brokenOrIncorrectLinks.length > 1 ? "s" : ""));
       return parts.length ? parts.join("; ") : "Minor issue flagged for review.";
     }
