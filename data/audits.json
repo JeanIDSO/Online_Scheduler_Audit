@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-16T16:45:46.060Z",
-  "updatedBy": "Claude Cowork Weekly Audit",
+  "updatedAt": "2026-09-16T18:32:12Z",
+  "updatedBy": "Codex Google Scheduler Retry",
   "practices": [
     {
       "id": "lakewood-family-dental",
@@ -88,11 +88,11 @@
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
       "expectedAppointmentTypes": [
-        "Invisalign Consultation",
-        "Dental Consultation",
+        "Invisalign Consult",
+        "Denture Consultation",
         "Emergency Exam",
         "Existing Patient Cleaning",
-        "New Patient Exam and Cleaning"
+        "New Patient Exam & Cleaning"
       ]
     },
     {
@@ -104,7 +104,7 @@
       "expectedAppointmentTypes": [
         "Invisalign Consultation",
         "Limited/Emergency Exam",
-        "Existing Patient Cleaning",
+        "Existing Patient Exam and Cleaning",
         "New Patient Exam and Cleaning"
       ]
     },
@@ -137,12 +137,10 @@
       "name": "Lakewood Lafayette",
       "practiceId": "lakewood-family-dental",
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
-      "googleMapsUrl": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+      "googleMapsUrl": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
       "expectedAppointmentTypes": [
-        "Existing Patient Child (12 - Below)",
-        "New Patient Exam & Cleaning (12 - Below)",
         "Existing Patient Exam & Cleaning",
-        "New Patient Adult (Ages 13+)",
+        "New Patient Exam & Cleaning",
         "Emergency Exam"
       ]
     },
@@ -167,6 +165,7 @@
       "googleMapsUrl": "https://maps.app.goo.gl/cJfrEUhY3nZmWBpS9",
       "expectedAppointmentTypes": [
         "Invisalign Consult",
+        "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ]
@@ -269,7 +268,12 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-el-paso-robert-wynn/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/kZVmUvUppiyEBBta7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "affordable-el-paso-tx-ave",
@@ -277,7 +281,12 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-el-paso-tx-ave/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/opyNk7itCUmYGvAY7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "affordable-socorro",
@@ -285,7 +294,13 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-socorro/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/QuF5jSuDrm1oWTn68",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "bethesda-executive",
@@ -293,7 +308,13 @@
       "practiceId": "bethesda-family-dentistry",
       "websiteUrl": "https://book.modento.io/bethesda-family-dentistry-executive/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/gfpfabbhF5hZ42216",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ]
     },
     {
       "id": "bethesda-fernwood",
@@ -301,7 +322,13 @@
       "practiceId": "bethesda-family-dentistry",
       "websiteUrl": "https://book.modento.io/bethesda-family-dentistry-fernwood/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/UZeixA4phqCVHEXq5",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ]
     },
     {
       "id": "double-oak-mountain",
@@ -309,7 +336,12 @@
       "practiceId": "double-oak-mountain-family-dentistry",
       "websiteUrl": "https://book.modento.io/double-oak-mountain-family-dentistry/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/jCSYJ64YSartnFR17",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Visit- New Patient",
+        "New Patient Exam & Cleaning",
+        "Emergency Visit- Existing Patient",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-sleepy-hollow",
@@ -317,7 +349,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/pro-dental-care-sleepy-hollow/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/kRm8rPUGq5gfe1xu6",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Doctor Consultation",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-south-elgin",
@@ -325,7 +362,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/c/7bfc2f016e4843a78d15136fb049e20e/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/A12pxWBEJZuP8AL26",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Consultation - Invisalign, Implants, Cosmetic",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-st-charles",
@@ -333,7 +375,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/c/d46e572df7c5446ea0c5346909150994/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/38hdna8J4t4S8orm9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Existing Patient Cleaning, Exam & X-rays",
+        "Emergency Exam & X-rays",
+        "Consultation - Invisalign, Implants, Cosmetic"
+      ]
     },
     {
       "id": "family-implant-stuart",
@@ -341,7 +388,12 @@
       "practiceId": "family-implant-dentistry-stuart",
       "websiteUrl": "https://book.modento.io/c/6eb2eaa94aae4d0b93a7d6caacf51e44/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ASSYPhLZwgUcjSPM7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Implant/Cosmetic Consultation",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "family-dentistry-boynton-beach",
@@ -349,7 +401,12 @@
       "practiceId": "family-dentistry-boynton-beach",
       "websiteUrl": "https://book.modento.io/premier-dentistry-of-boynton-beach-2/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/SKqjZvwv9LiZFkJM9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "mid-missouri",
@@ -357,7 +414,11 @@
       "practiceId": "mid-missouri-dental-center",
       "websiteUrl": "https://book.modento.io/mid-missouri-dental-center/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/opVnhAY1QQkvWvoS8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Appointment (under 18)",
+        "New Patient Appointment (under 18)",
+        "Existing Patient Exam"
+      ]
     },
     {
       "id": "molar-city",
@@ -365,7 +426,14 @@
       "practiceId": "molar-city",
       "websiteUrl": "https://booking.adit.com/9d609b3f-a7bf-4e61-9b50-cc0db57a73ea",
       "googleMapsUrl": "https://maps.app.goo.gl/ELtKpR79c3v1AK6U9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Adult",
+        "New Patient Child (0-12y)",
+        "Emergency Appointment (NP)",
+        "Consult",
+        "BOTOX",
+        "Invisalign"
+      ]
     },
     {
       "id": "premier-palm-beach",
@@ -373,7 +441,12 @@
       "practiceId": "premier-dentistry",
       "websiteUrl": "https://book.modento.io/premier-dentistry-palm-beach/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uQDtie1vd4w4GRXw7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Exam",
+        "Doctor Consultation",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "redwood-family-dentistry",
@@ -381,7 +454,9 @@
       "practiceId": "redwood-family-dentistry",
       "websiteUrl": "https://book.modento.io/redwoodfamilydentistry/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/8NRqpXhoj4WTG6R99",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Appointment — Ages 12 and Older"
+      ]
     },
     {
       "id": "seaside-jacksonville",
@@ -389,7 +464,12 @@
       "practiceId": "seaside-dental-jacksonville",
       "websiteUrl": "https://book.modento.io/seaside-dental-of-jacksonville/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/9sGFsFzSzVZht87n9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation",
+        "Emergency Exam & Xrays",
+        "New Patient Exam, Xrays & Cleaning"
+      ]
     },
     {
       "id": "shemen-dental",
@@ -397,7 +477,19 @@
       "practiceId": "shemen-dental-group",
       "websiteUrl": "https://book.modento.io/shemen-dental-group-llp/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ybTQtbC4qVsWxfzp8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Returning Child Teeth Cleaning (14 years or younger)",
+        "Returning Patient Teeth Cleaning",
+        "Veneer Consultation",
+        "Wisdom Teeth Consultation",
+        "TMJ Consultation",
+        "Invisalign Consultation",
+        "Second Opinion",
+        "Implant Consultation",
+        "Emergency Exam",
+        "NEW Child Teeth Cleaning (14 years or younger)",
+        "NEW Patient Teeth Cleaning"
+      ]
     },
     {
       "id": "stonebriar-smile-design",
@@ -405,7 +497,13 @@
       "practiceId": "stonebriar-smile-design",
       "websiteUrl": "https://book.modento.io/c/9977e905c899428b93cd0d5712ee11ba/website/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/Hy5c5Kz9iqJf6KLC9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Invisalign Consult",
+        "EMSMILE CONSULT",
+        "Cosmetic Consultation",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "suwanee-family-dentistry",
@@ -413,7 +511,11 @@
       "practiceId": "suwanee-family-dentistry",
       "websiteUrl": "https://book.modento.io/suwaneefamilydentistry/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/L9GJFhsUhYXinyNp7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Exam & Teeth Cleaning",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "tulare-family-dentistry",
@@ -421,7 +523,9 @@
       "practiceId": "tulare-family-dentistry",
       "websiteUrl": "https://book.modento.io/tularefamilydentistry/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/HqNJ3A414367jFSr9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Appointment (Ages 12 and Older)"
+      ]
     },
     {
       "id": "united-smiles-colonial-heights",
@@ -429,7 +533,11 @@
       "practiceId": "united-smiles",
       "websiteUrl": "https://book.modento.io/united-smiles-colonial-heights/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ofm4Bu2gaa6Bu46S6",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "united-smiles-glen-allen",
@@ -437,7 +545,11 @@
       "practiceId": "united-smiles",
       "websiteUrl": "https://book.modento.io/c/b551eef5c87742139fd6c4edc14e8cf5/web/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/3dakA1j42nBLM2xo9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "young-family-american-fork",
@@ -445,7 +557,12 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-american-fork/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/F1TyMtL6Ygg3HbK86",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "young-family-orem",
@@ -453,7 +570,10 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-orem/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/jcSvWQX5sCV2afwL7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Exam",
+        "New Patient Exam & X-rays"
+      ]
     },
     {
       "id": "young-family-riverton",
@@ -461,7 +581,11 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-riverton/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/R11QYDHk3XrGoipB9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Xrays",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "young-family-saratoga-springs",
@@ -469,7 +593,11 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-saratoga-springs/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/hGxWV2VCrRAKhFoA8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient - Exam & Cleaning"
+      ]
     },
     {
       "id": "young-family-west-jordan",
@@ -477,7 +605,12 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-west-jordan/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ymEtwRunYpRFn1b76",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning (Adult)",
+        "Existing Patient Exam & Cleaning (Child)",
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ]
     }
   ],
   "auditHistory": [
@@ -2481,6 +2614,2417 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "Correction to the prior entry: this location's Google Business Profile listing has no distinct Reserve-with-Google booking widget — its \"Book online\" link points to the exact same page as the public website scheduler (book.modento.io/dental-team-of-plantation/reason-for-visit). The prior entry recorded a fifth Google appointment type, \"New Patient Exam, X-Rays & Cleaning\", marked as having no availability; that type does not actually exist on this page — only the same 4 types the website offers. That was a data error, not a genuine availability problem. Re-checked directly: both legs show the same 4 appointment types, each with real online availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "lakewood-lafayette__2026-09-16T18:00:18Z",
+      "locationId": "lakewood-lafayette",
+      "checkedAt": "2026-09-16T18:00:18Z",
+      "auditedBy": "Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Corrected the stored Google Maps listing, which previously opened the Anderson office. The verified Lafayette listing at 2 Executive Dr routes to the Lafayette Modento scheduler. All three current appointment types produced real availability through both the website and Google-origin routes; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "affordable-el-paso-robert-wynn__2026-09-16T17:32:23Z",
+      "locationId": "affordable-el-paso-robert-wynn",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "Emergency Consult",
+        "New Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Whitening Service",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Adult Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Child Hygiene Recall",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "affordable-el-paso-tx-ave__2026-09-16T17:32:23Z",
+      "locationId": "affordable-el-paso-tx-ave",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Broken",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Adult Hygiene Recall",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Child Hygiene Recall",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Adult Hygiene Recall",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Child Hygiene Recall",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google-origin scheduler exceeded the 30-second failure threshold (30.031 seconds).",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "affordable-socorro__2026-09-16T17:32:23Z",
+      "locationId": "affordable-socorro",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Whitening Service",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Adult Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Child Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Adult Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Child Hygiene Recall",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "bethesda-executive__2026-09-16T17:32:23Z",
+      "locationId": "bethesda-executive",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "bethesda-fernwood__2026-09-16T17:32:23Z",
+      "locationId": "bethesda-fernwood",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "double-oak-mountain__2026-09-16T17:32:23Z",
+      "locationId": "double-oak-mountain",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Visit- New Patient",
+        "New Patient Exam & Cleaning",
+        "Emergency Visit- Existing Patient",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Emergency Visit- New Patient",
+        "New Patient Exam & Cleaning",
+        "Emergency Visit- Existing Patient",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Visit- New Patient",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Visit- Existing Patient",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Visit- New Patient",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Visit- Existing Patient",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "envision-sleepy-hollow__2026-09-16T17:32:23Z",
+      "locationId": "envision-sleepy-hollow",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Doctor Consultation",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Doctor Consultation",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "envision-south-elgin__2026-09-16T17:32:23Z",
+      "locationId": "envision-south-elgin",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Consultation - Invisalign, Implants, Cosmetic",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Consultation - Invisalign, Implants, Cosmetic",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "envision-st-charles__2026-09-16T17:32:23Z",
+      "locationId": "envision-st-charles",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Existing Patient Cleaning, Exam & X-rays",
+        "Emergency Exam & X-rays",
+        "Consultation - Invisalign, Implants, Cosmetic"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Emergency Exam & X-rays",
+        "Consultation - Invisalign, Implants, Cosmetic"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning, Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website and Google-origin findings transcribed from the completed live audit checkpoint; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "family-implant-stuart__2026-09-16T17:32:23Z",
+      "locationId": "family-implant-stuart",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Implant/Cosmetic Consultation",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Implant/Cosmetic Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "family-dentistry-boynton-beach__2026-09-16T17:32:23Z",
+      "locationId": "family-dentistry-boynton-beach",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "mid-missouri__2026-09-16T17:32:23Z",
+      "locationId": "mid-missouri",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Appointment (under 18)",
+        "New Patient Appointment (under 18)",
+        "Existing Patient Exam"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Appointment (under 18)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Appointment (under 18)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "molar-city__2026-09-16T17:32:23Z",
+      "locationId": "molar-city",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Adult",
+        "New Patient Child (0-12y)",
+        "Emergency Appointment (NP)",
+        "Consult",
+        "BOTOX",
+        "Invisalign"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Adult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Child (0-12y)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Appointment (NP)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "BOTOX",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "premier-palm-beach__2026-09-16T17:32:23Z",
+      "locationId": "premier-palm-beach",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam",
+        "Doctor Consultation",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "redwood-family-dentistry__2026-09-16T17:32:23Z",
+      "locationId": "redwood-family-dentistry",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment — Ages 12 and Older"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment — Ages 12 and Older",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "seaside-jacksonville__2026-09-16T17:32:23Z",
+      "locationId": "seaside-jacksonville",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation",
+        "Emergency Exam & Xrays",
+        "New Patient Exam, Xrays & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam & Xrays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam, Xrays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "shemen-dental__2026-09-16T17:32:23Z",
+      "locationId": "shemen-dental",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Returning Child Teeth Cleaning (14 years or younger)",
+        "Returning Patient Teeth Cleaning",
+        "Veneer Consultation",
+        "Wisdom Teeth Consultation",
+        "TMJ Consultation",
+        "Invisalign Consultation",
+        "Second Opinion",
+        "Implant Consultation",
+        "Emergency Exam",
+        "NEW Child Teeth Cleaning (14 years or younger)",
+        "NEW Patient Teeth Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Returning Child Teeth Cleaning (14 years or younger)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Returning Patient Teeth Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Veneer Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Wisdom Teeth Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "TMJ Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Second Opinion",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Implant Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "NEW Child Teeth Cleaning (14 years or younger)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "NEW Patient Teeth Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "stonebriar-smile-design__2026-09-16T17:32:23Z",
+      "locationId": "stonebriar-smile-design",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Consult",
+        "Invisalign Consult",
+        "EMSMILE CONSULT",
+        "Cosmetic Consultation",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "EMSMILE CONSULT",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Cosmetic Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "suwanee-family-dentistry__2026-09-16T17:32:23Z",
+      "locationId": "suwanee-family-dentistry",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Consult",
+        "Exam & Teeth Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Exam & Teeth Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "tulare-family-dentistry__2026-09-16T17:32:23Z",
+      "locationId": "tulare-family-dentistry",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment (Ages 12 and Older)"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment (Ages 12 and Older)",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "united-smiles-colonial-heights__2026-09-16T17:32:23Z",
+      "locationId": "united-smiles-colonial-heights",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "united-smiles-glen-allen__2026-09-16T17:32:23Z",
+      "locationId": "united-smiles-glen-allen",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-american-fork__2026-09-16T17:32:23Z",
+      "locationId": "young-family-american-fork",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-orem__2026-09-16T17:32:23Z",
+      "locationId": "young-family-orem",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam",
+        "New Patient Exam & X-rays"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-riverton__2026-09-16T17:32:23Z",
+      "locationId": "young-family-riverton",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Xrays",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Xrays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-saratoga-springs__2026-09-16T17:32:23Z",
+      "locationId": "young-family-saratoga-springs",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient - Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient - Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-west-jordan__2026-09-16T17:32:23Z",
+      "locationId": "young-family-west-jordan",
+      "checkedAt": "2026-09-16T17:32:23Z",
+      "auditedBy": "Claude/Codex Scheduler Audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning (Adult)",
+        "Existing Patient Exam & Cleaning (Child)",
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Adult)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Child)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient - Exam & X-rays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google Maps booking route still requires a complete appointment-type availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website appointment types and availability were completed. Google-route testing was not complete, so this entry is intentionally marked for manual review rather than presented as a full pass/fail audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "bethesda-executive__2026-09-16T18:32:12Z",
+      "locationId": "bethesda-executive",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Emergency Visit",
+        "Existing Patient Exam & Cleaning",
+        "Consultation with Doctor"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "family-implant-stuart__2026-09-16T18:32:12Z",
+      "locationId": "family-implant-stuart",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Implant/Cosmetic Consultation",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Implant/Cosmetic Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Implant/Cosmetic Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Implant/Cosmetic Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "family-dentistry-boynton-beach__2026-09-16T18:32:12Z",
+      "locationId": "family-dentistry-boynton-beach",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "mid-missouri__2026-09-16T18:32:12Z",
+      "locationId": "mid-missouri",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Appointment (under 18)",
+        "New Patient Appointment (under 18)",
+        "Existing Patient Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Appointment (under 18)",
+        "Emergency Appointment (under 18)",
+        "Existing Patient Exam"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Appointment (under 18)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Appointment (under 18)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment (under 18)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Appointment (under 18)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "premier-palm-beach__2026-09-16T18:32:12Z",
+      "locationId": "premier-palm-beach",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam",
+        "Doctor Consultation",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "Doctor Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "seaside-jacksonville__2026-09-16T18:32:12Z",
+      "locationId": "seaside-jacksonville",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation",
+        "Emergency Exam & Xrays",
+        "New Patient Exam, Xrays & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam, Xrays & Cleaning",
+        "Emergency Exam & Xrays",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam & Xrays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam, Xrays & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, Xrays & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam & Xrays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "stonebriar-smile-design__2026-09-16T18:32:12Z",
+      "locationId": "stonebriar-smile-design",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Consult",
+        "Invisalign Consult",
+        "EMSMILE CONSULT",
+        "Cosmetic Consultation",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "EMSMILE CONSULT",
+        "Invisalign Consult",
+        "New Patient Exam & Cleaning",
+        "Child Recare",
+        "Emergency Consult",
+        "Adult Recare"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "EMSMILE CONSULT",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Cosmetic Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "EMSMILE CONSULT",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Child Recare",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Adult Recare",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "suwanee-family-dentistry__2026-09-16T18:32:12Z",
+      "locationId": "suwanee-family-dentistry",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Consult",
+        "Exam & Teeth Cleaning",
+        "New Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Exam & Teeth Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Consult"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Exam & Teeth Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Exam & Teeth Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "united-smiles-colonial-heights__2026-09-16T18:32:12Z",
+      "locationId": "united-smiles-colonial-heights",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "united-smiles-glen-allen__2026-09-16T18:32:12Z",
+      "locationId": "united-smiles-glen-allen",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-american-fork__2026-09-16T18:32:12Z",
+      "locationId": "young-family-american-fork",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning & Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-saratoga-springs__2026-09-16T18:32:12Z",
+      "locationId": "young-family-saratoga-springs",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient - Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient - Exam & Cleaning"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient - Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Existing Patient - Exam & Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-west-jordan__2026-09-16T18:32:12Z",
+      "locationId": "young-family-west-jordan",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "Working",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning (Adult)",
+        "Existing Patient Exam & Cleaning (Child)",
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Adult)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Child)",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "New Patient - Exam & X-rays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient - Exam & X-rays",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        }
+      ],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google Maps Book online route was retried successfully. Every appointment type displayed through Google produced real appointment availability; no appointment was submitted.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "molar-city__2026-09-16T18:32:12Z",
+      "locationId": "molar-city",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NoBookingLink",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Adult",
+        "New Patient Child (0-12y)",
+        "Emergency Appointment (NP)",
+        "Consult",
+        "BOTOX",
+        "Invisalign"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Adult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Child (0-12y)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Appointment (NP)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Consult",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "BOTOX",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Invisalign",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "The Google Maps listing was rechecked and currently has no Book online button.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "redwood-family-dentistry__2026-09-16T18:32:12Z",
+      "locationId": "redwood-family-dentistry",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NoBookingLink",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment — Ages 12 and Older"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment — Ages 12 and Older",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "The Google Maps listing was rechecked and currently has no Book online button.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "tulare-family-dentistry__2026-09-16T18:32:12Z",
+      "locationId": "tulare-family-dentistry",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NoBookingLink",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment (Ages 12 and Older)"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment (Ages 12 and Older)",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "The Google Maps listing was rechecked and currently has no Book online button.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "shemen-dental__2026-09-16T18:32:12Z",
+      "locationId": "shemen-dental",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Returning Child Teeth Cleaning (14 years or younger)",
+        "Returning Patient Teeth Cleaning",
+        "Veneer Consultation",
+        "Wisdom Teeth Consultation",
+        "TMJ Consultation",
+        "Invisalign Consultation",
+        "Second Opinion",
+        "Implant Consultation",
+        "Emergency Exam",
+        "NEW Child Teeth Cleaning (14 years or younger)",
+        "NEW Patient Teeth Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Returning Child Teeth Cleaning (14 years or younger)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Returning Patient Teeth Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Veneer Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Wisdom Teeth Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "TMJ Consultation",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Second Opinion",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Implant Consultation",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "NEW Child Teeth Cleaning (14 years or younger)",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "NEW Patient Teeth Cleaning",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google appointment menu rendered, but repeated attempts did not reliably complete every availability check.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google appointment menu rendered, but repeated attempts did not reliably complete every availability check.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-orem__2026-09-16T18:32:12Z",
+      "locationId": "young-family-orem",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam",
+        "New Patient Exam & X-rays"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true
+        },
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-riverton__2026-09-16T18:32:12Z",
+      "locationId": "young-family-riverton",
+      "checkedAt": "2026-09-16T18:32:12Z",
+      "auditedBy": "Codex Google Scheduler Retry",
+      "auditSource": "Website + Google",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Xrays",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Xrays",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": false,
+          "issue": "No bookable appointment availability was shown"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": true,
+      "manualReviewReason": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Google route requires a patient-details-first flow; the retry did not reliably complete the full availability audit.",
       "evidenceLinks": []
     }
   ]

@@ -85,11 +85,11 @@
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
       "expectedAppointmentTypes": [
-        "Invisalign Consultation",
-        "Dental Consultation",
+        "Invisalign Consult",
+        "Denture Consultation",
         "Emergency Exam",
         "Existing Patient Cleaning",
-        "New Patient Exam and Cleaning"
+        "New Patient Exam & Cleaning"
       ]
     },
     {
@@ -101,7 +101,7 @@
       "expectedAppointmentTypes": [
         "Invisalign Consultation",
         "Limited/Emergency Exam",
-        "Existing Patient Cleaning",
+        "Existing Patient Exam and Cleaning",
         "New Patient Exam and Cleaning"
       ]
     },
@@ -134,12 +134,10 @@
       "name": "Lakewood Lafayette",
       "practiceId": "lakewood-family-dental",
       "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
-      "googleMapsUrl": "https://maps.app.goo.gl/ULBYUSSWUHaBcfCT9",
+      "googleMapsUrl": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
       "expectedAppointmentTypes": [
-        "Existing Patient Child (12 - Below)",
-        "New Patient Exam & Cleaning (12 - Below)",
         "Existing Patient Exam & Cleaning",
-        "New Patient Adult (Ages 13+)",
+        "New Patient Exam & Cleaning",
         "Emergency Exam"
       ]
     },
@@ -164,6 +162,7 @@
       "googleMapsUrl": "https://maps.app.goo.gl/cJfrEUhY3nZmWBpS9",
       "expectedAppointmentTypes": [
         "Invisalign Consult",
+        "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ]
@@ -266,7 +265,12 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-el-paso-robert-wynn/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/kZVmUvUppiyEBBta7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "affordable-el-paso-tx-ave",
@@ -274,7 +278,12 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-el-paso-tx-ave/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/opyNk7itCUmYGvAY7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "affordable-socorro",
@@ -282,7 +291,13 @@
       "practiceId": "affordable-dental",
       "websiteUrl": "https://book.modento.io/affordable-dental-socorro/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/QuF5jSuDrm1oWTn68",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Whitening Service",
+        "Emergency Consult",
+        "Adult Hygiene Recall",
+        "Child Hygiene Recall",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "bethesda-executive",
@@ -290,7 +305,13 @@
       "practiceId": "bethesda-family-dentistry",
       "websiteUrl": "https://book.modento.io/bethesda-family-dentistry-executive/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/gfpfabbhF5hZ42216",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ]
     },
     {
       "id": "bethesda-fernwood",
@@ -298,7 +319,13 @@
       "practiceId": "bethesda-family-dentistry",
       "websiteUrl": "https://book.modento.io/bethesda-family-dentistry-fernwood/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/UZeixA4phqCVHEXq5",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ]
     },
     {
       "id": "double-oak-mountain",
@@ -306,7 +333,12 @@
       "practiceId": "double-oak-mountain-family-dentistry",
       "websiteUrl": "https://book.modento.io/double-oak-mountain-family-dentistry/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/jCSYJ64YSartnFR17",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Visit- New Patient",
+        "New Patient Exam & Cleaning",
+        "Emergency Visit- Existing Patient",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-sleepy-hollow",
@@ -314,7 +346,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/pro-dental-care-sleepy-hollow/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/kRm8rPUGq5gfe1xu6",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Doctor Consultation",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-south-elgin",
@@ -322,7 +359,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/c/7bfc2f016e4843a78d15136fb049e20e/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/A12pxWBEJZuP8AL26",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Consultation - Invisalign, Implants, Cosmetic",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "envision-st-charles",
@@ -330,7 +372,12 @@
       "practiceId": "envision-a-smile",
       "websiteUrl": "https://book.modento.io/c/d46e572df7c5446ea0c5346909150994/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/38hdna8J4t4S8orm9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Existing Patient Cleaning, Exam & X-rays",
+        "Emergency Exam & X-rays",
+        "Consultation - Invisalign, Implants, Cosmetic"
+      ]
     },
     {
       "id": "family-implant-stuart",
@@ -338,7 +385,12 @@
       "practiceId": "family-implant-dentistry-stuart",
       "websiteUrl": "https://book.modento.io/c/6eb2eaa94aae4d0b93a7d6caacf51e44/website/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ASSYPhLZwgUcjSPM7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Implant/Cosmetic Consultation",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "family-dentistry-boynton-beach",
@@ -346,7 +398,12 @@
       "practiceId": "family-dentistry-boynton-beach",
       "websiteUrl": "https://book.modento.io/premier-dentistry-of-boynton-beach-2/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/SKqjZvwv9LiZFkJM9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "mid-missouri",
@@ -354,7 +411,11 @@
       "practiceId": "mid-missouri-dental-center",
       "websiteUrl": "https://book.modento.io/mid-missouri-dental-center/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/opVnhAY1QQkvWvoS8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Appointment (under 18)",
+        "New Patient Appointment (under 18)",
+        "Existing Patient Exam"
+      ]
     },
     {
       "id": "molar-city",
@@ -362,7 +423,14 @@
       "practiceId": "molar-city",
       "websiteUrl": "https://booking.adit.com/9d609b3f-a7bf-4e61-9b50-cc0db57a73ea",
       "googleMapsUrl": "https://maps.app.goo.gl/ELtKpR79c3v1AK6U9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Adult",
+        "New Patient Child (0-12y)",
+        "Emergency Appointment (NP)",
+        "Consult",
+        "BOTOX",
+        "Invisalign"
+      ]
     },
     {
       "id": "premier-palm-beach",
@@ -370,7 +438,12 @@
       "practiceId": "premier-dentistry",
       "websiteUrl": "https://book.modento.io/premier-dentistry-palm-beach/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/uQDtie1vd4w4GRXw7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Exam",
+        "Doctor Consultation",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "redwood-family-dentistry",
@@ -378,7 +451,9 @@
       "practiceId": "redwood-family-dentistry",
       "websiteUrl": "https://book.modento.io/redwoodfamilydentistry/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/8NRqpXhoj4WTG6R99",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Appointment — Ages 12 and Older"
+      ]
     },
     {
       "id": "seaside-jacksonville",
@@ -386,7 +461,12 @@
       "practiceId": "seaside-dental-jacksonville",
       "websiteUrl": "https://book.modento.io/seaside-dental-of-jacksonville/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/9sGFsFzSzVZht87n9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation",
+        "Emergency Exam & Xrays",
+        "New Patient Exam, Xrays & Cleaning"
+      ]
     },
     {
       "id": "shemen-dental",
@@ -394,7 +474,19 @@
       "practiceId": "shemen-dental-group",
       "websiteUrl": "https://book.modento.io/shemen-dental-group-llp/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ybTQtbC4qVsWxfzp8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Returning Child Teeth Cleaning (14 years or younger)",
+        "Returning Patient Teeth Cleaning",
+        "Veneer Consultation",
+        "Wisdom Teeth Consultation",
+        "TMJ Consultation",
+        "Invisalign Consultation",
+        "Second Opinion",
+        "Implant Consultation",
+        "Emergency Exam",
+        "NEW Child Teeth Cleaning (14 years or younger)",
+        "NEW Patient Teeth Cleaning"
+      ]
     },
     {
       "id": "stonebriar-smile-design",
@@ -402,7 +494,13 @@
       "practiceId": "stonebriar-smile-design",
       "websiteUrl": "https://book.modento.io/c/9977e905c899428b93cd0d5712ee11ba/website/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/Hy5c5Kz9iqJf6KLC9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Invisalign Consult",
+        "EMSMILE CONSULT",
+        "Cosmetic Consultation",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "suwanee-family-dentistry",
@@ -410,7 +508,11 @@
       "practiceId": "suwanee-family-dentistry",
       "websiteUrl": "https://book.modento.io/suwaneefamilydentistry/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/L9GJFhsUhYXinyNp7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Consult",
+        "Exam & Teeth Cleaning",
+        "New Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "tulare-family-dentistry",
@@ -418,7 +520,9 @@
       "practiceId": "tulare-family-dentistry",
       "websiteUrl": "https://book.modento.io/tularefamilydentistry/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/HqNJ3A414367jFSr9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Appointment (Ages 12 and Older)"
+      ]
     },
     {
       "id": "united-smiles-colonial-heights",
@@ -426,7 +530,11 @@
       "practiceId": "united-smiles",
       "websiteUrl": "https://book.modento.io/united-smiles-colonial-heights/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ofm4Bu2gaa6Bu46S6",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "united-smiles-glen-allen",
@@ -434,7 +542,11 @@
       "practiceId": "united-smiles",
       "websiteUrl": "https://book.modento.io/c/b551eef5c87742139fd6c4edc14e8cf5/web/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/3dakA1j42nBLM2xo9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "young-family-american-fork",
@@ -442,7 +554,12 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-american-fork/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/F1TyMtL6Ygg3HbK86",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient Cleaning & Exam",
+        "Doctor Consultation"
+      ]
     },
     {
       "id": "young-family-orem",
@@ -450,7 +567,10 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-orem/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/jcSvWQX5sCV2afwL7",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Emergency Exam",
+        "New Patient Exam & X-rays"
+      ]
     },
     {
       "id": "young-family-riverton",
@@ -458,7 +578,11 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-riverton/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/R11QYDHk3XrGoipB9",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & Xrays",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ]
     },
     {
       "id": "young-family-saratoga-springs",
@@ -466,7 +590,11 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-saratoga-springs/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/hGxWV2VCrRAKhFoA8",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "New Patient Exam & X-rays",
+        "Emergency Exam",
+        "Existing Patient - Exam & Cleaning"
+      ]
     },
     {
       "id": "young-family-west-jordan",
@@ -474,7 +602,12 @@
       "practiceId": "young-family-dental",
       "websiteUrl": "https://book.modento.io/young-family-dental-west-jordan/reason-for-visit",
       "googleMapsUrl": "https://maps.app.goo.gl/ymEtwRunYpRFn1b76",
-      "expectedAppointmentTypes": []
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning (Adult)",
+        "Existing Patient Exam & Cleaning (Child)",
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ]
     }
   ]
 }
