@@ -8,7 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css?v=20260916-reinvention-1">
+<link rel="stylesheet" href="assets/styles.css?v=20260918-ops-2">
+<link rel="stylesheet" href="assets/ops-refresh.css?v=20260918-ops-2">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to dashboard</a>
@@ -43,9 +44,9 @@
   <section class="hero-shell">
     <div class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">Digital scheduling operations</span>
-        <h1>Know exactly where patients can—and can’t—book.</h1>
-        <p>One command center for every website scheduler, Google booking path, regional office, and appointment type.</p>
+        <span class="eyebrow">Appointment access monitor</span>
+        <h1>A faster way to find booking problems.</h1>
+        <p>Search every practice and regional office, see the exact appointment types tested, and focus only on routes that truly block patients.</p>
         <div class="hero-actions">
           <a class="primary-action" href="#attention-section">Review active issues</a>
           <a class="secondary-action" href="#portfolio">Browse practices</a>
@@ -55,7 +56,7 @@
         <span class="standard-label">A complete audit checks</span>
         <ol>
           <li><b>01</b><span>Website scheduler loads within 30 seconds</span></li>
-          <li><b>02</b><span>Google booking reaches the correct office</span></li>
+          <li><b>02</b><span>Google booking page loads within 30 seconds</span></li>
           <li><b>03</b><span>Every appointment type displays real times</span></li>
         </ol>
         <p>No real patient data is entered or stored.</p>
@@ -127,6 +128,14 @@
       </div>
 
       <div class="filter-console">
+        <div class="filter-field filter-search-field">
+          <label for="filter-search">Search everything</label>
+          <div class="search-control">
+            <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="filter-search" type="search" placeholder="Search practice, location, appointment type, or audit note…" autocomplete="off">
+            <kbd>/</kbd>
+          </div>
+        </div>
         <div class="filter-field">
           <label for="filter-practice">Practice</label>
           <select id="filter-practice"><option value="">All practices</option></select>

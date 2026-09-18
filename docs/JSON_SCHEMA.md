@@ -93,12 +93,12 @@ registry's `expectedAppointmentTypes` list:
 
 1. **Manual Review** — `manualReviewNeeded` is true, or `googleSchedulerStatus`
    is `Ambiguous`, or either scheduler status is `NotChecked`.
-2. **Failed** — otherwise, if either scheduler is `Broken`/`WrongLocation`,
-   Google has `NoBookingLink`, or any entry in `websiteAppointmentAvailability` /
+2. **Failed** — otherwise, only when either scheduler is `Broken` (including a
+   30-second load timeout), or any entry in `websiteAppointmentAvailability` /
    `googleAppointmentAvailability` has `availabilityLoaded: false` (an
    appointment type that was clicked into but showed no real availability).
-3. **Warning** — otherwise, if there are any noted `brokenOrIncorrectLinks`
-   (no functional problem, but something to review).
+3. **Warning** — otherwise, when `WrongLocation`, `NoBookingLink`, or a noted
+   `brokenOrIncorrectLinks` item needs attention without blocking availability.
 4. **Passed** — otherwise.
 5. **Not Yet Audited** — a location with no entries in `auditHistory` at all.
 
