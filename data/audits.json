@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-18T23:45:00.000Z",
+  "updatedAt": "2026-09-18T23:59:00.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -5224,9 +5224,9 @@
       "locationId": "lakewood-anderson",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Invisalign Consult",
         "Denture Consultation",
@@ -5234,681 +5234,212 @@
         "Existing Patient Cleaning",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning",
-        "Denture Consultation",
-        "Invisalign Consult"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Denture Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Denture Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "lakewood-carmel__2026-09-18T23:45:00.000Z",
       "locationId": "lakewood-carmel",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Invisalign Consultation",
         "Limited/Emergency Exam",
         "Existing Patient Exam and Cleaning",
         "New Patient Exam and Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and Cleaning",
-        "Limited/Emergency Exam",
-        "Existing Patient Exam and Cleaning",
-        "Invisalign Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Invisalign Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Limited/Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam and Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam and Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Limited/Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam and Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "lakewood-fort-wayne__2026-09-18T23:45:00.000Z",
       "locationId": "lakewood-fort-wayne",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning",
         "New Patient Exam & Cleaning",
         "Emergency Exam"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "lakewood-kokomo__2026-09-18T23:45:00.000Z",
       "locationId": "lakewood-kokomo",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning",
         "Emergency Exam",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "lakewood-lafayette__2026-09-18T23:45:00.000Z",
       "locationId": "lakewood-lafayette",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning",
         "New Patient Exam & Cleaning",
         "Emergency Exam"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning",
-        "Denture Consultation",
-        "Invisalign Consult"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Denture Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [
-        {
-          "url": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
-          "issue": "Google Book online currently opens the Anderson scheduler; informational under the current pass/fail rule."
-        }
-      ],
-      "notes": "Independent live audit on September 18, 2026. The Google Book online action opened the Anderson scheduler. Under the current rule this is noted but does not fail the audit because the page loaded and every displayed appointment type showed availability.",
-      "evidenceLinks": []
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. The Google Book online action opened the Anderson scheduler. Under the current rule this is noted but does not fail the audit because the page loaded and every displayed appointment type showed availability. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "dental-team-abacoa__2026-09-18T23:45:00.000Z",
       "locationId": "dental-team-abacoa",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and X-Rays Only",
-        "Emergency Exam",
-        "Invisalign Consult"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-atlantic__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-atlantic",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Emergency Exam",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "Invisalign Consult",
-        "New Patient Exam and X-Rays Only",
-        "New Patient Exam, X-Rays & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-bayview__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-bayview",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam, X-Rays & Cleaning",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and X-Rays Only",
-        "Emergency Exam",
-        "Existing Patient Cleaning",
-        "Invisalign Consult",
-        "New Patient Exam, X-Rays & Cleaning"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-coconut-creek__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-coconut-creek",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and X-Rays Only",
-        "Emergency Exam",
-        "Invisalign Consult"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-delray-east__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-delray-east",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and X-Rays Only",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "Invisalign Consult"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-miami__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-miami",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
-      "observedWebsiteAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam and X-Rays Only"
-      ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam and X-Rays Only",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "Invisalign Consult",
-        "New Patient Exam, X-Rays & Cleaning"
-      ],
-      "websiteAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
-      "manualReviewNeeded": false,
-      "manualReviewReason": "",
-      "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
-    },
-    {
-      "auditId": "dental-team-plantation__2026-09-18T23:45:00.000Z",
-      "locationId": "dental-team-plantation",
-      "checkedAt": "2026-09-18T23:45:00.000Z",
-      "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
-      "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "NoBookingLink",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Invisalign Consult",
         "Existing Patient Cleaning",
@@ -5919,294 +5450,493 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Google Maps loaded, but no Book online action was present; this is shown as a warning, not a failure.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-atlantic__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-atlantic",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-bayview__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-bayview",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam, X-Rays & Cleaning",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-coconut-creek__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-coconut-creek",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-delray-east__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-delray-east",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-miami__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-miami",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
+    },
+    {
+      "auditId": "dental-team-plantation__2026-09-18T23:45:00.000Z",
+      "locationId": "dental-team-plantation",
+      "checkedAt": "2026-09-18T23:45:00.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consult",
+        "Existing Patient Cleaning",
+        "Emergency Exam",
+        "New Patient Exam and X-Rays Only"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and X-Rays Only",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "dental-team-delray-west__2026-09-18T23:45:00.000Z",
       "locationId": "dental-team-delray-west",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Invisalign Consult",
         "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam, X-Rays & Cleaning",
-        "New Patient Exam and X-Rays Only"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "dental-team-west-palm-beach__2026-09-18T23:45:00.000Z",
       "locationId": "dental-team-west-palm-beach",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Invisalign Consult",
         "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam and X-Rays Only"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Invisalign Consult",
-        "Existing Patient Cleaning",
-        "Emergency Exam",
-        "New Patient Exam, X-Rays & Cleaning",
-        "New Patient Exam and X-Rays Only"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam, X-Rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam and X-Rays Only",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "affordable-el-paso-robert-wynn__2026-09-18T23:45:00.000Z",
       "locationId": "affordable-el-paso-robert-wynn",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Whitening Service",
         "Emergency Consult",
         "Hygiene Recall",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Hygiene Recall",
-        "Child Hygiene Recall",
-        "Emergency Consult",
-        "New Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Whitening Service",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Hygiene Recall",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Hygiene Recall",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Child Hygiene Recall",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the Google booking availability screen was observed for an extended wait."
-        },
-        {
-          "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Google booking had no visible times for: Child Hygiene Recall.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "affordable-el-paso-tx-ave__2026-09-18T23:45:00.000Z",
       "locationId": "affordable-el-paso-tx-ave",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Consult",
         "Adult Hygiene Recall",
         "Child Hygiene Recall",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Adult Hygiene Recall",
-        "Child Hygiene Recall",
-        "New Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Adult Hygiene Recall",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Child Hygiene Recall",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Adult Hygiene Recall",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the Google booking availability screen was observed for an extended wait."
-        },
-        {
-          "appointmentType": "Child Hygiene Recall",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the Google booking availability screen was observed for an extended wait."
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: Adult Hygiene Recall, Child Hygiene Recall. Google booking had no visible times for: Adult Hygiene Recall, Child Hygiene Recall.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "affordable-socorro__2026-09-18T23:45:00.000Z",
       "locationId": "affordable-socorro",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Whitening Service",
         "Emergency Consult",
@@ -6214,67 +5944,51 @@
         "Child Hygiene Recall",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Consult",
-        "Child Hygiene Recall",
-        "Adult Hygiene Recall"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Whitening Service",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Adult Hygiene Recall",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Child Hygiene Recall",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Child Hygiene Recall",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Adult Hygiene Recall",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: Whitening Service.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "bethesda-executive__2026-09-18T23:45:00.000Z",
       "locationId": "bethesda-executive",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam, X-rays & Cleaning",
         "Consultation with Doctor",
@@ -6282,76 +5996,55 @@
         "Existing Patient Exam & Cleaning",
         "Emergency Visit"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam, X-rays & Cleaning",
-        "$249 New Patient Special (exam, x-rays & cleaning)",
-        "Emergency Visit",
-        "Existing Patient Exam & Cleaning",
-        "Consultation with Doctor"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Consultation with Doctor",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Emergency Visit",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Visit",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Consultation with Doctor",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: New Patient Exam, X-rays & Cleaning, Consultation with Doctor, $249 New Patient Special (exam, x-rays & cleaning), Existing Patient Exam & Cleaning, Emergency Visit.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "bethesda-fernwood__2026-09-18T23:45:00.000Z",
       "locationId": "bethesda-fernwood",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam, X-rays & Cleaning",
         "Consultation with Doctor",
@@ -6359,495 +6052,364 @@
         "Existing Patient Exam & Cleaning",
         "Emergency Visit"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam, X-rays & Cleaning",
-        "Consultation with Doctor",
-        "$249 New Patient Special (exam, x-rays & cleaning)",
-        "Existing Patient Exam & Cleaning",
-        "Emergency Visit"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Consultation with Doctor",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Emergency Visit",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Consultation with Doctor",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Visit",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: New Patient Exam, X-rays & Cleaning, Consultation with Doctor, $249 New Patient Special (exam, x-rays & cleaning), Existing Patient Exam & Cleaning, Emergency Visit.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "double-oak-mountain__2026-09-18T23:45:00.000Z",
       "locationId": "double-oak-mountain",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Visit- New Patient",
         "New Patient Exam & Cleaning",
         "Emergency Visit- Existing Patient",
         "Existing Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Emergency Visit- New Patient",
-        "New Patient Exam & Cleaning",
-        "Emergency Visit- Existing Patient",
-        "Existing Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Visit- New Patient",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Visit- Existing Patient",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Emergency Visit- New Patient",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Visit- Existing Patient",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "envision-sleepy-hollow__2026-09-18T23:45:00.000Z",
       "locationId": "envision-sleepy-hollow",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Doctor Consultation",
         "Emergency Exam",
         "New Patient Exam & Cleaning",
         "Existing Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Doctor Consultation",
-        "Emergency Exam",
-        "New Patient Exam & Cleaning",
-        "Existing Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "envision-south-elgin__2026-09-18T23:45:00.000Z",
       "locationId": "envision-south-elgin",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Consultation - Invisalign, Implants, Cosmetic",
         "Emergency Exam",
         "Existing Patient Cleaning & Exam",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Consultation - Invisalign, Implants, Cosmetic",
-        "Emergency Exam",
-        "Existing Patient Cleaning & Exam",
-        "New Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "envision-st-charles__2026-09-18T23:45:00.000Z",
       "locationId": "envision-st-charles",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam, X-rays & Cleaning",
         "Existing Patient Cleaning, Exam & X-rays",
         "Emergency Exam & X-rays",
         "Consultation - Invisalign, Implants, Cosmetic"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam, X-rays & Cleaning",
-        "Emergency Exam & X-rays",
-        "Consultation - Invisalign, Implants, Cosmetic"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning, Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam, X-rays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam & X-rays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Consultation - Invisalign, Implants, Cosmetic",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "family-implant-stuart__2026-09-18T23:45:00.000Z",
       "locationId": "family-implant-stuart",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Implant/Cosmetic Consultation",
         "Existing Patient Cleaning",
         "Emergency Exam",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning",
-        "Implant/Cosmetic Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Implant/Cosmetic Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Implant/Cosmetic Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "family-dentistry-boynton-beach__2026-09-18T23:45:00.000Z",
       "locationId": "family-dentistry-boynton-beach",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & Cleaning",
         "Emergency Exam",
         "Existing Patient Cleaning & Exam",
         "Doctor Consultation"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning & Exam",
-        "Doctor Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "mid-missouri__2026-09-18T23:45:00.000Z",
       "locationId": "mid-missouri",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Appointment (under 18)",
         "New Patient Appointment (under 18)",
         "Existing Patient Exam"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Appointment (under 18)",
-        "Emergency Appointment (under 18)",
-        "Existing Patient Exam"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Appointment (under 18)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Appointment (under 18)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Appointment (under 18)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Appointment (under 18)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "molar-city__2026-09-18T23:45:00.000Z",
       "locationId": "molar-city",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "NoBookingLink",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Adult",
         "New Patient Child (0-12y)",
@@ -6860,106 +6422,96 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Adult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Child (0-12y)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Appointment (NP)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "BOTOX",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Invisalign",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Google Maps loaded, but no Book online action was present; this is shown as a warning, not a failure. Adit flow was tested independently; all six appointment types displayed times. No appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Adit flow was tested independently; all six appointment types displayed times. No appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "premier-palm-beach__2026-09-18T23:45:00.000Z",
       "locationId": "premier-palm-beach",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Exam",
         "Doctor Consultation",
         "Existing Patient Cleaning",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Emergency Exam",
-        "Existing Patient Cleaning",
-        "Doctor Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "redwood-family-dentistry__2026-09-18T23:45:00.000Z",
       "locationId": "redwood-family-dentistry",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "NoBookingLink",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Appointment - (Ages 12 and Older)"
       ],
@@ -6967,90 +6519,75 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Appointment - (Ages 12 and Older)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Google Maps loaded, but no Book online action was present; this is shown as a warning, not a failure. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "seaside-jacksonville__2026-09-18T23:45:00.000Z",
       "locationId": "seaside-jacksonville",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning",
         "Doctor Consultation",
         "Emergency Exam & Xrays",
         "New Patient Exam, Xrays & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam, Xrays & Cleaning",
-        "Emergency Exam & Xrays",
-        "Existing Patient Exam & Cleaning",
-        "Doctor Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Emergency Exam & Xrays",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "New Patient Exam, Xrays & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam, Xrays & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam & Xrays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: Existing Patient Exam & Cleaning, Doctor Consultation, Emergency Exam & Xrays, New Patient Exam, Xrays & Cleaning.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "shemen-dental__2026-09-18T23:45:00.000Z",
       "locationId": "shemen-dental",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Returning Child Teeth Cleaning (14 years or younger)",
         "Returning Patient Teeth Cleaning",
@@ -7064,125 +6601,80 @@
         "NEW Child Teeth Cleaning (14 years or younger)",
         "NEW Patient Teeth Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Emergency Exam",
-        "Implant Consultation",
-        "Second Opinion",
-        "Invisalign Consultation",
-        "TMJ Consultation",
-        "Wisdom Teeth Consultation",
-        "Veneer Consultation",
-        "Returning Patient Teeth Cleaning",
-        "Returning Child Teeth Cleaning (14 years or younger)",
-        "NEW Child Teeth Cleaning (14 years or younger)",
-        "NEW Patient Teeth Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Returning Child Teeth Cleaning (14 years or younger)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Returning Patient Teeth Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Veneer Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Wisdom Teeth Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "TMJ Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Invisalign Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Second Opinion",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Implant Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "NEW Child Teeth Cleaning (14 years or younger)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "NEW Patient Teeth Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Implant Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Second Opinion",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "TMJ Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Wisdom Teeth Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Veneer Consultation",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Returning Patient Teeth Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Returning Child Teeth Cleaning (14 years or younger)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "NEW Child Teeth Cleaning (14 years or younger)",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "NEW Patient Teeth Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "stonebriar-smile-design__2026-09-18T23:45:00.000Z",
       "locationId": "stonebriar-smile-design",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Consult",
         "Invisalign Consult",
@@ -7190,128 +6682,89 @@
         "Cosmetic Consultation",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "EMSMILE CONSULT",
-        "Invisalign Consult",
-        "New Patient Exam & Cleaning",
-        "Child Recare",
-        "Emergency Consult",
-        "Adult Recare"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "EMSMILE CONSULT",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Cosmetic Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "EMSMILE CONSULT",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Child Recare",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Adult Recare",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "suwanee-family-dentistry__2026-09-18T23:45:00.000Z",
       "locationId": "suwanee-family-dentistry",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Consult",
         "Exam & Teeth Cleaning",
         "New Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Exam & Teeth Cleaning",
-        "New Patient Exam & Cleaning",
-        "Emergency Consult"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Exam & Teeth Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Exam & Teeth Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Consult",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "tulare-family-dentistry__2026-09-18T23:45:00.000Z",
       "locationId": "tulare-family-dentistry",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "NoBookingLink",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Appointment (Ages 12 and Older)"
       ],
@@ -7319,368 +6772,300 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Appointment (Ages 12 and Older)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Google Maps loaded, but no Book online action was present; this is shown as a warning, not a failure. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "united-smiles-colonial-heights__2026-09-18T23:45:00.000Z",
       "locationId": "united-smiles-colonial-heights",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & Cleaning",
         "Emergency Exam",
         "Existing Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Existing Patient Exam & Cleaning",
-        "Emergency Exam",
-        "New Patient Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "united-smiles-glen-allen__2026-09-18T23:45:00.000Z",
       "locationId": "united-smiles-glen-allen",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & Cleaning",
         "Existing Patient Exam & Cleaning",
         "Doctor Consultation"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Cleaning",
-        "Existing Patient Exam & Cleaning",
-        "Doctor Consultation"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "young-family-american-fork__2026-09-18T23:45:00.000Z",
       "locationId": "young-family-american-fork",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & X-rays",
         "Emergency Exam",
         "Existing Patient Cleaning & Exam",
         "Doctor Consultation"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & X-rays",
-        "Emergency Exam",
-        "Existing Patient Cleaning & Exam"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Doctor Consultation",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient Cleaning & Exam",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "young-family-orem__2026-09-18T23:45:00.000Z",
       "locationId": "young-family-orem",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Exam",
         "New Patient Exam & X-rays"
       ],
-      "observedGoogleAppointmentTypes": [
-        "Emergency Exam"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "young-family-riverton__2026-09-18T23:45:00.000Z",
       "locationId": "young-family-riverton",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & Xrays",
         "Emergency Exam",
         "Existing Patient Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & Xrays",
-        "Emergency Exam"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & Xrays",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning",
-          "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "availabilityLoaded": null,
+          "issue": "The availability step loaded too slowly to verify reliably during this run; no failure was recorded.",
+          "verificationStatus": "SlowLoading"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & Xrays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: New Patient Exam & Xrays, Emergency Exam, Existing Patient Exam & Cleaning. Patient-first flow was tested with fictional Test Patient information; no appointment was booked.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Patient-first flow was tested with fictional Test Patient information; no appointment was booked. Website-only audit: every displayed appointment type was opened; delayed results are flagged Slow Loading instead of Failed.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Slow"
     },
     {
       "auditId": "young-family-saratoga-springs__2026-09-18T23:45:00.000Z",
       "locationId": "young-family-saratoga-springs",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Exam & X-rays",
         "Emergency Exam",
         "Existing Patient - Exam & Cleaning"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient Exam & X-rays",
-        "Emergency Exam",
-        "Existing Patient - Exam & Cleaning"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient - Exam & Cleaning",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Existing Patient - Exam & Cleaning",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Both booking routes loaded and every displayed appointment type tested showed at least one available time.",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. The website scheduler loaded and every displayed appointment type tested showed at least one available time. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     },
     {
       "auditId": "young-family-west-jordan__2026-09-18T23:45:00.000Z",
       "locationId": "young-family-west-jordan",
       "checkedAt": "2026-09-18T23:45:00.000Z",
       "auditedBy": "Codex live browser audit",
-      "auditSource": "Website + Google",
+      "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "googleSchedulerStatus": "Working",
+      "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning (Adult)",
         "Existing Patient Exam & Cleaning (Child)",
         "New Patient - Exam & X-rays",
         "Emergency Exam"
       ],
-      "observedGoogleAppointmentTypes": [
-        "New Patient - Exam & X-rays",
-        "Emergency Exam"
-      ],
+      "observedGoogleAppointmentTypes": [],
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Existing Patient Exam & Cleaning (Adult)",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning (Child)",
           "availabilityLoaded": false,
-          "issue": "No appointment times were displayed after the website availability screen was observed for an extended wait."
+          "issue": "The fully loaded availability screen explicitly reported that it could not find any available appointment slots online.",
+          "verificationStatus": "NoAvailability"
         },
         {
           "appointmentType": "New Patient - Exam & X-rays",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
-      "googleAppointmentAvailability": [
-        {
-          "appointmentType": "New Patient - Exam & X-rays",
-          "availabilityLoaded": true
-        },
-        {
-          "appointmentType": "Emergency Exam",
-          "availabilityLoaded": true
-        }
-      ],
+      "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Independent live audit on September 18, 2026. Website had no visible times for: Existing Patient Exam & Cleaning (Child).",
-      "evidenceLinks": []
+      "notes": "Independent website audit on September 18, 2026. Website-only audit: every displayed appointment type was opened and no Google booking check is included.",
+      "evidenceLinks": [],
+      "websiteLoadPerformance": "Normal"
     }
   ]
 }
