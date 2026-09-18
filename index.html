@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scheduler Command Center</title>
-<meta name="description" content="Live website and Google booking-flow audit dashboard for every managed dental practice and location.">
+<meta name="description" content="Live website scheduler audit dashboard for every managed dental practice and location.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -55,9 +55,9 @@
       <aside class="audit-standard">
         <span class="standard-label">A complete audit checks</span>
         <ol>
-          <li><b>01</b><span>Website scheduler loads within 30 seconds</span></li>
-          <li><b>02</b><span>Google booking page loads within 30 seconds</span></li>
-          <li><b>03</b><span>Every appointment type displays real times</span></li>
+          <li><b>01</b><span>The correct website scheduler and location load</span></li>
+          <li><b>02</b><span>Every displayed appointment type is opened</span></li>
+          <li><b>03</b><span>At least one real appointment time appears</span></li>
         </ol>
         <p>No real patient data is entered or stored.</p>
       </aside>
@@ -79,8 +79,8 @@
         <div><span class="metric-label">Active failures</span><strong id="kpi-failed">—</strong></div>
       </article>
       <article class="metric metric-manual">
-        <span class="metric-icon">?</span>
-        <div><span class="metric-label">Needs review</span><strong id="kpi-manual">—</strong></div>
+        <span class="metric-icon">◷</span>
+        <div><span class="metric-label">Slow loading</span><strong id="kpi-slow">—</strong></div>
       </article>
       <article class="metric metric-last">
         <span class="metric-icon">↻</span>
@@ -151,17 +151,29 @@
             <option value="Passed">Passed</option>
             <option value="Warning">Warning</option>
             <option value="Failed">Failed</option>
+            <option value="Slow Loading">Slow Loading</option>
+            <option value="Needs Recheck">Needs Recheck</option>
             <option value="Manual Review">Manual Review</option>
             <option value="Not Yet Audited">Not Yet Audited</option>
           </select>
         </div>
         <div class="filter-field">
-          <label for="filter-source">Audit source</label>
-          <select id="filter-source"><option value="">All sources</option></select>
+          <label for="filter-type">Appointment type</label>
+          <select id="filter-type"><option value="">All appointment types</option></select>
         </div>
         <div class="filter-field">
           <label for="filter-date">Audit date</label>
           <select id="filter-date"><option value="">All dates</option></select>
+        </div>
+        <div class="filter-field">
+          <label for="sort-by">Sort by</label>
+          <select id="sort-by">
+            <option value="practice">Practice A–Z</option>
+            <option value="location">Location A–Z</option>
+            <option value="status">Result priority</option>
+            <option value="appointment">Appointment type A–Z</option>
+            <option value="recent">Most recently audited</option>
+          </select>
         </div>
         <button type="button" id="filter-reset" class="reset-button">Reset</button>
       </div>
@@ -170,6 +182,7 @@
         <span><i class="legend-passed"></i>Passed</span>
         <span><i class="legend-warning"></i>Warning</span>
         <span><i class="legend-failed"></i>Failed</span>
+        <span><i class="legend-slow"></i>Slow loading</span>
         <span><i class="legend-manual"></i>Manual review</span>
         <span><i class="legend-notyet"></i>Not audited</span>
       </div>
@@ -236,28 +249,24 @@
       </div>
       <div class="detail-grid">
         <section class="detail-block scheduler-block">
-          <h3>Booking paths</h3>
+          <h3>Website booking path</h3>
           <dl class="kv-list">
             <div><dt>Website scheduler</dt><dd class="dd-website-status"></dd></div>
-            <div><dt>Google Business Profile</dt><dd class="dd-google-status"></dd></div>
           </dl>
           <div class="links-row">
             <a class="website-link" href="#" target="_blank" rel="noopener">Website scheduler ↗</a>
-            <a class="gmaps-link" href="#" target="_blank" rel="noopener">Google listing ↗</a>
           </div>
         </section>
         <section class="detail-block">
           <h3>Appointment types observed</h3>
           <dl class="kv-list">
             <div><dt>Website</dt><dd class="dd-observed-website"></dd></div>
-            <div><dt>Google</dt><dd class="dd-observed-google"></dd></div>
           </dl>
         </section>
         <section class="detail-block availability-block">
           <h3>Availability by appointment type</h3>
           <dl class="kv-list">
             <div><dt>Website results</dt><dd class="dd-avail-website"></dd></div>
-            <div><dt>Google results</dt><dd class="dd-avail-google"></dd></div>
           </dl>
         </section>
         <section class="detail-block evidence-block">
@@ -275,6 +284,6 @@
   </article>
 </template>
 
-<script src="assets/app.js?v=20260916-reinvention-1"></script>
+<script src="assets/app.js?v=20260918-website-only-1"></script>
 </body>
 </html>

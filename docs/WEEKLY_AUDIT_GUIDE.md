@@ -56,16 +56,22 @@ For each location, using Claude in Chrome (or manually):
      `websiteAppointmentAvailability`:
      - `availabilityLoaded: true` if a real time-slot/calendar view appears
        with at least one open day or time to pick.
-     - `availabilityLoaded: false` if it shows no open slots, an error, a
-       dead end, or otherwise never surfaces bookable times — this is a
-       real problem even if the scheduler "loaded" in step 1's sense, so
-       flag it. Fill in `issue` with a short description (e.g. `"No open
-       slots shown 60+ days out"`).
+     - `availabilityLoaded: false` **only** when the fully loaded availability
+       screen explicitly says that there are no open slots.
+     - `availabilityLoaded: null` when latency, a timeout, or another
+       inconclusive condition prevents a reliable answer. Set
+       `verificationStatus: "SlowLoading"` (or `"Inconclusive"`) and explain
+       what happened in `issue`. This flags the result without failing it.
      Do not actually submit a booking or enter real patient details at any
      point.
 
-2. **Open the Google Maps listing.** Look for a booking/appointment link or
-   button on the listing. Note:
+2. **Do not audit Google Maps booking links.** Google checks were retired on
+   September 18, 2026. For compatibility with older history, record
+   `googleSchedulerStatus: "NotChecked"`, empty Google arrays, and
+   `auditSource: "Website Only"`.
+
+<!-- Historical Google instructions retained below for older record interpretation only.
+   Look for a booking/appointment link or button on the listing. Note:
    - `googleSchedulerStatus`:
      - `Working` if the booking link opens within 30 seconds.
      - `Broken` if it errors.
@@ -96,7 +102,7 @@ For each location, using Claude in Chrome (or manually):
      website: for each option in `observedGoogleAppointmentTypes`, select
      it, proceed to the time-slot step, and record one entry per type in
      `googleAppointmentAvailability` with the same `availabilityLoaded` /
-     `issue` rules as above.
+     `issue` rules as above. -->
 
 3. **If you hit a CAPTCHA, a login wall, a browser restriction, or
    anything else that stops you from completing either check reliably:**

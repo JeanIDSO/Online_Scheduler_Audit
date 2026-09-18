@@ -91,16 +91,18 @@ matter who or what ran the audit.
 Status depends only on what an audit run actually observed — never on the
 registry's `expectedAppointmentTypes` list:
 
-1. **Manual Review** — `manualReviewNeeded` is true, or `googleSchedulerStatus`
-   is `Ambiguous`, or either scheduler status is `NotChecked`.
-2. **Failed** — otherwise, only when either scheduler is `Broken` (including a
-   30-second load timeout), or any entry in `websiteAppointmentAvailability` /
-   `googleAppointmentAvailability` has `availabilityLoaded: false` (an
-   appointment type that was clicked into but showed no real availability).
-3. **Warning** — otherwise, when `WrongLocation`, `NoBookingLink`, or a noted
-   `brokenOrIncorrectLinks` item needs attention without blocking availability.
-4. **Passed** — otherwise.
-5. **Not Yet Audited** — a location with no entries in `auditHistory` at all.
+1. **Manual Review** — `manualReviewNeeded` is true.
+2. **Failed** — only when a fully loaded website availability screen explicitly
+   reports no slots (`availabilityLoaded: false`).
+3. **Slow Loading** — latency prevented one or more website appointment types
+   from being verified (`availabilityLoaded: null` or `websiteLoadPerformance: "Slow"`).
+4. **Needs Recheck** — the website audit was otherwise inconclusive; this is a
+   flag, not a failure.
+5. **Warning** — a wrong-location or secondary website link issue was observed.
+6. **Passed** — otherwise.
+7. **Not Yet Audited** — a location with no entries in `auditHistory` at all.
+
+Google booking data is historical only and does not affect current status.
 
 ## CI validation
 
