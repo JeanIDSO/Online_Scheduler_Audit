@@ -13,8 +13,7 @@
  *   - week-over-week change summaries
  *
  * Status is based only on what an audit run actually observes: does the
- * website scheduler / Google booking link load (and land on the right
- * location), and does every appointment type clicked into show real
+ * website scheduler / Google booking link load, and does every appointment type clicked into show real
  * availability. The location registry's `expectedAppointmentTypes` list
  * is reference metadata only and is never compared against what's
  * observed or used to compute status — it has proven unreliable.
@@ -71,7 +70,7 @@
   /**
    * Status is driven only by things actually observed this run:
    *   1. Did the website scheduler and the Google booking link load
-   *      (and land on the right location)?
+   *      within the 30-second audit window?
    *   2. For every appointment type that was clicked into, did it show
    *      real, bookable availability?
    *
@@ -86,15 +85,16 @@
     if (entry.googleSchedulerStatus === "Ambiguous") return "Manual Review";
     if (entry.websiteSchedulerStatus === "NotChecked" || entry.googleSchedulerStatus === "NotChecked") return "Manual Review";
 
-    var websiteBad = entry.websiteSchedulerStatus === "Broken" || entry.websiteSchedulerStatus === "WrongLocation";
-    var googleBad = entry.googleSchedulerStatus === "Broken" ||
-      entry.googleSchedulerStatus === "WrongLocation" ||
-      entry.googleSchedulerStatus === "NoBookingLink";
+    var websiteBad = entry.websiteSchedulerStatus === "Broken";
+    var googleBad = entry.googleSchedulerStatus === "Broken";
 
     if (websiteBad || googleBad) return "Failed";
     if (availIssues && availIssues.length > 0) return "Failed";
 
-    var hasMinorLinkNote = Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0;
+    var hasMinorLinkNote = entry.websiteSchedulerStatus === "WrongLocation" ||
+      entry.googleSchedulerStatus === "WrongLocation" ||
+      entry.googleSchedulerStatus === "NoBookingLink" ||
+      (Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0);
     if (hasMinorLinkNote) return "Warning";
 
     return "Passed";
@@ -154,16 +154,15 @@
     var parts = [];
     if (status === "Failed") {
       if (entry.websiteSchedulerStatus === "Broken") parts.push("Website scheduler is broken");
-      if (entry.websiteSchedulerStatus === "WrongLocation") parts.push("Website scheduler leads to the wrong location");
       if (entry.googleSchedulerStatus === "Broken") parts.push("Google booking link is broken");
-      if (entry.googleSchedulerStatus === "WrongLocation") parts.push("Google booking link leads to the wrong location");
-      if (entry.googleSchedulerStatus === "NoBookingLink") parts.push("No Google booking link found");
       if (view.latest.availIssues && view.latest.availIssues.length) {
         parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " with no availability");
       }
       return parts.length ? parts.join("; ") : "Audit failed.";
     }
     if (status === "Warning") {
+      if (entry.websiteSchedulerStatus === "WrongLocation" || entry.googleSchedulerStatus === "WrongLocation") parts.push("Booking destination differs from the listed office");
+      if (entry.googleSchedulerStatus === "NoBookingLink") parts.push("Google listing has no Book online action");
       if (entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length) parts.push(entry.brokenOrIncorrectLinks.length + " secondary link note" + (entry.brokenOrIncorrectLinks.length > 1 ? "s" : ""));
       return parts.length ? parts.join("; ") : "Minor issue flagged for review.";
     }
@@ -329,8 +328,10 @@
   function renderPractices(data, locationViews) {
     var grid = document.getElementById("practice-grid");
     grid.innerHTML = "";
+    var f = currentFilters();
     data.practices.forEach(function (practice) {
-      var views = locationViews.filter(function (v) { return v.location.practiceId === practice.id; });
+      var views = locationViews.filter(function (v) { return v.location.practiceId === practice.id && locationMatchesFilters(v, f); });
+      if (!views.length) return;
       var counts = { "Passed": 0, "Warning": 0, "Failed": 0, "Manual Review": 0, "Not Yet Audited": 0 };
       var lastAudited = null;
       views.forEach(function (v) {
@@ -498,6 +499,7 @@
 
   function currentFilters() {
     return {
+      search: document.getElementById("filter-search").value.trim().toLowerCase(),
       practice: document.getElementById("filter-practice").value,
       location: document.getElementById("filter-location").value,
       status: document.getElementById("filter-status").value,
@@ -512,6 +514,21 @@
     if (f.status && v.status !== f.status) return false;
     if (f.source && (!v.latest || v.latest.entry.auditSource !== f.source)) return false;
     if (f.date && (!v.latest || dateKey(v.latest.entry.checkedAt) !== f.date)) return false;
+    if (f.search) {
+      var e = v.latest ? v.latest.entry : {};
+      var haystack = [
+        v.location.name,
+        practiceNameFor(v.location.practiceId),
+        (v.location.expectedAppointmentTypes || []).join(" "),
+        (e.observedWebsiteAppointmentTypes || []).join(" "),
+        (e.observedGoogleAppointmentTypes || []).join(" "),
+        e.notes || "",
+        e.manualReviewReason || "",
+        e.auditSource || "",
+        reasonText(v)
+      ].join(" ").toLowerCase();
+      if (haystack.indexOf(f.search) === -1) return false;
+    }
     return true;
   }
 
@@ -521,6 +538,14 @@
     if (f.status && row.ev.status !== f.status) return false;
     if (f.source && row.ev.entry.auditSource !== f.source) return false;
     if (f.date && dateKey(row.ev.entry.checkedAt) !== f.date) return false;
+    if (f.search) {
+      var e = row.ev.entry;
+      var haystack = [row.location.name, practiceNameFor(row.location.practiceId),
+        (e.observedWebsiteAppointmentTypes || []).join(" "),
+        (e.observedGoogleAppointmentTypes || []).join(" "), e.notes || "", e.auditSource || ""
+      ].join(" ").toLowerCase();
+      if (haystack.indexOf(f.search) === -1) return false;
+    }
     return true;
   }
 
@@ -633,6 +658,7 @@
   }
 
   function renderAll() {
+    renderPractices(state.data, state.locationViews);
     renderLocationGrid();
     renderHistoryTable();
   }
@@ -649,7 +675,6 @@
 
     renderHeader(data);
     renderKpis(state.locationViews);
-    renderPractices(data, state.locationViews);
     renderAttention(state.locationViews);
     populateFilterOptions(data);
     renderAll();
@@ -661,8 +686,15 @@
     ["filter-location", "filter-status", "filter-source", "filter-date"].forEach(function (id) {
       document.getElementById(id).addEventListener("change", renderAll);
     });
+    document.getElementById("filter-search").addEventListener("input", renderAll);
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "/" && !/input|select|textarea/i.test(document.activeElement.tagName)) {
+        event.preventDefault();
+        document.getElementById("filter-search").focus();
+      }
+    });
     document.getElementById("filter-reset").addEventListener("click", function () {
-      ["filter-practice", "filter-location", "filter-status", "filter-source", "filter-date"].forEach(function (id) {
+      ["filter-search", "filter-practice", "filter-location", "filter-status", "filter-source", "filter-date"].forEach(function (id) {
         document.getElementById(id).value = "";
       });
       refreshLocationOptions("");

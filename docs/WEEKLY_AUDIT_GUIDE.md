@@ -37,10 +37,11 @@ For each location, using Claude in Chrome (or manually):
 
 1. **Open the website scheduler URL.** Note:
    - `websiteSchedulerStatus`:
-     - `Working` if it loads and clearly leads to the correct office.
+     - `Working` if it loads within 30 seconds.
      - `Broken` if it errors, times out, or the reason-for-visit step never
        loads.
-     - `WrongLocation` if it loads but is actually for a different office.
+     - `WrongLocation` if it loads but is actually for a different office
+       (warning only, not a failed audit).
      - `NotChecked` if you couldn't complete this step (see Step 3).
    - `observedWebsiteAppointmentTypes`: list every appointment/reason-for-visit
      option shown, exactly as written (don't fix casing or wording — the
@@ -66,14 +67,21 @@ For each location, using Claude in Chrome (or manually):
 2. **Open the Google Maps listing.** Look for a booking/appointment link or
    button on the listing. Note:
    - `googleSchedulerStatus`:
-     - `Working` if the booking link works and leads to the correct office.
+     - `Working` if the booking link opens within 30 seconds.
      - `Broken` if it errors.
-     - `WrongLocation` if it leads to a different office.
-     - `NoBookingLink` if the listing has no booking link/button at all.
+     - `WrongLocation` if it leads to a different office (warning only).
+     - `NoBookingLink` if the listing has no booking link/button at all
+       (warning only).
      - `Ambiguous` if the listing itself is unclear — e.g. duplicate or
        merged listings for the practice, or you can't tell which office
        it represents.
      - `NotChecked` if you couldn't complete this step.
+
+   Only two observations produce a failed result: a booking page does not load
+   within 30 seconds, or a tested appointment type reaches its availability
+   screen and shows no appointment times. Do not fail for label differences,
+   missing/extra reference types, a different-office destination, or a missing
+   Google booking action.
    - `observedGoogleAppointmentTypes`: list every appointment/service type
      shown in the Google booking flow, exactly as written.
    - Some Google booking flows gate the appointment-type list behind a
