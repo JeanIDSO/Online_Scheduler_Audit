@@ -107,12 +107,12 @@ function validateEntry(entry, idx, validLocationIds) {
     if (arr === undefined) return;
     if (!Array.isArray(arr)) { fail(`${where}: "${fieldName}" must be an array`); return; }
     arr.forEach((a, i) => {
-      if (typeof a !== "object" || a === null || !isNonEmptyString(a.appointmentType) || !isBoolean(a.availabilityLoaded)) {
-        fail(`${where}.${fieldName}[${i}]: must be {appointmentType: <non-empty string>, availabilityLoaded: <boolean>, issue?: <non-empty string>}`);
+      if (typeof a !== "object" || a === null || !isNonEmptyString(a.appointmentType) || !(isBoolean(a.availabilityLoaded) || a.availabilityLoaded === null)) {
+        fail(`${where}.${fieldName}[${i}]: must be {appointmentType: <non-empty string>, availabilityLoaded: <boolean|null>, issue?: <non-empty string>}`);
         return;
       }
-      if (a.availabilityLoaded === false && !isNonEmptyString(a.issue)) {
-        fail(`${where}.${fieldName}[${i}]: "issue" should explain why when availabilityLoaded is false`);
+      if (a.availabilityLoaded !== true && !isNonEmptyString(a.issue)) {
+        fail(`${where}.${fieldName}[${i}]: "issue" should explain why when availabilityLoaded is false or null`);
       }
     });
   }
