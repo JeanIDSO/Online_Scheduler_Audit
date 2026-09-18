@@ -13,7 +13,7 @@
  *   - week-over-week change summaries
  *
  * Status is based only on what an audit run actually observes: does the
- * website scheduler / Google booking link load, and does every appointment type clicked into show real
+ * website scheduler load, and does every appointment type clicked into show real
  * availability. The location registry's `expectedAppointmentTypes` list
  * is reference metadata only and is never compared against what's
  * observed or used to compute status — it has proven unreliable.
@@ -22,8 +22,8 @@
 (function () {
   "use strict";
 
-  var STATUS_ORDER = ["Failed", "Manual Review", "Warning", "Passed", "Not Yet Audited"];
-  var RANK = { "Passed": 0, "Warning": 1, "Manual Review": 2, "Failed": 3 };
+  var STATUS_ORDER = ["Failed", "Needs Recheck", "Slow Loading", "Manual Review", "Warning", "Passed", "Not Yet Audited"];
+  var RANK = { "Passed": 0, "Warning": 1, "Slow Loading": 2, "Needs Recheck": 3, "Manual Review": 3, "Failed": 4 };
 
   var STATUS_META = {
     "Passed": {
@@ -41,6 +41,14 @@
     "Manual Review": {
       cls: "status-manual",
       icon: '<svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><circle cx="10" cy="10" r="7.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M7.9 8.1a2.2 2.2 0 114 1.2c-.6.5-1.3.9-1.3 2" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/><circle cx="10" cy="14.1" r="0.85" fill="currentColor"/></svg>'
+    },
+    "Slow Loading": {
+      cls: "status-slow",
+      icon: '<svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M10 6v4l2.7 1.8" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>'
+    },
+    "Needs Recheck": {
+      cls: "status-recheck",
+      icon: '<svg viewBox="0 0 20 20" width="12" height="12" aria-hidden="true"><path d="M16 7a6.5 6.5 0 10.2 5" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M13 4h3v3" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>'
     },
     "Not Yet Audited": {
       cls: "status-notyet",
@@ -69,8 +77,7 @@
 
   /**
    * Status is driven only by things actually observed this run:
-   *   1. Did the website scheduler and the Google booking link load
-   *      within the 30-second audit window?
+   *   1. Did the correct website scheduler load?
    *   2. For every appointment type that was clicked into, did it show
    *      real, bookable availability?
    *
@@ -82,18 +89,11 @@
    */
   function computeStatus(entry, availIssues) {
     if (entry.manualReviewNeeded) return "Manual Review";
-    if (entry.googleSchedulerStatus === "Ambiguous") return "Manual Review";
-    if (entry.websiteSchedulerStatus === "NotChecked" || entry.googleSchedulerStatus === "NotChecked") return "Manual Review";
-
-    var websiteBad = entry.websiteSchedulerStatus === "Broken";
-    var googleBad = entry.googleSchedulerStatus === "Broken";
-
-    if (websiteBad || googleBad) return "Failed";
     if (availIssues && availIssues.length > 0) return "Failed";
+    if (entry.websiteLoadPerformance === "Slow" || slowLoadingIssues(entry).length) return "Slow Loading";
+    if (entry.websiteSchedulerStatus === "Broken" || entry.websiteSchedulerStatus === "NotChecked" || entry.websiteLoadPerformance === "Inconclusive") return "Needs Recheck";
 
     var hasMinorLinkNote = entry.websiteSchedulerStatus === "WrongLocation" ||
-      entry.googleSchedulerStatus === "WrongLocation" ||
-      entry.googleSchedulerStatus === "NoBookingLink" ||
       (Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0);
     if (hasMinorLinkNote) return "Warning";
 
@@ -110,8 +110,7 @@
    * so status is driven only by the scheduler load statuses.
    */
   function appointmentTypesCheckedThisRun(entry) {
-    return (entry.observedWebsiteAppointmentTypes && entry.observedWebsiteAppointmentTypes.length > 0) ||
-      (entry.observedGoogleAppointmentTypes && entry.observedGoogleAppointmentTypes.length > 0);
+    return entry.observedWebsiteAppointmentTypes && entry.observedWebsiteAppointmentTypes.length > 0;
   }
 
   /**
@@ -129,12 +128,13 @@
         issues.push({ appointmentType: a.appointmentType, source: "Website", issue: a.issue || "" });
       }
     });
-    (entry.googleAppointmentAvailability || []).forEach(function (a) {
-      if (a && a.availabilityLoaded === false) {
-        issues.push({ appointmentType: a.appointmentType, source: "Google", issue: a.issue || "" });
-      }
-    });
     return issues;
+  }
+
+  function slowLoadingIssues(entry) {
+    return (entry.websiteAppointmentAvailability || []).filter(function (a) {
+      return a && (a.availabilityLoaded === null || a.verificationStatus === "SlowLoading");
+    });
   }
 
   function evaluateEntry(entry, location) {
@@ -151,18 +151,20 @@
     if (status === "Manual Review") {
       return entry.manualReviewReason || "Audit could not be completed automatically and needs manual review.";
     }
+    if (status === "Slow Loading") {
+      var slow = slowLoadingIssues(entry);
+      return slow.length ? slow.length + " appointment type" + (slow.length > 1 ? "s" : "") + " loaded too slowly to verify reliably" : "Website scheduler loaded slowly; recheck when the connection is stable.";
+    }
+    if (status === "Needs Recheck") return "The website audit was inconclusive; no failure was recorded.";
     var parts = [];
     if (status === "Failed") {
-      if (entry.websiteSchedulerStatus === "Broken") parts.push("Website scheduler is broken");
-      if (entry.googleSchedulerStatus === "Broken") parts.push("Google booking link is broken");
       if (view.latest.availIssues && view.latest.availIssues.length) {
-        parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " with no availability");
+        parts.push(view.latest.availIssues.length + " appointment type" + (view.latest.availIssues.length > 1 ? "s" : "") + " explicitly reported no availability");
       }
       return parts.length ? parts.join("; ") : "Audit failed.";
     }
     if (status === "Warning") {
-      if (entry.websiteSchedulerStatus === "WrongLocation" || entry.googleSchedulerStatus === "WrongLocation") parts.push("Booking destination differs from the listed office");
-      if (entry.googleSchedulerStatus === "NoBookingLink") parts.push("Google listing has no Book online action");
+      if (entry.websiteSchedulerStatus === "WrongLocation") parts.push("Booking destination differs from the listed office");
       if (entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length) parts.push(entry.brokenOrIncorrectLinks.length + " secondary link note" + (entry.brokenOrIncorrectLinks.length > 1 ? "s" : ""));
       return parts.length ? parts.join("; ") : "Minor issue flagged for review.";
     }
@@ -181,9 +183,6 @@
 
     if (curr.entry.websiteSchedulerStatus !== prev.entry.websiteSchedulerStatus) {
       parts.push("Website: " + labelFor(prev.entry.websiteSchedulerStatus) + " → " + labelFor(curr.entry.websiteSchedulerStatus));
-    }
-    if (curr.entry.googleSchedulerStatus !== prev.entry.googleSchedulerStatus) {
-      parts.push("Google: " + labelFor(prev.entry.googleSchedulerStatus) + " → " + labelFor(curr.entry.googleSchedulerStatus));
     }
 
     var keyA = function (a) { return a.appointmentType + "|" + a.source; };
@@ -251,10 +250,11 @@
   function availabilityListHtml(items) {
     if (!items || !items.length) return '<span class="dd-empty">Not checked this run</span>';
     return '<span class="tag-list">' + items.map(function (a) {
-      var ok = a.availabilityLoaded !== false;
-      var cls = ok ? "tag-avail-ok" : "tag-avail-fail";
-      var label = escapeHtml(a.appointmentType) + (ok ? " ✓" : " ✗");
-      var title = ok ? "" : ' title="' + escapeHtml(a.issue || "No availability shown") + '"';
+      var slow = a.availabilityLoaded === null || a.verificationStatus === "SlowLoading";
+      var ok = a.availabilityLoaded === true;
+      var cls = slow ? "tag-avail-slow" : ok ? "tag-avail-ok" : "tag-avail-fail";
+      var label = escapeHtml(a.appointmentType) + (slow ? " ◷" : ok ? " ✓" : " ✗");
+      var title = ok ? "" : ' title="' + escapeHtml(a.issue || (slow ? "Slow loading; recheck needed" : "No availability shown")) + '"';
       return '<span class="tag ' + cls + '"' + title + ">" + label + "</span>";
     }).join("") + "</span>";
   }
@@ -306,7 +306,7 @@
   }
 
   function renderKpis(locationViews) {
-    var counts = { "Passed": 0, "Warning": 0, "Failed": 0, "Manual Review": 0, "Not Yet Audited": 0 };
+    var counts = { "Passed": 0, "Warning": 0, "Failed": 0, "Slow Loading": 0, "Needs Recheck": 0, "Manual Review": 0, "Not Yet Audited": 0 };
     var lastCompleted = null;
     locationViews.forEach(function (v) {
       counts[v.status] = (counts[v.status] || 0) + 1;
@@ -319,7 +319,7 @@
     document.getElementById("kpi-total").textContent = locationViews.length;
     document.getElementById("kpi-passed").textContent = counts["Passed"];
     document.getElementById("kpi-failed").textContent = counts["Failed"];
-    document.getElementById("kpi-manual").textContent = counts["Manual Review"];
+    document.getElementById("kpi-slow").textContent = counts["Slow Loading"];
     document.getElementById("kpi-last").textContent = lastCompleted ? formatDateTime(lastCompleted.toISOString()) : "No audits yet";
     document.getElementById("kpi-warning-footnote").textContent = "Warning: " + counts["Warning"];
     document.getElementById("kpi-notyet-footnote").textContent = "Not yet audited: " + counts["Not Yet Audited"];
@@ -332,7 +332,7 @@
     data.practices.forEach(function (practice) {
       var views = locationViews.filter(function (v) { return v.location.practiceId === practice.id && locationMatchesFilters(v, f); });
       if (!views.length) return;
-      var counts = { "Passed": 0, "Warning": 0, "Failed": 0, "Manual Review": 0, "Not Yet Audited": 0 };
+      var counts = { "Passed": 0, "Warning": 0, "Failed": 0, "Slow Loading": 0, "Needs Recheck": 0, "Manual Review": 0, "Not Yet Audited": 0 };
       var lastAudited = null;
       views.forEach(function (v) {
         counts[v.status]++;
@@ -356,6 +356,8 @@
             statChip("Passed", counts["Passed"], "st-passed") +
             statChip("Warning", counts["Warning"], "st-warning") +
             statChip("Failed", counts["Failed"], "st-failed") +
+            statChip("Slow", counts["Slow Loading"], "st-slow") +
+            statChip("Recheck", counts["Needs Recheck"], "st-recheck") +
             statChip("Manual", counts["Manual Review"], "st-manual") +
             statChip("Not audited", counts["Not Yet Audited"], "st-notyet") +
           "</span>" +
@@ -395,7 +397,7 @@
     refreshLocationOptions(location.practiceId);
     document.getElementById("filter-location").value = locationId;
     document.getElementById("filter-status").value = "";
-    document.getElementById("filter-source").value = "";
+    document.getElementById("filter-type").value = "";
     document.getElementById("filter-date").value = "";
     renderAll();
 
@@ -419,7 +421,7 @@
     var countEl = document.getElementById("attention-count");
 
     var items = locationViews.filter(function (v) {
-      return v.status === "Failed" || v.status === "Manual Review" || v.status === "Warning";
+      return v.status === "Failed" || v.status === "Needs Recheck" || v.status === "Slow Loading" || v.status === "Manual Review" || v.status === "Warning";
     });
     items.sort(function (a, b) {
       return STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status);
@@ -431,7 +433,7 @@
 
     items.forEach(function (v) {
       var practice = practiceNameFor(v.location.practiceId);
-      var sevClass = v.status === "Failed" ? "sev-failed" : v.status === "Manual Review" ? "sev-manual" : "sev-warning";
+      var sevClass = v.status === "Failed" ? "sev-failed" : (v.status === "Manual Review" || v.status === "Needs Recheck") ? "sev-manual" : "sev-warning";
       var row = document.createElement("div");
       row.className = "attention-item " + sevClass;
       row.innerHTML =
@@ -464,12 +466,14 @@
     });
 
     refreshLocationOptions("");
-    var sourceSel = document.getElementById("filter-source");
-    var sources = Array.from(new Set(data.auditHistory.map(function (e) { return e.auditSource; }).filter(Boolean))).sort();
-    sources.forEach(function (s) {
+    var typeSel = document.getElementById("filter-type");
+    var types = Array.from(new Set(data.auditHistory.reduce(function (all, e) {
+      return all.concat(e.observedWebsiteAppointmentTypes || []);
+    }, []))).sort(function (a, b) { return a.localeCompare(b); });
+    types.forEach(function (s) {
       var opt = document.createElement("option");
       opt.value = s; opt.textContent = s;
-      sourceSel.appendChild(opt);
+      typeSel.appendChild(opt);
     });
 
     var dateSel = document.getElementById("filter-date");
@@ -503,8 +507,9 @@
       practice: document.getElementById("filter-practice").value,
       location: document.getElementById("filter-location").value,
       status: document.getElementById("filter-status").value,
-      source: document.getElementById("filter-source").value,
-      date: document.getElementById("filter-date").value
+      type: document.getElementById("filter-type").value,
+      date: document.getElementById("filter-date").value,
+      sort: document.getElementById("sort-by").value
     };
   }
 
@@ -512,7 +517,7 @@
     if (f.practice && v.location.practiceId !== f.practice) return false;
     if (f.location && v.location.id !== f.location) return false;
     if (f.status && v.status !== f.status) return false;
-    if (f.source && (!v.latest || v.latest.entry.auditSource !== f.source)) return false;
+    if (f.type && (!v.latest || (v.latest.entry.observedWebsiteAppointmentTypes || []).indexOf(f.type) === -1)) return false;
     if (f.date && (!v.latest || dateKey(v.latest.entry.checkedAt) !== f.date)) return false;
     if (f.search) {
       var e = v.latest ? v.latest.entry : {};
@@ -521,7 +526,6 @@
         practiceNameFor(v.location.practiceId),
         (v.location.expectedAppointmentTypes || []).join(" "),
         (e.observedWebsiteAppointmentTypes || []).join(" "),
-        (e.observedGoogleAppointmentTypes || []).join(" "),
         e.notes || "",
         e.manualReviewReason || "",
         e.auditSource || "",
@@ -536,13 +540,13 @@
     if (f.practice && row.location.practiceId !== f.practice) return false;
     if (f.location && row.location.id !== f.location) return false;
     if (f.status && row.ev.status !== f.status) return false;
-    if (f.source && row.ev.entry.auditSource !== f.source) return false;
+    if (f.type && (row.ev.entry.observedWebsiteAppointmentTypes || []).indexOf(f.type) === -1) return false;
     if (f.date && dateKey(row.ev.entry.checkedAt) !== f.date) return false;
     if (f.search) {
       var e = row.ev.entry;
       var haystack = [row.location.name, practiceNameFor(row.location.practiceId),
         (e.observedWebsiteAppointmentTypes || []).join(" "),
-        (e.observedGoogleAppointmentTypes || []).join(" "), e.notes || "", e.auditSource || ""
+        e.notes || "", e.auditSource || ""
       ].join(" ").toLowerCase();
       if (haystack.indexOf(f.search) === -1) return false;
     }
@@ -559,6 +563,17 @@
     var tpl = document.getElementById("location-card-template");
 
     var filtered = state.locationViews.filter(function (v) { return locationMatchesFilters(v, f); });
+    filtered.sort(function (a, b) {
+      if (f.sort === "location") return a.location.name.localeCompare(b.location.name);
+      if (f.sort === "status") return STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status) || a.location.name.localeCompare(b.location.name);
+      if (f.sort === "recent") return new Date(b.latest ? b.latest.entry.checkedAt : 0) - new Date(a.latest ? a.latest.entry.checkedAt : 0);
+      if (f.sort === "appointment") {
+        var at = a.latest && a.latest.entry.observedWebsiteAppointmentTypes[0] || "";
+        var bt = b.latest && b.latest.entry.observedWebsiteAppointmentTypes[0] || "";
+        return at.localeCompare(bt) || a.location.name.localeCompare(b.location.name);
+      }
+      return practiceNameFor(a.location.practiceId).localeCompare(practiceNameFor(b.location.practiceId)) || a.location.name.localeCompare(b.location.name);
+    });
     countEl.textContent = filtered.length + " of " + state.locationViews.length + " shown";
     grid.innerHTML = "";
     emptyEl.hidden = filtered.length > 0;
@@ -590,17 +605,13 @@
       var entry = v.latest ? v.latest.entry : null;
 
       detail.querySelector(".dd-website-status").textContent = entry ? labelFor(entry.websiteSchedulerStatus) : "Not yet checked";
-      detail.querySelector(".dd-google-status").textContent = entry ? labelFor(entry.googleSchedulerStatus) : "Not yet checked";
       detail.querySelector(".website-link").href = v.location.websiteUrl;
-      detail.querySelector(".gmaps-link").href = v.location.googleMapsUrl;
 
       var typesChecked = v.latest ? v.latest.typesChecked : false;
       var notCheckedHtml = '<span class="dd-empty">Not checked this run</span>';
       detail.querySelector(".dd-observed-website").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedWebsiteAppointmentTypes) : notCheckedHtml;
-      detail.querySelector(".dd-observed-google").innerHTML = !entry ? '<span class="dd-empty">Not yet checked</span>' : typesChecked ? tagListHtml(entry.observedGoogleAppointmentTypes) : notCheckedHtml;
 
       detail.querySelector(".dd-avail-website").innerHTML = availabilityListHtml(entry && entry.websiteAppointmentAvailability);
-      detail.querySelector(".dd-avail-google").innerHTML = availabilityListHtml(entry && entry.googleAppointmentAvailability);
 
       var brokenLinks = entry && entry.brokenOrIncorrectLinks && entry.brokenOrIncorrectLinks.length
         ? entry.brokenOrIncorrectLinks.map(function (b) {
@@ -683,7 +694,7 @@
       refreshLocationOptions(e.target.value);
       renderAll();
     });
-    ["filter-location", "filter-status", "filter-source", "filter-date"].forEach(function (id) {
+    ["filter-location", "filter-status", "filter-type", "filter-date", "sort-by"].forEach(function (id) {
       document.getElementById(id).addEventListener("change", renderAll);
     });
     document.getElementById("filter-search").addEventListener("input", renderAll);
@@ -694,9 +705,10 @@
       }
     });
     document.getElementById("filter-reset").addEventListener("click", function () {
-      ["filter-search", "filter-practice", "filter-location", "filter-status", "filter-source", "filter-date"].forEach(function (id) {
+      ["filter-search", "filter-practice", "filter-location", "filter-status", "filter-type", "filter-date"].forEach(function (id) {
         document.getElementById(id).value = "";
       });
+      document.getElementById("sort-by").value = "practice";
       refreshLocationOptions("");
       renderAll();
     });
