@@ -46,7 +46,12 @@
     "websiteSchedulerStatus": {
       "type": "string",
       "enum": ["Working", "Broken", "WrongLocation", "NotChecked"],
-      "description": "Working: the scheduler loaded and led to the correct location. Broken: link error, timeout, or the reason-for-visit page did not load. WrongLocation: it loaded but pointed at the wrong office. NotChecked: the website leg of this audit was skipped (audit could not be completed reliably — pair with manualReviewNeeded=true)."
+      "description": "Working: the scheduler loaded and led to the correct location. Broken: a definitive link or application error was displayed. WrongLocation: it loaded but pointed at the wrong office. NotChecked: the website leg could not be completed reliably. A timeout or slow response alone is not Broken; record it with websiteLoadPerformance."
+    },
+    "websiteLoadPerformance": {
+      "type": "string",
+      "enum": ["Normal", "Slow", "Inconclusive", "NotMeasured"],
+      "description": "Normal when the flow responded reliably; Slow when latency delayed the result; Inconclusive when the run could not determine availability. Slow and Inconclusive are flags, never failures."
     },
     "googleSchedulerStatus": {
       "type": "string",
@@ -102,8 +107,10 @@
         "required": ["appointmentType", "availabilityLoaded"],
         "properties": {
           "appointmentType": { "type": "string", "minLength": 1, "description": "The appointment type exactly as clicked, matching an entry in observedWebsiteAppointmentTypes." },
-          "availabilityLoaded": { "type": "boolean", "description": "True if selecting this type led to a time-slot/calendar step showing at least one real open slot. False if it showed no availability, an error, a dead end, or otherwise failed to surface bookable times." },
-          "issue": { "type": "string", "minLength": 1, "description": "Required in practice when availabilityLoaded is false. Short description of what happened instead (e.g. \"No open slots shown for 60+ days\", \"Selecting this type returned to reason-for-visit with no error\")." }
+          "availabilityLoaded": { "type": ["boolean", "null"], "description": "True only when at least one real open slot was observed. False only when a fully loaded availability screen explicitly reported no slots. Null when latency or another inconclusive condition prevented a reliable result." },
+          "verificationStatus": { "type": "string", "enum": ["Available", "NoAvailability", "SlowLoading", "Inconclusive"] },
+          "issue": { "type": "string", "minLength": 1, "description": "Explanation when availabilityLoaded is false or null."
+          }
         }
       }
     },
