@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css?v=20260918-ops-2">
-<link rel="stylesheet" href="assets/ops-refresh.css?v=20260919-navigator-2">
+<link rel="stylesheet" href="assets/ops-refresh.css?v=20260919-unified-3">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to dashboard</a>
@@ -29,9 +29,8 @@
     </a>
     <nav class="topnav" aria-label="Dashboard navigation">
       <a href="#main"><span>01</span> Overview</a>
-      <a href="#portfolio"><span>02</span> Practices &amp; flags</a>
-      <a href="#locations-section"><span>03</span> Explorer</a>
-      <a href="#history-section"><span>04</span> Archive</a>
+      <a href="#locations-section"><span>02</span> Practices &amp; audits</a>
+      <a href="#history-section"><span>03</span> Archive</a>
     </nav>
     <div class="topbar-meta">
       <span class="live-indicator"><i></i> System live</span>
@@ -54,7 +53,7 @@
     </div>
     <div class="navigator-links">
       <a href="#locations-section">Explore audits</a>
-      <a href="#portfolio">Practices &amp; flags</a>
+      <a href="#attention-section">Availability issues</a>
     </div>
   </section>
   <section class="hero-shell">
@@ -100,8 +99,8 @@
         <div><span class="metric-label">Active failures</span><strong id="kpi-failed">—</strong></div>
       </article>
       <article class="metric metric-manual">
-        <span class="metric-icon">◷</span>
-        <div><span class="metric-label">Slow loading</span><strong id="kpi-slow">—</strong></div>
+        <span class="metric-icon">◎</span>
+        <div><span class="metric-label">Types tested</span><strong id="kpi-tested">—</strong></div>
       </article>
       <article class="metric metric-last">
         <span class="metric-icon">↻</span>
@@ -113,40 +112,24 @@
       <span id="kpi-notyet-footnote">Not yet audited: —</span>
     </div>
 
-    <section class="overview-grid">
-      <div class="panel portfolio-panel" id="portfolio">
-        <div class="panel-heading">
-          <div>
-            <span class="panel-kicker">Portfolio</span>
-            <h2>Practices and regional offices</h2>
-            <p>Open a practice to see every location and its latest result.</p>
-          </div>
-        </div>
-        <div class="practice-grid" id="practice-grid"></div>
-      </div>
-
-      <aside class="panel attention-panel" id="attention-section" aria-labelledby="attention-heading">
-        <div class="panel-heading attention-heading-row">
-          <div>
-            <span class="panel-kicker alert-kicker">Action queue</span>
-            <h2 id="attention-heading">Needs attention</h2>
-          </div>
-          <span class="count-pill" id="attention-count">0</span>
-        </div>
-        <div id="attention-list" class="attention-list"></div>
-        <p id="attention-empty" class="empty-note" hidden>Everything checked is currently passing.</p>
-      </aside>
-    </section>
-
     <section class="audit-workspace" id="locations-section">
       <div class="workspace-heading">
         <div>
-          <span class="panel-kicker">Audit explorer</span>
-          <h2>Location-level results</h2>
-          <p>Filter the portfolio, then open any location for appointment-level evidence.</p>
+          <span class="panel-kicker">Unified practice workspace</span>
+          <h2>Practices, locations &amp; audit results</h2>
+          <p>Search, filter, and open any location without jumping between duplicate sections.</p>
         </div>
         <span class="result-count" id="locations-result-count"></span>
       </div>
+
+      <aside class="inline-attention" id="attention-section" aria-labelledby="attention-heading">
+        <div class="inline-attention-head">
+          <span><b id="attention-count">0</b> confirmed availability issues</span>
+          <small id="attention-heading">Only fully loaded schedulers that explicitly show no times appear here.</small>
+        </div>
+        <div id="attention-list" class="attention-list"></div>
+        <p id="attention-empty" class="empty-note" hidden>No confirmed availability issues.</p>
+      </aside>
 
       <div class="filter-console">
         <div class="filter-field">
@@ -164,8 +147,6 @@
             <option value="Passed">Passed</option>
             <option value="Warning">Warning</option>
             <option value="Failed">Failed</option>
-            <option value="Slow Loading">Slow Loading</option>
-            <option value="Needs Recheck">Needs Recheck</option>
             <option value="Manual Review">Manual Review</option>
             <option value="Not Yet Audited">Not Yet Audited</option>
           </select>
@@ -195,7 +176,6 @@
         <span><i class="legend-passed"></i>Passed</span>
         <span><i class="legend-warning"></i>Warning</span>
         <span><i class="legend-failed"></i>Failed</span>
-        <span><i class="legend-slow"></i>Slow loading</span>
         <span><i class="legend-manual"></i>Manual review</span>
         <span><i class="legend-notyet"></i>Not audited</span>
       </div>
@@ -297,6 +277,6 @@
   </article>
 </template>
 
-<script src="assets/app.js?v=20260919-navigator-2"></script>
+<script src="assets/app.js?v=20260919-unified-3"></script>
 </body>
 </html>
