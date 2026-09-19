@@ -7,9 +7,9 @@
 <meta name="description" content="Live website scheduler audit dashboard for every managed dental practice and location.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css?v=20260918-ops-2">
-<link rel="stylesheet" href="assets/ops-refresh.css?v=20260918-ops-2">
+<link rel="stylesheet" href="assets/ops-refresh.css?v=20260919-control-room-1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to dashboard</a>
@@ -23,19 +23,20 @@
         </svg>
       </span>
       <span>
-        <strong>Scheduler</strong>
-        <small>Command Center</small>
+        <strong>SCHED//OPS</strong>
+        <small>Access intelligence</small>
       </span>
     </a>
     <nav class="topnav" aria-label="Dashboard navigation">
-      <a href="#portfolio">Practices</a>
-      <a href="#attention-section">Issues</a>
-      <a href="#locations-section">Audits</a>
-      <a href="#history-section">History</a>
+      <a href="#main"><span>01</span> Overview</a>
+      <a href="#portfolio"><span>02</span> Practices</a>
+      <a href="#attention-section"><span>03</span> Flags</a>
+      <a href="#locations-section"><span>04</span> Explorer</a>
+      <a href="#history-section"><span>05</span> Archive</a>
     </nav>
     <div class="topbar-meta">
-      <span class="live-indicator"><i></i> Live dashboard</span>
-      <span class="updated-label">Updated <strong id="data-updated-at">—</strong></span>
+      <span class="live-indicator"><i></i> System live</span>
+      <span class="updated-label">Last sync<br><strong id="data-updated-at">—</strong></span>
     </div>
   </div>
 </header>
@@ -44,22 +45,27 @@
   <section class="hero-shell">
     <div class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">Appointment access monitor</span>
-        <h1>A faster way to find booking problems.</h1>
-        <p>Search every practice and regional office, see the exact appointment types tested, and focus only on routes that truly block patients.</p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#attention-section">Review active issues</a>
-          <a class="secondary-action" href="#portfolio">Browse practices</a>
+        <span class="eyebrow">Website scheduler intelligence</span>
+        <h1>Find any booking path.<br><em>Know if it works.</em></h1>
+        <p>Search practices, locations, appointment types, and audit notes in one place.</p>
+        <div class="hero-search">
+          <label for="filter-search">Search the entire network</label>
+          <div class="search-control">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="filter-search" type="search" placeholder="Try “Mid Missouri”, “Emergency”, or “Lakewood”…" autocomplete="off">
+            <kbd>/</kbd>
+          </div>
+          <div id="search-results" class="search-results" hidden></div>
         </div>
       </div>
       <aside class="audit-standard">
-        <span class="standard-label">A complete audit checks</span>
+        <span class="standard-label">Audit protocol // website only</span>
         <ol>
-          <li><b>01</b><span>The correct website scheduler and location load</span></li>
-          <li><b>02</b><span>Every displayed appointment type is opened</span></li>
-          <li><b>03</b><span>At least one real appointment time appears</span></li>
+          <li><b>01</b><span>Correct location loads</span></li>
+          <li><b>02</b><span>Every appointment type opens</span></li>
+          <li><b>03</b><span>Real appointment times appear</span></li>
         </ol>
-        <p>No real patient data is entered or stored.</p>
+        <p>Slow responses are flagged—not failed. No appointments are submitted.</p>
       </aside>
     </div>
   </section>
@@ -128,14 +134,6 @@
       </div>
 
       <div class="filter-console">
-        <div class="filter-field filter-search-field">
-          <label for="filter-search">Search everything</label>
-          <div class="search-control">
-            <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            <input id="filter-search" type="search" placeholder="Search practice, location, appointment type, or audit note…" autocomplete="off">
-            <kbd>/</kbd>
-          </div>
-        </div>
         <div class="filter-field">
           <label for="filter-practice">Practice</label>
           <select id="filter-practice"><option value="">All practices</option></select>
@@ -284,6 +282,6 @@
   </article>
 </template>
 
-<script src="assets/app.js?v=20260918-website-only-1"></script>
+<script src="assets/app.js?v=20260919-control-room-1"></script>
 </body>
 </html>

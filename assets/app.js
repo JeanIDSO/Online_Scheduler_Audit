@@ -553,6 +553,35 @@
     return true;
   }
 
+  function renderSearchResults() {
+    var query = document.getElementById("filter-search").value.trim().toLowerCase();
+    var results = document.getElementById("search-results");
+    if (!query) {
+      results.hidden = true;
+      results.innerHTML = "";
+      return;
+    }
+    var matches = state.locationViews.filter(function (v) {
+      var e = v.latest ? v.latest.entry : {};
+      return [v.location.name, practiceNameFor(v.location.practiceId),
+        (e.observedWebsiteAppointmentTypes || []).join(" "), e.notes || "", reasonText(v)
+      ].join(" ").toLowerCase().indexOf(query) !== -1;
+    }).slice(0, 8);
+    results.innerHTML = matches.length ? matches.map(function (v) {
+      return '<button class="search-result" type="button" data-search-location="' + escapeHtml(v.location.id) + '">' +
+        '<span class="search-result-name">' + escapeHtml(v.location.name) + '</span>' +
+        '<span class="search-result-practice">' + escapeHtml(practiceNameFor(v.location.practiceId)) + '</span>' +
+        '<span class="search-result-status">' + statusPillHtml(v.status) + '</span></button>';
+    }).join("") : '<div class="search-empty">No matching locations or appointment types</div>';
+    results.hidden = false;
+    Array.from(results.querySelectorAll("[data-search-location]")).forEach(function (button) {
+      button.addEventListener("click", function () {
+        results.hidden = true;
+        showLocationFromPractice(button.getAttribute("data-search-location"));
+      });
+    });
+  }
+
   // ---- Location grid -------------------------------------------------
 
   function renderLocationGrid() {
@@ -697,12 +726,16 @@
     ["filter-location", "filter-status", "filter-type", "filter-date", "sort-by"].forEach(function (id) {
       document.getElementById(id).addEventListener("change", renderAll);
     });
-    document.getElementById("filter-search").addEventListener("input", renderAll);
+    document.getElementById("filter-search").addEventListener("input", function () {
+      renderAll();
+      renderSearchResults();
+    });
     document.addEventListener("keydown", function (event) {
       if (event.key === "/" && !/input|select|textarea/i.test(document.activeElement.tagName)) {
         event.preventDefault();
         document.getElementById("filter-search").focus();
       }
+      if (event.key === "Escape") document.getElementById("search-results").hidden = true;
     });
     document.getElementById("filter-reset").addEventListener("click", function () {
       ["filter-search", "filter-practice", "filter-location", "filter-status", "filter-type", "filter-date"].forEach(function (id) {
@@ -710,6 +743,7 @@
       });
       document.getElementById("sort-by").value = "practice";
       refreshLocationOptions("");
+      document.getElementById("search-results").hidden = true;
       renderAll();
     });
   }
