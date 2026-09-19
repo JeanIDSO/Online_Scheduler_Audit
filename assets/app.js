@@ -405,7 +405,6 @@
       var detail = card.querySelector(".location-card-detail");
       summary.setAttribute("aria-expanded", "true");
       detail.hidden = false;
-      card.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 
@@ -731,9 +730,6 @@
     document.getElementById("navigator-search").addEventListener("input", function () {
       document.getElementById("filter-search").value = document.getElementById("navigator-search").value;
       renderAll();
-    });
-    document.getElementById("navigator-search").addEventListener("keydown", function (event) {
-      if (event.key === "Enter") document.getElementById("locations-section").scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "/" && !/input|select|textarea/i.test(document.activeElement.tagName)) {
