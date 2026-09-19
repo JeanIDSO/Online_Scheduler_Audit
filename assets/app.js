@@ -90,7 +90,6 @@
   function computeStatus(entry, availIssues) {
     if (entry.manualReviewNeeded) return "Manual Review";
     if (availIssues && availIssues.length > 0) return "Failed";
-    if (entry.websiteLoadPerformance === "Slow" || slowLoadingIssues(entry).length) return "Slow Loading";
     if (entry.websiteSchedulerStatus === "Broken" || entry.websiteSchedulerStatus === "NotChecked" || entry.websiteLoadPerformance === "Inconclusive") return "Needs Recheck";
 
     var hasMinorLinkNote = entry.websiteSchedulerStatus === "WrongLocation" ||
@@ -150,10 +149,6 @@
 
     if (status === "Manual Review") {
       return entry.manualReviewReason || "Audit could not be completed automatically and needs manual review.";
-    }
-    if (status === "Slow Loading") {
-      var slow = slowLoadingIssues(entry);
-      return slow.length ? slow.length + " appointment type" + (slow.length > 1 ? "s" : "") + " loaded too slowly to verify reliably" : "Website scheduler loaded slowly; recheck when the connection is stable.";
     }
     if (status === "Needs Recheck") return "The website audit was inconclusive; no failure was recorded.";
     var parts = [];
@@ -250,11 +245,11 @@
   function availabilityListHtml(items) {
     if (!items || !items.length) return '<span class="dd-empty">Not checked this run</span>';
     return '<span class="tag-list">' + items.map(function (a) {
-      var slow = a.availabilityLoaded === null || a.verificationStatus === "SlowLoading";
+      var slow = a.availabilityLoaded === null || a.verificationStatus === "SlowLoading" || a.verificationStatus === "Inconclusive";
       var ok = a.availabilityLoaded === true;
-      var cls = slow ? "tag-avail-slow" : ok ? "tag-avail-ok" : "tag-avail-fail";
-      var label = escapeHtml(a.appointmentType) + (slow ? " ◷" : ok ? " ✓" : " ✗");
-      var title = ok ? "" : ' title="' + escapeHtml(a.issue || (slow ? "Slow loading; recheck needed" : "No availability shown")) + '"';
+      var cls = slow ? "tag-avail-neutral" : ok ? "tag-avail-ok" : "tag-avail-fail";
+      var label = escapeHtml(a.appointmentType) + (slow ? " — Not confirmed" : ok ? " ✓" : " ✗");
+      var title = ok ? "" : ' title="' + escapeHtml(a.issue || (slow ? "Availability was not confirmed in this run" : "No availability shown")) + '"';
       return '<span class="tag ' + cls + '"' + title + ">" + label + "</span>";
     }).join("") + "</span>";
   }
@@ -319,7 +314,10 @@
     document.getElementById("kpi-total").textContent = locationViews.length;
     document.getElementById("kpi-passed").textContent = counts["Passed"];
     document.getElementById("kpi-failed").textContent = counts["Failed"];
-    document.getElementById("kpi-slow").textContent = counts["Slow Loading"];
+    var tested = locationViews.reduce(function (total, v) {
+      return total + (v.latest ? (v.latest.entry.websiteAppointmentAvailability || []).length : 0);
+    }, 0);
+    document.getElementById("kpi-tested").textContent = tested;
     document.getElementById("kpi-last").textContent = lastCompleted ? formatDateTime(lastCompleted.toISOString()) : "No audits yet";
     document.getElementById("kpi-warning-footnote").textContent = "Warning: " + counts["Warning"];
     document.getElementById("kpi-notyet-footnote").textContent = "Not yet audited: " + counts["Not Yet Audited"];
@@ -421,7 +419,7 @@
     var countEl = document.getElementById("attention-count");
 
     var items = locationViews.filter(function (v) {
-      return v.status === "Failed" || v.status === "Needs Recheck" || v.status === "Slow Loading" || v.status === "Manual Review" || v.status === "Warning";
+      return v.status === "Failed";
     });
     items.sort(function (a, b) {
       return STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status);
@@ -698,7 +696,6 @@
   }
 
   function renderAll() {
-    renderPractices(state.data, state.locationViews);
     renderLocationGrid();
     renderHistoryTable();
   }
