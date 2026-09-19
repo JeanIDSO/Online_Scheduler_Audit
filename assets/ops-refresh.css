@@ -38,3 +38,11 @@ body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opa
 .website-link{font-size:13px!important;letter-spacing:.01em;transition:background .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease}.website-link:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(89,225,255,.3)}
 button,a,summary,input,select{transition-timing-function:cubic-bezier(.2,.8,.2,1)}
 @media(max-width:760px){body{font-size:14px}.navigator-search input{font-size:13px}.location-name{font-size:15px}.standard-copy,.kv-list dd,.history-table{font-size:12px}}
+
+/* Organization branding */
+.brand-logo-link{min-height:70px;padding:2px 5px 18px;justify-content:center;overflow:visible}
+.brand-logo{display:block;width:100%;max-width:190px;height:auto;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(0,181,255,.12));transition:filter .25s ease,transform .25s ease}
+.brand-logo-link:hover .brand-logo{transform:translateY(-2px) scale(1.015);filter:drop-shadow(0 10px 24px rgba(0,181,255,.3))}
+.brand-logo-link:focus-visible{outline:3px solid rgba(103,232,249,.68);outline-offset:4px;border-radius:8px}
+@media(max-width:1180px){.brand-logo-link{min-width:205px;min-height:58px;padding:4px 10px}.brand-logo{max-width:175px}}
+@media(max-width:760px){.brand-logo-link{min-width:170px}.brand-logo{max-width:155px}}
