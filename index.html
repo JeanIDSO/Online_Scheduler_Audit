@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css?v=20260918-ops-2">
-<link rel="stylesheet" href="assets/ops-refresh.css?v=20260919-control-room-1">
+<link rel="stylesheet" href="assets/ops-refresh.css?v=20260919-navigator-2">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to dashboard</a>
@@ -29,10 +29,9 @@
     </a>
     <nav class="topnav" aria-label="Dashboard navigation">
       <a href="#main"><span>01</span> Overview</a>
-      <a href="#portfolio"><span>02</span> Practices</a>
-      <a href="#attention-section"><span>03</span> Flags</a>
-      <a href="#locations-section"><span>04</span> Explorer</a>
-      <a href="#history-section"><span>05</span> Archive</a>
+      <a href="#portfolio"><span>02</span> Practices &amp; flags</a>
+      <a href="#locations-section"><span>03</span> Explorer</a>
+      <a href="#history-section"><span>04</span> Archive</a>
     </nav>
     <div class="topbar-meta">
       <span class="live-indicator"><i></i> System live</span>
@@ -42,6 +41,22 @@
 </header>
 
 <main id="main">
+  <section class="navigator-bar" aria-label="Dashboard navigator">
+    <div class="navigator-title">
+      <span>Navigator</span>
+      <strong>Scheduler network</strong>
+    </div>
+    <div class="navigator-search">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <label class="sr-only" for="navigator-search">Search scheduler network</label>
+      <input id="navigator-search" type="search" placeholder="Search locations or appointment types…" autocomplete="off">
+      <span class="navigator-shortcut">Press /</span>
+    </div>
+    <div class="navigator-links">
+      <a href="#locations-section">Explore audits</a>
+      <a href="#portfolio">Practices &amp; flags</a>
+    </div>
+  </section>
   <section class="hero-shell">
     <div class="hero">
       <div class="hero-copy">
@@ -252,7 +267,7 @@
             <div><dt>Website scheduler</dt><dd class="dd-website-status"></dd></div>
           </dl>
           <div class="links-row">
-            <a class="website-link" href="#" target="_blank" rel="noopener">Website scheduler ↗</a>
+            <a class="website-link" href="#" target="_blank" rel="noopener"><span>Open live scheduler</span><b>↗</b></a>
           </div>
         </section>
         <section class="detail-block">
@@ -282,6 +297,6 @@
   </article>
 </template>
 
-<script src="assets/app.js?v=20260919-control-room-1"></script>
+<script src="assets/app.js?v=20260919-navigator-2"></script>
 </body>
 </html>
