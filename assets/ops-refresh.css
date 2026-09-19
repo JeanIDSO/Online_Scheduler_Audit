@@ -70,6 +70,15 @@ body:after{content:"";position:fixed;z-index:-2;width:44rem;height:44rem;left:34
 .website-link{position:relative;overflow:hidden}.website-link b{display:grid;place-items:center;width:26px;height:26px;border-radius:7px;background:rgba(7,16,24,.13);transition:transform .22s ease}.website-link:hover b{transform:translate(2px,-2px) rotate(4deg)}
 .history-drawer>summary{transition:background .22s ease,color .22s ease}.history-drawer>summary:hover{background:linear-gradient(90deg,rgba(103,232,249,.055),rgba(155,140,255,.055))}
 .live-indicator i{animation:livePulse 2.2s ease-in-out infinite}
+.inline-attention{margin:4px 0 22px;padding:20px 22px 22px;border-radius:16px}
+.inline-attention-head{display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:17px;padding-bottom:15px;border-bottom:1px solid rgba(255,101,119,.12)}
+.inline-attention-head span{display:flex;align-items:center;gap:10px;font-size:14px}.inline-attention-head b{margin:0;min-width:30px;height:30px;font-size:12px}.inline-attention-head small{max-width:760px;font-size:12px;line-height:1.55}
+.inline-attention .attention-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin-top:0}
+.inline-attention .attention-item{display:flex;min-width:0;min-height:142px;flex-direction:column;gap:0;padding:19px 20px;border-left-width:3px;border-radius:13px;background:linear-gradient(145deg,rgba(16,20,36,.98),rgba(11,14,26,.98));box-shadow:0 14px 34px rgba(0,0,0,.18);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.inline-attention .attention-item:hover{transform:translateY(-3px);border-color:rgba(255,101,119,.38);box-shadow:0 20px 42px rgba(0,0,0,.25),0 0 28px rgba(255,101,119,.045)}
+.attn-top{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:15px}.attn-identity{min-width:0;padding-top:2px}.attn-name,.attn-practice{display:block}.attn-name{font-size:14px;line-height:1.35}.attn-practice{margin-top:6px;font-size:11px}.attn-reason{display:block;margin-top:auto;padding-top:17px;color:#a3aabd;font-size:12px;line-height:1.5}
+@media(max-width:900px){.inline-attention .attention-list{grid-template-columns:1fr}.inline-attention .attention-item{min-height:0}}
+@media(max-width:560px){.inline-attention{padding:17px 15px}.attn-top{grid-template-columns:1fr;gap:10px}.attn-reason{padding-top:13px}}
 @keyframes auroraDrift{0%{transform:translate3d(-8%,-4%,0) rotate(0deg) scale(.9)}100%{transform:translate3d(13%,10%,0) rotate(24deg) scale(1.12)}}
 @keyframes lightSweep{to{background-position:200% 0}}
 @keyframes orbBreathe{0%,100%{transform:scale(.86);opacity:.48}50%{transform:scale(1.12);opacity:1}}
