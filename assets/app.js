@@ -434,9 +434,13 @@
       var row = document.createElement("div");
       row.className = "attention-item " + sevClass;
       row.innerHTML =
-        statusPillHtml(v.status) +
-        '<span class="attn-name">' + escapeHtml(v.location.name) + "</span>" +
-        '<span class="attn-practice">' + escapeHtml(practice) + "</span>" +
+        '<div class="attn-top">' +
+          statusPillHtml(v.status) +
+          '<div class="attn-identity">' +
+            '<span class="attn-name">' + escapeHtml(v.location.name) + "</span>" +
+            '<span class="attn-practice">' + escapeHtml(practice) + "</span>" +
+          "</div>" +
+        "</div>" +
         '<span class="attn-reason">' + escapeHtml(reasonText(v)) + "</span>";
       listEl.appendChild(row);
     });
