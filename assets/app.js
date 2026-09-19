@@ -727,13 +727,21 @@
       document.getElementById(id).addEventListener("change", renderAll);
     });
     document.getElementById("filter-search").addEventListener("input", function () {
+      document.getElementById("navigator-search").value = document.getElementById("filter-search").value;
       renderAll();
       renderSearchResults();
+    });
+    document.getElementById("navigator-search").addEventListener("input", function () {
+      document.getElementById("filter-search").value = document.getElementById("navigator-search").value;
+      renderAll();
+    });
+    document.getElementById("navigator-search").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") document.getElementById("locations-section").scrollIntoView({ behavior: "smooth", block: "start" });
     });
     document.addEventListener("keydown", function (event) {
       if (event.key === "/" && !/input|select|textarea/i.test(document.activeElement.tagName)) {
         event.preventDefault();
-        document.getElementById("filter-search").focus();
+        document.getElementById("navigator-search").focus();
       }
       if (event.key === "Escape") document.getElementById("search-results").hidden = true;
     });
@@ -742,6 +750,7 @@
         document.getElementById(id).value = "";
       });
       document.getElementById("sort-by").value = "practice";
+      document.getElementById("navigator-search").value = "";
       refreshLocationOptions("");
       document.getElementById("search-results").hidden = true;
       renderAll();
