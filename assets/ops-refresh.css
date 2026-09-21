@@ -83,6 +83,29 @@ body:after{content:"";position:fixed;z-index:-2;width:44rem;height:44rem;left:34
 .inline-attention:before{display:none}
 .inline-attention .attention-list{margin:0}
 @media(max-width:560px){.inline-attention{padding:0}}
+
+/* Failed audit cards */
+.inline-attention .attention-item{min-height:0;padding:0;overflow:hidden;border:1px solid rgba(255,101,119,.2);border-left:3px solid var(--red);background:linear-gradient(145deg,rgba(18,21,36,.98),rgba(11,14,25,.99));box-shadow:0 12px 30px rgba(0,0,0,.16);transform:none}
+.inline-attention .attention-item:hover{transform:none;border-color:rgba(255,101,119,.34);border-left-color:var(--red);background:linear-gradient(145deg,rgba(21,24,40,.99),rgba(13,16,28,.99));box-shadow:0 16px 36px rgba(0,0,0,.21),0 0 0 1px rgba(255,101,119,.035)}
+.inline-attention .attention-item[open]{grid-column:1/-1;border-color:rgba(255,101,119,.32);background:linear-gradient(145deg,rgba(20,23,39,.99),rgba(11,14,25,.99));box-shadow:0 18px 44px rgba(0,0,0,.24)}
+.inline-attention .attn-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 18px;padding:18px 19px;background:transparent!important;box-shadow:none!important;transition:background .18s ease}
+.inline-attention .attn-summary:hover{background:rgba(255,101,119,.055)!important;box-shadow:none!important}
+.inline-attention .attention-item[open] .attn-summary{border-bottom:1px solid rgba(255,101,119,.12);background:rgba(255,101,119,.025)!important}
+.inline-attention .attn-top{display:flex;align-items:center;gap:12px}
+.inline-attention .attn-identity{padding:0}.inline-attention .attn-name{color:#f0f1f6;font-size:14px}.inline-attention .attn-practice{margin-top:4px;color:#747c91;font-size:10px}
+.inline-attention .attn-reason{grid-column:1/-1;margin:0;padding:4px 0 0;color:#929aae;font-size:11px}
+.inline-attention .attn-toggle{align-self:center;color:#ff8b98;font-size:10px;letter-spacing:.01em}
+.inline-attention .attn-detail{margin:0;padding:18px 19px 19px;border:0;border-radius:0;background:transparent}
+.inline-attention .attn-detail-label{margin-bottom:12px;color:#ff8b98;font:500 9px "DM Mono",monospace;letter-spacing:.1em}
+.inline-attention .attn-failure-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 16px}
+.inline-attention .attn-failure-list li{display:grid;grid-template-columns:22px minmax(0,1fr) auto;align-items:center;gap:9px;min-height:46px;padding:10px 11px;border:1px solid rgba(255,255,255,.065);border-radius:9px;background:rgba(7,9,17,.42)}
+.inline-attention .attn-failure-list li:last-child{padding:10px 11px;border:1px solid rgba(255,255,255,.065)}
+.inline-attention .attn-failure-marker{width:22px;height:22px;display:grid;place-items:center;border-radius:6px;color:var(--red);background:rgba(255,101,119,.11);font:600 10px "DM Mono",monospace}
+.inline-attention .attn-failure-list b{color:#dfe2ec;font-size:11px;font-weight:600;line-height:1.35}
+.inline-attention .attn-failure-state{white-space:nowrap;color:#ff8b98;font:500 9px "DM Mono",monospace}
+.inline-attention .attn-scheduler-link{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;border-bottom:1px solid rgba(103,232,249,.3);border-radius:0;background:transparent;color:var(--cyan);font-size:11px;font-weight:600;line-height:1.8}
+.inline-attention .attn-scheduler-link:hover{background:transparent;color:#baf7ff;border-bottom-color:var(--cyan)}
+@media(max-width:760px){.inline-attention .attn-failure-list{grid-template-columns:1fr}.inline-attention .attn-failure-list li{grid-template-columns:22px minmax(0,1fr)}.inline-attention .attn-failure-state{grid-column:2}}
 @keyframes auroraDrift{0%{transform:translate3d(-8%,-4%,0) rotate(0deg) scale(.9)}100%{transform:translate3d(13%,10%,0) rotate(24deg) scale(1.12)}}
 @keyframes lightSweep{to{background-position:200% 0}}
 @keyframes orbBreathe{0%,100%{transform:scale(.86);opacity:.48}50%{transform:scale(1.12);opacity:1}}

@@ -434,8 +434,8 @@
       var failures = v.latest && v.latest.availIssues ? v.latest.availIssues : [];
       var failureList = failures.length
         ? '<ul class="attn-failure-list">' + failures.map(function (failure) {
-            return '<li><b>' + escapeHtml(failure.appointmentType) + '</b><span>' +
-              escapeHtml(failure.issue || "No appointment times were available.") + '</span></li>';
+            return '<li><span class="attn-failure-marker">!</span><b>' +
+              escapeHtml(failure.appointmentType) + '</b><span class="attn-failure-state">No availability</span></li>';
           }).join("") + "</ul>"
         : '<p class="attn-failure-copy">The website booking page did not load successfully.</p>';
       var row = document.createElement("details");
