@@ -2,6 +2,15 @@ name: Send approved scheduler audit email
 
 on:
   workflow_dispatch:
+    inputs:
+      recipient:
+        description: Who should receive the approved audit report?
+        required: true
+        default: Send to me only
+        type: choice
+        options:
+          - Send to me only
+          - Send to Valerie (BCC me)
 
 permissions:
   contents: read
@@ -31,8 +40,8 @@ jobs:
             echo "configured=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Send approved audit report to Jean
-        if: steps.mail.outputs.configured == 'true'
+      - name: Send private audit report to me
+        if: steps.mail.outputs.configured == 'true' && inputs.recipient == 'Send to me only'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: ${{ secrets.MAIL_SERVER }}
@@ -42,6 +51,21 @@ jobs:
           secure: false
           subject: ${{ steps.check.outputs.email_subject }}
           to: jean@Independencedso.com
+          from: Scheduler Audit Dashboard <${{ secrets.MAIL_USERNAME }}>
+          html_body: file://failure-alert.html
+
+      - name: Send approved audit report to Valerie and BCC me
+        if: steps.mail.outputs.configured == 'true' && inputs.recipient == 'Send to Valerie (BCC me)'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          secure: false
+          subject: ${{ steps.check.outputs.email_subject }}
+          to: valerie@independencedso.com
+          bcc: jean@Independencedso.com
           from: Scheduler Audit Dashboard <${{ secrets.MAIL_USERNAME }}>
           html_body: file://failure-alert.html
 
