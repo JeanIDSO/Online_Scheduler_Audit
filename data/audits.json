@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T17:10:31.000Z",
+  "updatedAt": "2026-09-21T17:38:02.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -11262,6 +11262,69 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "Website-only audit on September 21, 2026. All six displayed appointment types reached a fully loaded availability screen that explicitly reported no available appointment slots online.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "philadelphia-dentistry__2026-09-21T17:38:02.000Z",
+      "locationId": "philadelphia-dentistry",
+      "checkedAt": "2026-09-21T17:38:02.000Z",
+      "auditedBy": "Codex individual live browser recheck",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consultation",
+        "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+        "New or Existing Patient Emergency Appointment",
+        "New Patient Cleaning",
+        "New Patient Consultation",
+        "Existing Patient Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New or Existing Patient Emergency Appointment",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New Patient Cleaning",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New Patient Consultation",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "Individually selected and advanced through insurance to its own time-slot page; the fully loaded page explicitly reported no available appointment slots online."
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Second Philadelphia audit completed one appointment type at a time. Each type was separately selected, advanced through the self-pay insurance step, and held on its own time-slot screen for up to 45 seconds. All six explicitly reported no online availability.",
       "evidenceLinks": []
     }
   ]
