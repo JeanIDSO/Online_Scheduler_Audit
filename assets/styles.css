@@ -224,8 +224,8 @@ a { color: inherit; }
   padding: 0; border-top: 1px solid var(--line);
 }
 .attention-item > summary::-webkit-details-marker { display: none; }
-.attn-summary { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 14px; padding: 14px 10px; cursor: pointer; list-style: none; }
-.attn-summary:hover { background: #fff8f7; }
+.attn-summary { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 14px; padding: 14px 10px; cursor: pointer; list-style: none; transition: background .16s ease, box-shadow .16s ease; }
+.attn-summary:hover { background: var(--failed-bg); box-shadow: inset 3px 0 0 var(--failed); }
 .attn-top { display: flex; align-items: flex-start; gap: 9px; min-width: 0; }
 .attn-identity { display: flex; flex-direction: column; min-width: 0; }
 .attn-name { font-weight: 700; font-size: .83rem; }
@@ -242,7 +242,7 @@ a { color: inherit; }
 .attn-failure-list b { color: var(--ink); font-size: .75rem; }
 .attn-failure-list span, .attn-failure-copy { margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.4; }
 .attn-scheduler-link { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border: 1px solid var(--failed-border); border-radius: 8px; color: var(--failed); background: white; font-size: .7rem; font-weight: 800; text-decoration: none; }
-.attn-scheduler-link:hover { background: #fff8f7; }
+.attn-scheduler-link:hover { background: #f6ddd8; }
 .empty-note { margin: 0; padding: 18px 24px; color: var(--muted); }
 
 .audit-workspace { margin-top: 22px; padding: 25px; border: 1px solid var(--line); border-radius: 24px; background: white; box-shadow: var(--shadow-sm); }
