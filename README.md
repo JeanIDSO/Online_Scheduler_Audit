@@ -1,8 +1,7 @@
 # Online Scheduler Audit
 
 A public, read-only dashboard that tracks weekly audits of the public
-website scheduler and Google Business Profile booking link for 41 dental
-office locations across 19 practice groups.
+website scheduler for 42 dental office locations across 20 practice groups.
 
 It's a static site — no server, no database, no login. All shared state
 lives in one JSON file, [`data/audits.json`](data/audits.json), which this
@@ -129,3 +128,21 @@ Then open the printed `http://localhost:...` URL.
 Either way: once the change is committed to `main` (directly, or via a
 merged, CI-passing PR), GitHub Pages redeploys automatically and every
 viewer sees the update — no separate publish step.
+
+## Failure email alerts
+
+When a commit to `main` adds an audit entry with a broken website scheduler
+or an appointment type that explicitly reports no availability, the
+`Email scheduler failures` workflow prepares an alert for
+`jean@Independencedso.com`. The email includes the failed location,
+appointment types, reasons, and direct scheduler links.
+
+Add these GitHub Actions repository secrets once to enable delivery:
+
+- `MAIL_SERVER` — SMTP server hostname
+- `MAIL_PORT` — SMTP submission port (normally `587`)
+- `MAIL_USERNAME` — SMTP login and sender email address
+- `MAIL_PASSWORD` — SMTP password or app password
+
+Until those secrets are configured, the workflow still detects failures
+and records a note in its run summary, but it cannot send the email.

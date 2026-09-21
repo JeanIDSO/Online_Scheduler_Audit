@@ -221,13 +221,28 @@ a { color: inherit; }
 }
 .attention-list { max-height: 650px; overflow: auto; padding: 0 12px 14px; }
 .attention-item {
-  display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; padding: 13px 10px;
-  border-top: 1px solid var(--line);
+  padding: 0; border-top: 1px solid var(--line);
 }
-.attention-item .status-pill { grid-row: 1 / 3; align-self: start; margin-top: 1px; }
+.attention-item > summary::-webkit-details-marker { display: none; }
+.attn-summary { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 5px 14px; padding: 14px 10px; cursor: pointer; list-style: none; }
+.attn-summary:hover { background: #fff8f7; }
+.attn-top { display: flex; align-items: flex-start; gap: 9px; min-width: 0; }
+.attn-identity { display: flex; flex-direction: column; min-width: 0; }
 .attn-name { font-weight: 700; font-size: .83rem; }
 .attn-practice { color: var(--soft); font-size: .69rem; }
-.attn-reason { grid-column: 1 / -1; margin-top: 4px; color: var(--muted); font-size: .74rem; line-height: 1.45; }
+.attn-reason { grid-column: 1 / -1; color: var(--muted); font-size: .74rem; line-height: 1.45; }
+.attn-toggle { grid-column: 2; grid-row: 1; align-self: center; white-space: nowrap; color: var(--failed); font-size: .68rem; font-weight: 800; }
+.attn-toggle i { display: inline-block; margin-left: 3px; font-size: .86rem; transition: transform .18s; }
+.attention-item[open] .attn-toggle i { transform: rotate(180deg); }
+.attn-detail { margin: 0 10px 13px; padding: 13px; border: 1px solid var(--failed-border); border-radius: 11px; background: var(--failed-bg); }
+.attn-detail-label { display: block; margin-bottom: 8px; color: var(--failed); font-size: .64rem; font-weight: 850; letter-spacing: .075em; text-transform: uppercase; }
+.attn-failure-list { display: grid; gap: 8px; margin: 0 0 12px; padding: 0; list-style: none; }
+.attn-failure-list li { display: flex; flex-direction: column; gap: 2px; padding-bottom: 8px; border-bottom: 1px solid rgba(180,61,48,.15); }
+.attn-failure-list li:last-child { padding-bottom: 0; border-bottom: 0; }
+.attn-failure-list b { color: var(--ink); font-size: .75rem; }
+.attn-failure-list span, .attn-failure-copy { margin: 0; color: var(--muted); font-size: .7rem; line-height: 1.4; }
+.attn-scheduler-link { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border: 1px solid var(--failed-border); border-radius: 8px; color: var(--failed); background: white; font-size: .7rem; font-weight: 800; text-decoration: none; }
+.attn-scheduler-link:hover { background: #fff8f7; }
 .empty-note { margin: 0; padding: 18px 24px; color: var(--muted); }
 
 .audit-workspace { margin-top: 22px; padding: 25px; border: 1px solid var(--line); border-radius: 24px; background: white; box-shadow: var(--shadow-sm); }

@@ -1,0 +1,67 @@
+name: Email scheduler failures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/audits.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out audit data
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Load the previous audit file
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if [ -z "$BEFORE_SHA" ]; then
+            BEFORE_SHA="HEAD~1"
+          fi
+          git show "${BEFORE_SHA}:data/audits.json" > /tmp/audits-before.json 2>/dev/null || printf '{"auditHistory":[]}' > /tmp/audits-before.json
+
+      - name: Build failure alert
+        id: check
+        env:
+          ALERT_BEFORE: /tmp/audits-before.json
+        run: node scripts/build-failure-alert.mjs
+
+      - name: Check mail configuration
+        id: mail
+        env:
+          MAIL_SERVER: ${{ secrets.MAIL_SERVER }}
+          MAIL_PORT: ${{ secrets.MAIL_PORT }}
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
+        run: |
+          if [ -n "$MAIL_SERVER" ] && [ -n "$MAIL_PORT" ] && [ -n "$MAIL_USERNAME" ] && [ -n "$MAIL_PASSWORD" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Email Jean when a scheduler fails
+        if: steps.check.outputs.has_failures == 'true' && steps.mail.outputs.configured == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          secure: false
+          subject: Scheduler audit alert - ${{ steps.check.outputs.failure_count }} failed location(s)
+          to: jean@Independencedso.com
+          from: Scheduler Audit Dashboard <${{ secrets.MAIL_USERNAME }}>
+          html_body: file://failure-alert.html
+
+      - name: Note missing mail setup
+        if: steps.check.outputs.has_failures == 'true' && steps.mail.outputs.configured != 'true'
+        run: echo "A failure was detected, but SMTP repository secrets are not configured yet." >> "$GITHUB_STEP_SUMMARY"

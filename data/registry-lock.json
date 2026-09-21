@@ -75,6 +75,10 @@
     {
       "id": "young-family-dental",
       "name": "Young Family Dental"
+    },
+    {
+      "id": "philadelphia-dentistry",
+      "name": "Philadelphia Dentistry"
     }
   ],
   "locations": [
@@ -607,6 +611,21 @@
         "Existing Patient Exam & Cleaning (Child)",
         "New Patient - Exam & X-rays",
         "Emergency Exam"
+      ]
+    },
+    {
+      "id": "philadelphia-dentistry",
+      "name": "Philadelphia Dentistry",
+      "practiceId": "philadelphia-dentistry",
+      "websiteUrl": "https://book.modento.io/philadelphia-dentistry/reason-for-visit",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Philadelphia%20Dentistry%201601%20Walnut%20Street%20Philadelphia%20PA%2019102",
+      "expectedAppointmentTypes": [
+        "Invisalign Consultation",
+        "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+        "New or Existing Patient Emergency Appointment",
+        "New Patient Cleaning",
+        "New Patient Consultation",
+        "Existing Patient Cleaning"
       ]
     }
   ]
