@@ -38,25 +38,24 @@ const formatDate = (value) => new Intl.DateTimeFormat("en-US", {
   timeZoneName: "short",
 }).format(new Date(value));
 
-const cards = newFailures.map((entry) => {
+const cards = newFailures.map((entry, index) => {
   const location = locations.get(entry.locationId) || { name: entry.locationId, websiteUrl: "" };
   const failedTypes = (entry.websiteAppointmentAvailability || []).filter((result) => result.availabilityLoaded === false);
   const details = failedTypes.length
-    ? failedTypes.map((result) => `<tr><td style="padding:11px 14px;border-top:1px solid #f1d9dd;color:#27332f;font-size:14px"><strong>${escapeHtml(result.appointmentType)}</strong><br><span style="color:#735f63;font-size:13px">${escapeHtml(result.issue || "No appointment times were available.")}</span></td></tr>`).join("")
-    : `<tr><td style="padding:11px 14px;border-top:1px solid #f1d9dd;color:#735f63;font-size:13px">The website scheduler did not load successfully.</td></tr>`;
+    ? failedTypes.map((result) => `<tr><td width="20" valign="top" style="padding:12px 0 12px 18px;color:#d65b72;font-size:18px;line-height:18px">•</td><td style="padding:12px 18px 12px 8px;border-top:1px solid #f0e9e7;color:#2a302e;font-size:14px;line-height:1.45"><strong style="font-weight:700">${escapeHtml(result.appointmentType)}</strong><br><span style="color:#77706e;font-size:12px">${escapeHtml(result.issue || "No appointment times were available.")}</span></td></tr>`).join("")
+    : `<tr><td width="20" valign="top" style="padding:12px 0 12px 18px;color:#d65b72;font-size:18px;line-height:18px">•</td><td style="padding:12px 18px 12px 8px;border-top:1px solid #f0e9e7;color:#77706e;font-size:13px">The website scheduler did not load successfully.</td></tr>`;
   const link = location.websiteUrl
-    ? `<a href="${escapeHtml(location.websiteUrl)}" style="display:inline-block;padding:9px 13px;border-radius:7px;background:#23483f;color:#ffffff;text-decoration:none;font-size:12px;font-weight:bold">Open scheduler</a>`
+    ? `<tr><td colspan="2" style="padding:4px 18px 18px"><a class="scheduler-button" href="${escapeHtml(location.websiteUrl)}" style="display:block;padding:12px 16px;border-radius:9px;background:#243f39;color:#ffffff;text-align:center;text-decoration:none;font-size:13px;font-weight:700">Check live scheduler&nbsp;&nbsp;→</a></td></tr>`
     : "";
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 14px;border:1px solid #ecd3d8;border-radius:12px;background:#fffafa;border-collapse:separate;overflow:hidden">
-    <tr><td style="padding:16px 16px 13px"><table role="presentation" width="100%"><tr><td><div style="color:#a52d43;font-size:11px;font-weight:bold;letter-spacing:.08em;text-transform:uppercase">Needs attention</div><div style="margin-top:4px;color:#20312c;font-size:18px;font-weight:bold">${escapeHtml(location.name)}</div><div style="margin-top:3px;color:#7a6a6d;font-size:12px">Checked ${escapeHtml(formatDate(entry.checkedAt))}</div></td><td align="right" style="vertical-align:middle">${link}</td></tr></table></td></tr>
+  return `<table class="issue-card" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 16px;border:1px solid #e8dfdc;border-radius:14px;background:#ffffff;border-collapse:separate;overflow:hidden">
+    <tr><td colspan="2" style="padding:18px 18px 15px;border-left:5px solid #d65b72"><div style="color:#b33e55;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Issue ${String(index + 1).padStart(2, "0")}</div><div style="margin-top:5px;color:#1f2926;font-size:19px;font-weight:700;line-height:1.25">${escapeHtml(location.name)}</div><div style="margin-top:5px;color:#8a817e;font-size:11px">Last checked ${escapeHtml(formatDate(entry.checkedAt))}</div></td></tr>
     ${details}
+    ${link}
   </table>`;
 }).join("");
 
 const failureCount = newFailures.length;
 const reviewedCount = latestResults.length;
-const heroColor = failureCount ? "#a52d43" : "#19704f";
-const heroBackground = failureCount ? "#fff1f3" : "#edfaf4";
 const headline = failureCount
   ? `${failureCount} location${failureCount === 1 ? "" : "s"} need attention`
   : "All online schedulers passed";
@@ -66,17 +65,31 @@ const intro = failureCount
 const auditDate = current.updatedAt ? formatDate(current.updatedAt) : "Latest sync";
 
 const html = `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Online scheduler audit report</title></head>
-<body style="margin:0;background:#f3f6f4;font-family:Arial,Helvetica,sans-serif;color:#20312c;line-height:1.5">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f6f4"><tr><td align="center" style="padding:28px 14px">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:680px;background:#ffffff;border:1px solid #dde7e2;border-radius:18px;border-collapse:separate;overflow:hidden;box-shadow:0 10px 30px rgba(31,60,51,.08)">
-  <tr><td style="padding:25px 28px;background:#183e35;color:#ffffff"><div style="color:#9fe7d0;font-size:11px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase">Independence Dental Services</div><h1 style="margin:7px 0 3px;font-size:25px;line-height:1.2">Online Scheduler Audit</h1><div style="color:#d1e7df;font-size:13px">${escapeHtml(auditDate)}</div></td></tr>
-  <tr><td style="padding:24px 28px">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:22px;border-radius:12px;background:${heroBackground}"><tr><td style="padding:18px 20px"><div style="color:${heroColor};font-size:22px;font-weight:bold">${escapeHtml(headline)}</div><div style="margin-top:6px;color:#56665f;font-size:14px">${escapeHtml(intro)}</div><div style="margin-top:12px;color:#6f7d77;font-size:12px">${reviewedCount} locations reviewed</div></td></tr></table>
-    ${cards || `<div style="padding:18px;border:1px solid #cfe9dc;border-radius:12px;background:#f7fffb;color:#315e4d;font-size:14px">No follow-up is needed based on the latest audit.</div>`}
-    <div style="margin-top:22px;text-align:center"><a href="https://jeanidso.github.io/Online_Scheduler_Audit/" style="display:inline-block;padding:11px 17px;border:1px solid #bfd3cb;border-radius:8px;color:#23483f;text-decoration:none;font-size:13px;font-weight:bold">View full audit dashboard</a></div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Online scheduler audit report</title>
+<style>
+  @media only screen and (max-width:620px){
+    .page-pad{padding:0!important}.email-shell{border-radius:0!important;border-left:0!important;border-right:0!important}.hero{padding:28px 21px 25px!important}.content{padding:22px 14px 26px!important}.result-number{font-size:52px!important}.result-title{font-size:20px!important}.issue-card{margin-bottom:12px!important}.scheduler-button{padding:14px 16px!important}.footer{padding:20px 18px!important}
+  }
+</style></head>
+<body style="margin:0;padding:0;background:#eeeae5;font-family:Arial,Helvetica,sans-serif;color:#1f2926;line-height:1.5;-webkit-text-size-adjust:100%">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0">${escapeHtml(headline)} across ${reviewedCount} reviewed locations.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;background:#eeeae5"><tr><td class="page-pad" align="center" style="padding:32px 12px">
+<table class="email-shell" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:620px;background:#faf9f7;border:1px solid #ded7d1;border-radius:20px;border-collapse:separate;overflow:hidden">
+  <tr><td style="height:7px;background:#df6c7f;font-size:0;line-height:0">&nbsp;</td></tr>
+  <tr><td class="hero" style="padding:34px 38px 31px;background:#203b35;color:#ffffff">
+    <div style="color:#b9d9cd;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">Independence Dental Services</div>
+    <div style="margin-top:18px;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1.05">Scheduler<br>audit report</div>
+    <div style="margin-top:17px;color:#cfe0da;font-size:12px">Reviewed ${escapeHtml(auditDate)}</div>
   </td></tr>
-  <tr><td style="padding:15px 28px;border-top:1px solid #e5ece9;background:#fafcfb;color:#83918b;font-size:11px;text-align:center">Sent after review from the Online Scheduler Audit dashboard</td></tr>
+  <tr><td class="content" style="padding:30px 34px 34px">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px"><tr>
+      <td width="112" valign="top"><div class="result-number" style="color:${failureCount ? "#c4435b" : "#257356"};font-family:Georgia,'Times New Roman',serif;font-size:64px;line-height:.9">${failureCount}</div><div style="margin-top:7px;color:#8a817e;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">of ${reviewedCount} reviewed</div></td>
+      <td valign="top" style="padding-left:18px"><div class="result-title" style="color:#26312e;font-size:22px;font-weight:700;line-height:1.2">${escapeHtml(headline)}</div><div style="margin-top:8px;color:#726c69;font-size:13px;line-height:1.55">${escapeHtml(intro)}</div></td>
+    </tr></table>
+    ${failureCount ? `<div style="margin:0 0 12px;color:#8a817e;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Locations to review</div>${cards}` : `<table role="presentation" width="100%" style="border:1px solid #cfe2d9;border-radius:14px;background:#f2faf6"><tr><td style="padding:22px;color:#32624f;font-size:14px;text-align:center"><strong style="font-size:16px">Everything looks clear.</strong><br><span style="color:#638173">No follow-up is needed from this audit.</span></td></tr></table>`}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:25px"><tr><td><a href="https://jeanidso.github.io/Online_Scheduler_Audit/" style="display:block;padding:14px 18px;border:1px solid #cfc6c0;border-radius:10px;color:#29473f;text-align:center;text-decoration:none;font-size:13px;font-weight:700">Open complete audit dashboard&nbsp;&nbsp;→</a></td></tr></table>
+  </td></tr>
+  <tr><td class="footer" style="padding:20px 34px;border-top:1px solid #e6dfda;background:#f5f2ef;color:#958c87;font-size:10px;line-height:1.5;text-align:center">This report was reviewed and sent manually from the Online Scheduler Audit dashboard.</td></tr>
 </table>
 </td></tr></table>
 </body></html>`;
