@@ -62,6 +62,9 @@ jobs:
           from: Scheduler Audit Dashboard <${{ secrets.MAIL_USERNAME }}>
           html_body: file://failure-alert.html
 
-      - name: Note missing mail setup
+      - name: Stop when mail is not configured
         if: steps.check.outputs.has_failures == 'true' && steps.mail.outputs.configured != 'true'
-        run: echo "A failure was detected, but SMTP repository secrets are not configured yet." >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "## Email alert was not sent" >> "$GITHUB_STEP_SUMMARY"
+          echo "A scheduler failure was detected, but the MAIL_SERVER, MAIL_PORT, MAIL_USERNAME, and MAIL_PASSWORD repository secrets are not configured." >> "$GITHUB_STEP_SUMMARY"
+          exit 1

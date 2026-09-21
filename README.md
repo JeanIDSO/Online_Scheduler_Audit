@@ -144,5 +144,8 @@ Add these GitHub Actions repository secrets once to enable delivery:
 - `MAIL_USERNAME` — SMTP login and sender email address
 - `MAIL_PASSWORD` — SMTP password or app password
 
-Until those secrets are configured, the workflow still detects failures
-and records a note in its run summary, but it cannot send the email.
+Add them under **Settings → Secrets and variables → Actions → New
+repository secret** in the `JeanIDSO/Online_Scheduler_Audit` repository.
+
+Until those secrets are configured, the workflow detects failures but
+ends with a visible setup error instead of silently skipping the email.
