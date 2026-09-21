@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T13:37:06.000Z",
+  "updatedAt": "2026-09-21T13:50:07.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -10786,6 +10786,168 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "Website-only live audit on September 21, 2026. One or more calendars were inconclusive and were not failed.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "redwood-family-dentistry__2026-09-21T13:50:07.000Z",
+      "locationId": "redwood-family-dentistry",
+      "checkedAt": "2026-09-21T13:50:07.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment - (Ages 12 and Older)"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment - (Ages 12 and Older)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 retry of the patient-details-first website flow. Fictional audit details were used, no appointment was submitted, and every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "stonebriar-smile-design__2026-09-21T13:50:07.000Z",
+      "locationId": "stonebriar-smile-design",
+      "checkedAt": "2026-09-21T13:50:07.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Cleaning",
+        "Emergency Consult",
+        "Invisalign Consult",
+        "EMSMILE CONSULT",
+        "Cosmetic Consultation",
+        "Cosmetic & Wellness Consultation",
+        "Wellness Consultation",
+        "TMJ Consultation",
+        "Sleep Consultation"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Invisalign Consult",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "EMSMILE CONSULT",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Cosmetic Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Cosmetic & Wellness Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Wellness Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "TMJ Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Sleep Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 retry of the patient-details-first website flow. Fictional audit details were used, no appointment was submitted, and every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "tulare-family-dentistry__2026-09-21T13:50:07.000Z",
+      "locationId": "tulare-family-dentistry",
+      "checkedAt": "2026-09-21T13:50:07.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Appointment (Ages 12 and Older)"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Appointment (Ages 12 and Older)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 retry of the patient-details-first website flow. Fictional audit details were used, no appointment was submitted, and every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-orem__2026-09-21T13:50:07.000Z",
+      "locationId": "young-family-orem",
+      "checkedAt": "2026-09-21T13:50:07.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam",
+        "New Patient Exam & X-rays"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam & X-rays",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 retry of the patient-details-first website flow. Fictional audit details were used, no appointment was submitted, and every displayed appointment type produced real availability.",
       "evidenceLinks": []
     }
   ]
