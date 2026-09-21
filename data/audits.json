@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T14:06:38.000Z",
+  "updatedAt": "2026-09-21T17:10:31.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -78,6 +78,10 @@
     {
       "id": "young-family-dental",
       "name": "Young Family Dental"
+    },
+    {
+      "id": "philadelphia-dentistry",
+      "name": "Philadelphia Dentistry"
     }
   ],
   "locations": [
@@ -610,6 +614,21 @@
         "Existing Patient Exam & Cleaning (Child)",
         "New Patient - Exam & X-rays",
         "Emergency Exam"
+      ]
+    },
+    {
+      "id": "philadelphia-dentistry",
+      "name": "Philadelphia Dentistry",
+      "practiceId": "philadelphia-dentistry",
+      "websiteUrl": "https://book.modento.io/philadelphia-dentistry/reason-for-visit",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Philadelphia%20Dentistry%201601%20Walnut%20Street%20Philadelphia%20PA%2019102",
+      "expectedAppointmentTypes": [
+        "Invisalign Consultation",
+        "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+        "New or Existing Patient Emergency Appointment",
+        "New Patient Cleaning",
+        "New Patient Consultation",
+        "Existing Patient Cleaning"
       ]
     }
   ],
@@ -11180,6 +11199,69 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "September 21 extended retry completed. Three appointment types displayed real availability; the fully loaded child-cleaning calendar explicitly reported no available appointment slots online.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "philadelphia-dentistry__2026-09-21T17:10:31.000Z",
+      "locationId": "philadelphia-dentistry",
+      "checkedAt": "2026-09-21T17:10:31.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Invisalign Consultation",
+        "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+        "New or Existing Patient Emergency Appointment",
+        "New Patient Cleaning",
+        "New Patient Consultation",
+        "Existing Patient Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Invisalign Consultation",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "Cosmetic Consult - Comprehensive Exam, Wellness Scan & X-Rays",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New or Existing Patient Emergency Appointment",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New Patient Cleaning",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New Patient Consultation",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website-only audit on September 21, 2026. All six displayed appointment types reached a fully loaded availability screen that explicitly reported no available appointment slots online.",
       "evidenceLinks": []
     }
   ]

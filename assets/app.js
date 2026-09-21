@@ -90,7 +90,8 @@
   function computeStatus(entry, availIssues) {
     if (entry.manualReviewNeeded) return "Manual Review";
     if (availIssues && availIssues.length > 0) return "Failed";
-    if (entry.websiteSchedulerStatus === "Broken" || entry.websiteSchedulerStatus === "NotChecked" || entry.websiteLoadPerformance === "Inconclusive") return "Needs Recheck";
+    if (entry.websiteSchedulerStatus === "Broken") return "Failed";
+    if (entry.websiteSchedulerStatus === "NotChecked" || entry.websiteLoadPerformance === "Inconclusive") return "Needs Recheck";
 
     var hasMinorLinkNote = entry.websiteSchedulerStatus === "WrongLocation" ||
       (Array.isArray(entry.brokenOrIncorrectLinks) && entry.brokenOrIncorrectLinks.length > 0);
@@ -430,18 +431,32 @@
 
     items.forEach(function (v) {
       var practice = practiceNameFor(v.location.practiceId);
-      var sevClass = v.status === "Failed" ? "sev-failed" : (v.status === "Manual Review" || v.status === "Needs Recheck") ? "sev-manual" : "sev-warning";
-      var row = document.createElement("div");
-      row.className = "attention-item " + sevClass;
+      var failures = v.latest && v.latest.availIssues ? v.latest.availIssues : [];
+      var failureList = failures.length
+        ? '<ul class="attn-failure-list">' + failures.map(function (failure) {
+            return '<li><b>' + escapeHtml(failure.appointmentType) + '</b><span>' +
+              escapeHtml(failure.issue || "No appointment times were available.") + '</span></li>';
+          }).join("") + "</ul>"
+        : '<p class="attn-failure-copy">The website booking page did not load successfully.</p>';
+      var row = document.createElement("details");
+      row.className = "attention-item sev-failed";
       row.innerHTML =
-        '<div class="attn-top">' +
-          statusPillHtml(v.status) +
-          '<div class="attn-identity">' +
-            '<span class="attn-name">' + escapeHtml(v.location.name) + "</span>" +
-            '<span class="attn-practice">' + escapeHtml(practice) + "</span>" +
-          "</div>" +
-        "</div>" +
-        '<span class="attn-reason">' + escapeHtml(reasonText(v)) + "</span>";
+        '<summary class="attn-summary">' +
+          '<span class="attn-top">' +
+            statusPillHtml(v.status) +
+            '<span class="attn-identity">' +
+              '<span class="attn-name">' + escapeHtml(v.location.name) + "</span>" +
+              '<span class="attn-practice">' + escapeHtml(practice) + "</span>" +
+            "</span>" +
+          "</span>" +
+          '<span class="attn-reason">' + escapeHtml(reasonText(v)) + "</span>" +
+          '<span class="attn-toggle">View details <i>⌄</i></span>' +
+        "</summary>" +
+        '<div class="attn-detail">' +
+          '<span class="attn-detail-label">Failing appointment types</span>' +
+          failureList +
+          '<a class="attn-scheduler-link" href="' + escapeHtml(v.location.websiteUrl) + '" target="_blank" rel="noopener">Open live scheduler <b>↗</b></a>' +
+        "</div>";
       listEl.appendChild(row);
     });
   }
