@@ -10,11 +10,26 @@ const before = beforePath && fs.existsSync(beforePath)
 
 const previousIds = new Set((before.auditHistory || []).map((entry) => entry.auditId));
 const locations = new Map((current.locations || []).map((location) => [location.id, location]));
-const newFailures = (current.auditHistory || []).filter((entry) => {
-  if (previousIds.has(entry.auditId)) return false;
+const isFailure = (entry) => {
   if (entry.websiteSchedulerStatus === "Broken") return true;
   return (entry.websiteAppointmentAvailability || []).some((result) => result.availabilityLoaded === false);
-});
+};
+
+const includeCurrentFailures = process.env.ALERT_INCLUDE_CURRENT_FAILURES === "true";
+const latestByLocation = new Map();
+for (const entry of current.auditHistory || []) {
+  const previous = latestByLocation.get(entry.locationId);
+  if (!previous || new Date(entry.checkedAt).getTime() >= new Date(previous.checkedAt).getTime()) {
+    latestByLocation.set(entry.locationId, entry);
+  }
+}
+
+const newFailures = includeCurrentFailures
+  ? [...latestByLocation.values()].filter(isFailure)
+  : (current.auditHistory || []).filter((entry) => {
+  if (previousIds.has(entry.auditId)) return false;
+  return isFailure(entry);
+  });
 
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({
   "&": "&amp;",
@@ -53,4 +68,6 @@ if (process.env.GITHUB_OUTPUT) {
 
 console.log(newFailures.length
   ? `Prepared an email alert for ${newFailures.length} failed location(s).`
-  : "No newly added failures; no email alert needed.");
+  : includeCurrentFailures
+    ? "No current failures; no test email needed."
+    : "No newly added failures; no email alert needed.");

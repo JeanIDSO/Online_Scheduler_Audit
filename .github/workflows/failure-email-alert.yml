@@ -32,6 +32,7 @@ jobs:
         id: check
         env:
           ALERT_BEFORE: /tmp/audits-before.json
+          ALERT_INCLUDE_CURRENT_FAILURES: ${{ github.event_name == 'workflow_dispatch' }}
         run: node scripts/build-failure-alert.mjs
 
       - name: Check mail configuration
