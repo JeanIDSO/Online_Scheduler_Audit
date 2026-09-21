@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T13:50:07.000Z",
+  "updatedAt": "2026-09-21T14:06:38.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -10948,6 +10948,238 @@
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
       "notes": "September 21 retry of the patient-details-first website flow. Fictional audit details were used, no appointment was submitted, and every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "bethesda-executive__2026-09-21T14:06:38.000Z",
+      "locationId": "bethesda-executive",
+      "checkedAt": "2026-09-21T14:06:38.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 extended retry completed after selecting the self-pay option on the required insurance step. Every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "bethesda-fernwood__2026-09-21T14:06:38.000Z",
+      "locationId": "bethesda-fernwood",
+      "checkedAt": "2026-09-21T14:06:38.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam, X-rays & Cleaning",
+        "Consultation with Doctor",
+        "$249 New Patient Special (exam, x-rays & cleaning)",
+        "Existing Patient Exam & Cleaning",
+        "Emergency Visit"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam, X-rays & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Consultation with Doctor",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "$249 New Patient Special (exam, x-rays & cleaning)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Visit",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 extended retry completed after selecting the self-pay option on the required insurance step. Every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "seaside-jacksonville__2026-09-21T14:06:38.000Z",
+      "locationId": "seaside-jacksonville",
+      "checkedAt": "2026-09-21T14:06:38.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Doctor Consultation",
+        "Emergency Exam & Xrays",
+        "New Patient Exam, Xrays & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Doctor Consultation",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam & Xrays",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam, Xrays & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 extended retry completed after selecting the self-pay option on the required insurance step. Every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-riverton__2026-09-21T14:06:38.000Z",
+      "locationId": "young-family-riverton",
+      "checkedAt": "2026-09-21T14:06:38.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Exam & Xrays",
+        "Emergency Exam",
+        "Existing Patient Exam & Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Exam & Xrays",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 extended retry completed after selecting the self-pay option on the required insurance step. Every displayed appointment type produced real availability.",
+      "evidenceLinks": []
+    },
+    {
+      "auditId": "young-family-west-jordan__2026-09-21T14:06:38.000Z",
+      "locationId": "young-family-west-jordan",
+      "checkedAt": "2026-09-21T14:06:38.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Existing Patient Exam & Cleaning (Adult)",
+        "Existing Patient Exam & Cleaning (Child)",
+        "New Patient - Exam & X-rays",
+        "Emergency Exam"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Adult)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Exam & Cleaning (Child)",
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The fully loaded scheduler explicitly reported no available appointment slots online."
+        },
+        {
+          "appointmentType": "New Patient - Exam & X-rays",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "September 21 extended retry completed. Three appointment types displayed real availability; the fully loaded child-cleaning calendar explicitly reported no available appointment slots online.",
       "evidenceLinks": []
     }
   ]
