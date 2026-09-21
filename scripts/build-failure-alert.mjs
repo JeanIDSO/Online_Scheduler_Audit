@@ -42,15 +42,15 @@ const cards = newFailures.map((entry, index) => {
   const location = locations.get(entry.locationId) || { name: entry.locationId, websiteUrl: "" };
   const failedTypes = (entry.websiteAppointmentAvailability || []).filter((result) => result.availabilityLoaded === false);
   const details = failedTypes.length
-    ? failedTypes.map((result) => `<tr><td width="20" valign="top" style="padding:12px 0 12px 18px;color:#d65b72;font-size:18px;line-height:18px">•</td><td style="padding:12px 18px 12px 8px;border-top:1px solid #f0e9e7;color:#2a302e;font-size:14px;line-height:1.45"><strong style="font-weight:700">${escapeHtml(result.appointmentType)}</strong><br><span style="color:#77706e;font-size:12px">${escapeHtml(result.issue || "No appointment times were available.")}</span></td></tr>`).join("")
-    : `<tr><td width="20" valign="top" style="padding:12px 0 12px 18px;color:#d65b72;font-size:18px;line-height:18px">•</td><td style="padding:12px 18px 12px 8px;border-top:1px solid #f0e9e7;color:#77706e;font-size:13px">The website scheduler did not load successfully.</td></tr>`;
+    ? failedTypes.map((result) => `<tr><td width="16" valign="top" style="padding:9px 0;color:#c54a61;font-size:16px;line-height:18px">●</td><td style="padding:9px 0 9px 9px;color:#29312e;font-size:14px;line-height:1.45"><span style="font-weight:700">${escapeHtml(result.appointmentType)}</span><br><span style="color:#817a77;font-size:12px">${escapeHtml(result.issue || "No appointment times were available.")}</span></td></tr>`).join("")
+    : `<tr><td width="16" valign="top" style="padding:9px 0;color:#c54a61;font-size:16px;line-height:18px">●</td><td style="padding:9px 0 9px 9px;color:#817a77;font-size:13px">The website scheduler did not load successfully.</td></tr>`;
   const link = location.websiteUrl
-    ? `<tr><td colspan="2" style="padding:4px 18px 18px"><a class="scheduler-button" href="${escapeHtml(location.websiteUrl)}" style="display:block;padding:12px 16px;border-radius:9px;background:#243f39;color:#ffffff;text-align:center;text-decoration:none;font-size:13px;font-weight:700">Check live scheduler&nbsp;&nbsp;→</a></td></tr>`
+    ? `<a href="${escapeHtml(location.websiteUrl)}" style="color:#24594c;text-decoration:none;font-size:13px;font-weight:700">Review live scheduler&nbsp;&nbsp;→</a>`
     : "";
-  return `<table class="issue-card" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 16px;border:1px solid #e8dfdc;border-radius:14px;background:#ffffff;border-collapse:separate;overflow:hidden">
-    <tr><td colspan="2" style="padding:18px 18px 15px;border-left:5px solid #d65b72"><div style="color:#b33e55;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Issue ${String(index + 1).padStart(2, "0")}</div><div style="margin-top:5px;color:#1f2926;font-size:19px;font-weight:700;line-height:1.25">${escapeHtml(location.name)}</div><div style="margin-top:5px;color:#8a817e;font-size:11px">Last checked ${escapeHtml(formatDate(entry.checkedAt))}</div></td></tr>
-    ${details}
-    ${link}
+  return `<table class="location-section" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-top:1px solid #ddd9d4">
+    <tr><td style="padding:24px 0 8px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="38" valign="top"><div style="width:28px;height:28px;border-radius:50%;background:#f8e5e8;color:#a6384d;font-size:11px;font-weight:700;line-height:28px;text-align:center">${String(index + 1).padStart(2, "0")}</div></td><td valign="top"><div style="color:#202825;font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:1.2">${escapeHtml(location.name)}</div><div style="margin-top:5px;color:#938b87;font-size:11px">Checked ${escapeHtml(formatDate(entry.checkedAt))}</div></td></tr></table></td></tr>
+    <tr><td style="padding:3px 0 12px"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${details}</table></td></tr>
+    <tr><td style="padding:0 0 24px">${link}</td></tr>
   </table>`;
 }).join("");
 
@@ -68,28 +68,26 @@ const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Online scheduler audit report</title>
 <style>
   @media only screen and (max-width:620px){
-    .page-pad{padding:0!important}.email-shell{border-radius:0!important;border-left:0!important;border-right:0!important}.hero{padding:28px 21px 25px!important}.content{padding:22px 14px 26px!important}.result-number{font-size:52px!important}.result-title{font-size:20px!important}.issue-card{margin-bottom:12px!important}.scheduler-button{padding:14px 16px!important}.footer{padding:20px 18px!important}
+    .page-pad{padding:0!important}.email-shell{border-radius:0!important}.header,.content{padding-left:22px!important;padding-right:22px!important}.header-date{display:block!important;padding-top:6px!important;text-align:left!important}.headline{font-size:35px!important}.summary-number{font-size:50px!important}.summary-copy{padding-left:14px!important}.footer{padding:21px 22px!important}
   }
 </style></head>
-<body style="margin:0;padding:0;background:#eeeae5;font-family:Arial,Helvetica,sans-serif;color:#1f2926;line-height:1.5;-webkit-text-size-adjust:100%">
+<body style="margin:0;padding:0;background:#eef1ee;font-family:Arial,Helvetica,sans-serif;color:#1f2926;line-height:1.5;-webkit-text-size-adjust:100%">
 <div style="display:none;max-height:0;overflow:hidden;opacity:0">${escapeHtml(headline)} across ${reviewedCount} reviewed locations.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;background:#eeeae5"><tr><td class="page-pad" align="center" style="padding:32px 12px">
-<table class="email-shell" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:620px;background:#faf9f7;border:1px solid #ded7d1;border-radius:20px;border-collapse:separate;overflow:hidden">
-  <tr><td style="height:7px;background:#df6c7f;font-size:0;line-height:0">&nbsp;</td></tr>
-  <tr><td class="hero" style="padding:34px 38px 31px;background:#203b35;color:#ffffff">
-    <div style="color:#b9d9cd;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">Independence Dental Services</div>
-    <div style="margin-top:18px;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1.05">Scheduler<br>audit report</div>
-    <div style="margin-top:17px;color:#cfe0da;font-size:12px">Reviewed ${escapeHtml(auditDate)}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;background:#eef1ee"><tr><td class="page-pad" align="center" style="padding:34px 12px">
+<table class="email-shell" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:620px;background:#fffefd;border-radius:18px;border-collapse:separate;overflow:hidden;box-shadow:0 14px 40px rgba(33,54,47,.08)">
+  <tr><td class="header" style="padding:24px 38px 21px;border-bottom:1px solid #e9e5e0"><table role="presentation" width="100%"><tr><td><div style="color:#254b41;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase">Independence Dental Services</div></td><td class="header-date" align="right" style="color:#918a86;font-size:11px">${escapeHtml(auditDate)}</td></tr></table></td></tr>
+  <tr><td class="content" style="padding:38px 38px 40px">
+    <div style="color:#b34358;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">Online scheduling</div>
+    <div class="headline" style="margin-top:10px;color:#1e2925;font-family:Georgia,'Times New Roman',serif;font-size:43px;line-height:1.06;letter-spacing:-.02em">Audit results,<br>ready for review.</div>
+    <div style="margin-top:17px;max-width:475px;color:#706a67;font-size:14px;line-height:1.65">${escapeHtml(intro)}</div>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:30px 0 34px;background:${failureCount ? "#fbf0f2" : "#edf7f2"};border-radius:12px"><tr><td style="padding:22px 24px"><table role="presentation" width="100%"><tr>
+      <td width="82" valign="middle"><div class="summary-number" style="color:${failureCount ? "#b73d54" : "#276c52"};font-family:Georgia,'Times New Roman',serif;font-size:58px;line-height:.9">${failureCount}</div></td>
+      <td class="summary-copy" valign="middle" style="padding-left:20px"><div style="color:#2b322f;font-size:18px;font-weight:700;line-height:1.25">${escapeHtml(headline)}</div><div style="margin-top:5px;color:#837c78;font-size:11px">${reviewedCount} total locations reviewed</div></td>
+    </tr></table></td></tr></table>
+    ${failureCount ? `<div style="margin-bottom:8px;color:#8f8783;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase">Details</div>${cards}` : `<div style="padding:23px 0;border-top:1px solid #dce5df;border-bottom:1px solid #dce5df;color:#35614f;font-size:14px"><strong style="font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:400">Everything looks clear.</strong><br><span style="color:#73837c">No follow-up is needed from this audit.</span></div>`}
+    <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:30px"><tr><td style="border-radius:9px;background:#254b41"><a href="https://jeanidso.github.io/Online_Scheduler_Audit/" style="display:inline-block;padding:13px 20px;color:#ffffff;text-decoration:none;font-size:12px;font-weight:700">View Full Audit Dashboard&nbsp;&nbsp;→</a></td></tr></table>
   </td></tr>
-  <tr><td class="content" style="padding:30px 34px 34px">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px"><tr>
-      <td width="112" valign="top"><div class="result-number" style="color:${failureCount ? "#c4435b" : "#257356"};font-family:Georgia,'Times New Roman',serif;font-size:64px;line-height:.9">${failureCount}</div><div style="margin-top:7px;color:#8a817e;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase">of ${reviewedCount} reviewed</div></td>
-      <td valign="top" style="padding-left:18px"><div class="result-title" style="color:#26312e;font-size:22px;font-weight:700;line-height:1.2">${escapeHtml(headline)}</div><div style="margin-top:8px;color:#726c69;font-size:13px;line-height:1.55">${escapeHtml(intro)}</div></td>
-    </tr></table>
-    ${failureCount ? `<div style="margin:0 0 12px;color:#8a817e;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Locations to review</div>${cards}` : `<table role="presentation" width="100%" style="border:1px solid #cfe2d9;border-radius:14px;background:#f2faf6"><tr><td style="padding:22px;color:#32624f;font-size:14px;text-align:center"><strong style="font-size:16px">Everything looks clear.</strong><br><span style="color:#638173">No follow-up is needed from this audit.</span></td></tr></table>`}
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:25px"><tr><td><a href="https://jeanidso.github.io/Online_Scheduler_Audit/" style="display:block;padding:14px 18px;border:1px solid #cfc6c0;border-radius:10px;color:#29473f;text-align:center;text-decoration:none;font-size:13px;font-weight:700">Open complete audit dashboard&nbsp;&nbsp;→</a></td></tr></table>
-  </td></tr>
-  <tr><td class="footer" style="padding:20px 34px;border-top:1px solid #e6dfda;background:#f5f2ef;color:#958c87;font-size:10px;line-height:1.5;text-align:center">This report was reviewed and sent manually from the Online Scheduler Audit dashboard.</td></tr>
+  <tr><td class="footer" style="padding:21px 38px;background:#254b41;color:#cbdad5;font-size:10px;line-height:1.5">Reviewed and sent from the Online Scheduler Audit dashboard.</td></tr>
 </table>
 </td></tr></table>
 </body></html>`;
@@ -99,7 +97,10 @@ fs.writeFileSync(outputPath, html);
 if (process.env.GITHUB_OUTPUT) {
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `has_failures=${newFailures.length > 0}\n`);
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `failure_count=${newFailures.length}\n`);
-  fs.appendFileSync(process.env.GITHUB_OUTPUT, `email_subject=Scheduler audit report - ${headline}\n`);
+  const subject = failureCount
+    ? `Online Scheduler Audit: ${failureCount} Location${failureCount === 1 ? "" : "s"} Need Attention`
+    : "Online Scheduler Audit: All Locations Passed";
+  fs.appendFileSync(process.env.GITHUB_OUTPUT, `email_subject=${subject}\n`);
 }
 
 console.log(`Prepared an approved audit email for ${reviewedCount} locations with ${failureCount} failure(s).`);
