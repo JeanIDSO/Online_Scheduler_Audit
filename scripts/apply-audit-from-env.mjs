@@ -44,6 +44,12 @@ for (const result of results) {
   }));
   const hasFailure = availability.some((entry) => entry.availabilityLoaded === false);
   const hasInconclusive = availability.some((entry) => entry.availabilityLoaded === null);
+  const auditDate = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(checkedAt));
 
   data.auditHistory.push({
     auditId: `${result.id}__${checkedAt}`,
@@ -58,10 +64,14 @@ for (const result of results) {
     observedGoogleAppointmentTypes: [],
     websiteAppointmentAvailability: availability,
     googleAppointmentAvailability: [],
-    manualReviewNeeded: blocked,
-    manualReviewReason: blocked ? "Modento blocked the patient-details-first flow with an automation warning." : "",
+    manualReviewNeeded: hasInconclusive,
+    manualReviewReason: hasInconclusive
+      ? blocked
+        ? "The scheduler requires patient details before availability can be reviewed."
+        : "One or more appointment types did not return a conclusive availability result."
+      : "",
     brokenOrIncorrectLinks: [],
-    notes: `Website-only live audit on September 21, 2026. ${hasFailure ? "At least one fully loaded calendar explicitly reported no available times." : hasInconclusive ? "One or more calendars were inconclusive and were not failed." : "Every tested appointment type displayed at least one appointment time."}`,
+    notes: `Website-only live audit on ${auditDate}. ${hasFailure ? "At least one appointment type was missing or a fully loaded calendar explicitly reported no available times." : hasInconclusive ? "One or more calendars were inconclusive and were not failed." : "Every tested appointment type displayed at least one appointment time."}`,
     evidenceLinks: [],
   });
 }
