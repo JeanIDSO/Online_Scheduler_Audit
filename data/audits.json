@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-21T17:38:02.000Z",
+  "updatedAt": "2026-09-22T18:01:36.000Z",
   "updatedBy": "Codex live browser audit",
   "practices": [
     {
@@ -82,6 +82,14 @@
     {
       "id": "philadelphia-dentistry",
       "name": "Philadelphia Dentistry"
+    },
+    {
+      "id": "fort-worth-cosmetic-family-dentistry",
+      "name": "Fort Worth Cosmetic & Family Dentistry"
+    },
+    {
+      "id": "smilemakers-comprehensive-dentistry",
+      "name": "SmileMakers Comprehensive Dentistry"
     }
   ],
   "locations": [
@@ -628,6 +636,29 @@
         "New or Existing Patient Emergency Appointment",
         "New Patient Cleaning",
         "New Patient Consultation",
+        "Existing Patient Cleaning"
+      ]
+    },
+    {
+      "id": "fort-worth-cosmetic-family-dentistry",
+      "name": "Fort Worth Cosmetic & Family Dentistry",
+      "practiceId": "fort-worth-cosmetic-family-dentistry",
+      "websiteUrl": "https://book.modento.io/fort-worth-cosmetic-and-family-dentistry/reason-for-visit",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fort%20Worth%20Cosmetic%20%26%20Family%20Dentistry%205720%20Locke%20Avenue%20Fort%20Worth%20TX%2076107",
+      "expectedAppointmentTypes": [
+        "Emergency Exam - Existing Patient",
+        "Emergency Exam - New Patient"
+      ]
+    },
+    {
+      "id": "smilemakers-eastchase",
+      "name": "SmileMakers - Eastchase",
+      "practiceId": "smilemakers-comprehensive-dentistry",
+      "websiteUrl": "https://app.nexhealth.com/appt/independence-dso?lid=336829",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SmileMakers%20Eastchase%208565%20Eastchase%20Pkwy%20Montgomery%20AL%2036117",
+      "expectedAppointmentTypes": [
+        "New Patient Doctor Exam (no dental cleaning)",
+        "New Patient Exam and Cleaning",
         "Existing Patient Cleaning"
       ]
     }
@@ -11326,6 +11357,83 @@
       "brokenOrIncorrectLinks": [],
       "notes": "Second Philadelphia audit completed one appointment type at a time. Each type was separately selected, advanced through the self-pay insurance step, and held on its own time-slot screen for up to 45 seconds. All six explicitly reported no online availability.",
       "evidenceLinks": []
+    },
+    {
+      "auditId": "fort-worth-cosmetic-family-dentistry__2026-09-22T18:01:36.000Z",
+      "locationId": "fort-worth-cosmetic-family-dentistry",
+      "checkedAt": "2026-09-22T18:01:36.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "Emergency Exam - Existing Patient",
+        "Emergency Exam - New Patient"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "Emergency Exam - Existing Patient",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Emergency Exam - New Patient",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website-only audit on September 22, 2026. Both displayed emergency appointment types were individually selected and reached time-slot pages with real availability.",
+      "evidenceLinks": [
+        "https://www.ngreendental.com/",
+        "https://book.modento.io/fort-worth-cosmetic-and-family-dentistry/reason-for-visit"
+      ]
+    },
+    {
+      "auditId": "smilemakers-eastchase__2026-09-22T18:01:36.000Z",
+      "locationId": "smilemakers-eastchase",
+      "checkedAt": "2026-09-22T18:01:36.000Z",
+      "auditedBy": "Codex live browser audit",
+      "auditSource": "Website Only",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
+      "googleSchedulerStatus": "NotChecked",
+      "observedWebsiteAppointmentTypes": [
+        "New Patient Doctor Exam (no dental cleaning)",
+        "New Patient Exam and Cleaning",
+        "Existing Patient Cleaning"
+      ],
+      "observedGoogleAppointmentTypes": [],
+      "websiteAppointmentAvailability": [
+        {
+          "appointmentType": "New Patient Doctor Exam (no dental cleaning)",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "New Patient Exam and Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        },
+        {
+          "appointmentType": "Existing Patient Cleaning",
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
+        }
+      ],
+      "googleAppointmentAvailability": [],
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
+      "brokenOrIncorrectLinks": [],
+      "notes": "Website-only audit on September 22, 2026. All three displayed appointment types were individually selected in NexHealth and reached provider availability with bookable dates or times.",
+      "evidenceLinks": [
+        "https://app.nexhealth.com/appt/independence-dso?lid=336829"
+      ]
     }
   ]
 }
