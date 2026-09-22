@@ -12915,8 +12915,8 @@
       "checkedAt": "2026-09-22T18:32:19Z",
       "auditedBy": "Codex live browser audit",
       "auditSource": "Website Only",
-      "websiteSchedulerStatus": "NotChecked",
-      "websiteLoadPerformance": "Inconclusive",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
       "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Appointment (Ages 12 and Older)"
@@ -12925,16 +12925,15 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Appointment (Ages 12 and Older)",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Modento displayed a robot-detection warning after the required fictional patient details were submitted; availability could not be verified."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
-      "manualReviewNeeded": true,
-      "manualReviewReason": "Modento blocked the fictional-details audit flow with a robot-detection warning.",
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
+      "notes": "Website-only live audit on September 22, 2026. Every tested appointment type displayed at least one appointment time.",
       "evidenceLinks": []
     },
     {
@@ -13066,8 +13065,8 @@
       "checkedAt": "2026-09-22T18:32:19Z",
       "auditedBy": "Codex live browser audit",
       "auditSource": "Website Only",
-      "websiteSchedulerStatus": "NotChecked",
-      "websiteLoadPerformance": "Inconclusive",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
       "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Exam",
@@ -13077,22 +13076,20 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Exam",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & X-rays",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
-      "manualReviewNeeded": true,
-      "manualReviewReason": "The scheduler requires patient details before availability can be reviewed.",
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
+      "notes": "Website-only live audit on September 22, 2026. Every tested appointment type displayed at least one appointment time.",
       "evidenceLinks": []
     },
     {
@@ -13180,7 +13177,7 @@
       "auditedBy": "Codex live browser audit",
       "auditSource": "Website Only",
       "websiteSchedulerStatus": "Working",
-      "websiteLoadPerformance": "Inconclusive",
+      "websiteLoadPerformance": "Normal",
       "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Existing Patient Exam & Cleaning (Adult)",
@@ -13197,9 +13194,9 @@
         },
         {
           "appointmentType": "Existing Patient Exam & Cleaning (Child)",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Availability did not become conclusive during this check."
+          "availabilityLoaded": false,
+          "verificationStatus": "NoAvailability",
+          "issue": "The loaded calendar explicitly reported no available appointment slots online."
         },
         {
           "appointmentType": "New Patient - Exam & X-rays",
@@ -13213,10 +13210,10 @@
         }
       ],
       "googleAppointmentAvailability": [],
-      "manualReviewNeeded": true,
-      "manualReviewReason": "One or more appointment types did not return a conclusive availability result.",
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
+      "notes": "Website-only live audit on September 22, 2026. At least one fully loaded calendar explicitly reported no available appointment times.",
       "evidenceLinks": []
     },
     {
