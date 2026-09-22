@@ -79,6 +79,14 @@
     {
       "id": "philadelphia-dentistry",
       "name": "Philadelphia Dentistry"
+    },
+    {
+      "id": "fort-worth-cosmetic-family-dentistry",
+      "name": "Fort Worth Cosmetic & Family Dentistry"
+    },
+    {
+      "id": "smilemakers-comprehensive-dentistry",
+      "name": "SmileMakers Comprehensive Dentistry"
     }
   ],
   "locations": [
@@ -625,6 +633,29 @@
         "New or Existing Patient Emergency Appointment",
         "New Patient Cleaning",
         "New Patient Consultation",
+        "Existing Patient Cleaning"
+      ]
+    },
+    {
+      "id": "fort-worth-cosmetic-family-dentistry",
+      "name": "Fort Worth Cosmetic & Family Dentistry",
+      "practiceId": "fort-worth-cosmetic-family-dentistry",
+      "websiteUrl": "https://book.modento.io/fort-worth-cosmetic-and-family-dentistry/reason-for-visit",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fort%20Worth%20Cosmetic%20%26%20Family%20Dentistry%205720%20Locke%20Avenue%20Fort%20Worth%20TX%2076107",
+      "expectedAppointmentTypes": [
+        "Emergency Exam - Existing Patient",
+        "Emergency Exam - New Patient"
+      ]
+    },
+    {
+      "id": "smilemakers-eastchase",
+      "name": "SmileMakers - Eastchase",
+      "practiceId": "smilemakers-comprehensive-dentistry",
+      "websiteUrl": "https://app.nexhealth.com/appt/independence-dso?lid=336829",
+      "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SmileMakers%20Eastchase%208565%20Eastchase%20Pkwy%20Montgomery%20AL%2036117",
+      "expectedAppointmentTypes": [
+        "New Patient Doctor Exam (no dental cleaning)",
+        "New Patient Exam and Cleaning",
         "Existing Patient Cleaning"
       ]
     }
