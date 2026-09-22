@@ -12666,8 +12666,8 @@
       "checkedAt": "2026-09-22T18:32:19Z",
       "auditedBy": "Codex live browser audit",
       "auditSource": "Website Only",
-      "websiteSchedulerStatus": "NotChecked",
-      "websiteLoadPerformance": "Inconclusive",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
       "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "New Patient Appointment — Ages 12 and Older"
@@ -12676,16 +12676,15 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "New Patient Appointment — Ages 12 and Older",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
-      "manualReviewNeeded": true,
-      "manualReviewReason": "The scheduler requires patient details before availability can be reviewed.",
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
+      "notes": "Website-only live audit on September 22, 2026. Every tested appointment type displayed at least one appointment time.",
       "evidenceLinks": []
     },
     {
@@ -12826,8 +12825,8 @@
       "checkedAt": "2026-09-22T18:32:19Z",
       "auditedBy": "Codex live browser audit",
       "auditSource": "Website Only",
-      "websiteSchedulerStatus": "NotChecked",
-      "websiteLoadPerformance": "Inconclusive",
+      "websiteSchedulerStatus": "Working",
+      "websiteLoadPerformance": "Normal",
       "googleSchedulerStatus": "NotChecked",
       "observedWebsiteAppointmentTypes": [
         "Emergency Consult",
@@ -12840,40 +12839,35 @@
       "websiteAppointmentAvailability": [
         {
           "appointmentType": "Emergency Consult",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Invisalign Consult",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "EMSMILE CONSULT",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "Cosmetic Consultation",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         },
         {
           "appointmentType": "New Patient Exam & Cleaning",
-          "availabilityLoaded": null,
-          "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
-      "manualReviewNeeded": true,
-      "manualReviewReason": "The scheduler requires patient details before availability can be reviewed.",
+      "manualReviewNeeded": false,
+      "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
+      "notes": "Website-only live audit on September 22, 2026. Every tested appointment type displayed at least one appointment time.",
       "evidenceLinks": []
     },
     {
@@ -12933,12 +12927,12 @@
           "appointmentType": "New Patient Appointment (Ages 12 and Older)",
           "availabilityLoaded": null,
           "verificationStatus": "Inconclusive",
-          "issue": "Scheduler requires patient details before appointment types and availability; no personal details were submitted."
+          "issue": "Modento displayed a robot-detection warning after the required fictional patient details were submitted; availability could not be verified."
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": true,
-      "manualReviewReason": "The scheduler requires patient details before availability can be reviewed.",
+      "manualReviewReason": "Modento blocked the fictional-details audit flow with a robot-detection warning.",
       "brokenOrIncorrectLinks": [],
       "notes": "Website-only live audit on September 22, 2026. One or more calendars were inconclusive and were not failed.",
       "evidenceLinks": []
