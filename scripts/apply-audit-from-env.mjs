@@ -57,7 +57,7 @@ for (const result of results) {
     checkedAt,
     auditedBy: "Codex live browser audit",
     auditSource: "Website Only",
-    websiteSchedulerStatus: blocked ? "NotChecked" : "Working",
+    websiteSchedulerStatus: blocked && hasInconclusive ? "NotChecked" : "Working",
     websiteLoadPerformance: hasInconclusive ? "Inconclusive" : "Normal",
     googleSchedulerStatus: "NotChecked",
     observedWebsiteAppointmentTypes: availability.map((entry) => entry.appointmentType),
