@@ -16719,16 +16719,15 @@
         },
         {
           "appointmentType": "New Patient Exam, Xrays & Cleaning",
-          "availabilityLoaded": false,
-          "verificationStatus": "NoAvailability",
-          "issue": "The expected appointment type was not present on the live booking page."
+          "availabilityLoaded": true,
+          "verificationStatus": "Available"
         }
       ],
       "googleAppointmentAvailability": [],
       "manualReviewNeeded": false,
       "manualReviewReason": "",
       "brokenOrIncorrectLinks": [],
-      "notes": "Website-only live audit on September 24, 2026. At least one appointment type was missing or a fully loaded calendar explicitly reported no available times.",
+      "notes": "Website-only live audit on September 24, 2026. Every tested appointment type displayed at least one appointment time.",
       "evidenceLinks": []
     },
     {
