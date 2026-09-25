@@ -439,7 +439,9 @@
         "Emergency Appointment (NP)",
         "Consult",
         "BOTOX",
-        "Invisalign"
+        "Invisalign",
+        "Recare",
+        "Emergency Appointment (Existing)"
       ]
     },
     {
@@ -462,7 +464,7 @@
       "websiteUrl": "https://book.modento.io/redwoodfamilydentistry/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/8NRqpXhoj4WTG6R99",
       "expectedAppointmentTypes": [
-        "New Patient Appointment — Ages 12 and Older"
+        "New Patient Appointment - (Ages 12 and Older)"
       ]
     },
     {
@@ -505,11 +507,15 @@
       "websiteUrl": "https://book.modento.io/c/9977e905c899428b93cd0d5712ee11ba/website/patient-details",
       "googleMapsUrl": "https://maps.app.goo.gl/Hy5c5Kz9iqJf6KLC9",
       "expectedAppointmentTypes": [
+        "New Patient Exam & Cleaning",
         "Emergency Consult",
         "Invisalign Consult",
         "EMSMILE CONSULT",
         "Cosmetic Consultation",
-        "New Patient Exam & Cleaning"
+        "Cosmetic & Wellness Consultation",
+        "Wellness Consultation",
+        "TMJ Consultation",
+        "Sleep Consultation"
       ]
     },
     {
