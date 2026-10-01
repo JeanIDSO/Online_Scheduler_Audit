@@ -18,7 +18,8 @@ for (const entry of current.auditHistory || []) {
   }
 }
 
-const latestResults = [...latestByLocation.values()];
+// Retired locations are preserved in history but excluded from current reports.
+const latestResults = [...latestByLocation.values()].filter((entry) => locations.has(entry.locationId));
 const newFailures = latestResults.filter(isFailure);
 
 const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (character) => ({

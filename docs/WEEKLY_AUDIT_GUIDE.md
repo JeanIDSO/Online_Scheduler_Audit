@@ -21,8 +21,8 @@ advertise), not real bookings.
 
 ## Step 1 — Get the current registry and history
 
-Pull the latest `main` and open `data/audits.json`. For each of the 14
-locations in the `locations` array, you already have:
+Pull the latest `main` and open `data/audits.json`. For each active
+location in the `locations` array, you already have:
 
 - `id` — use this exact value as `locationId` in your new entry.
 - `websiteUrl` — the public scheduler to check.
@@ -31,15 +31,23 @@ locations in the `locations` array, you already have:
   unreliable and is **not** used for comparison or status; just record
   what you actually observe on each site (Step 2/3) and ignore this list.
 
+### Retired locations
+
+Lakewood Family Dental and its five locations were retired on October 1, 2026.
+They are stored in `data/retired-registry.json` solely to identify preserved
+historical records. Do not open or test those schedulers in future audits.
+Audit only the active `locations` array in `data/audits.json` (39 locations).
+Do not use the retired registry or old history to rebuild the audit list.
+
 ## Step 2 — Audit each location
 
 For each location, using Claude in Chrome (or manually):
 
 1. **Open the website scheduler URL.** Note:
    - `websiteSchedulerStatus`:
-     - `Working` if it loads within 30 seconds.
-     - `Broken` if it errors, times out, or the reason-for-visit step never
-       loads.
+     - `Working` when the scheduler loads reliably.
+     - `Broken` only for a definitive scheduler or link error. Slow loading or
+       a timeout alone is indeterminate, not a failure.
      - `WrongLocation` if it loads but is actually for a different office
        (warning only, not a failed audit).
      - `NotChecked` if you couldn't complete this step (see Step 3).
