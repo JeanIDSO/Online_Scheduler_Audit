@@ -1,0 +1,75 @@
+{
+  "retiredAt": "2026-10-01",
+  "reason": "Lakewood removed from the active dashboard and future scheduler audits at the owner's request.",
+  "practices": [
+    {
+      "id": "lakewood-family-dental",
+      "name": "Lakewood Family Dental"
+    }
+  ],
+  "locations": [
+    {
+      "id": "lakewood-anderson",
+      "name": "Lakewood Anderson",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-anderson/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/uR8DFpP9ZY7qfrm97",
+      "expectedAppointmentTypes": [
+        "Invisalign Consult",
+        "Denture Consultation",
+        "Emergency Exam",
+        "Existing Patient Cleaning",
+        "New Patient Exam & Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-carmel",
+      "name": "Lakewood Carmel",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-carmel/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/RyBkBswG71W5ebVv7",
+      "expectedAppointmentTypes": [
+        "Invisalign Consultation",
+        "Limited/Emergency Exam",
+        "Existing Patient Exam and Cleaning",
+        "New Patient Exam and Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-fort-wayne",
+      "name": "Lakewood Fort Wayne",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-fort-wayne/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/BHjHemyj2Kuh8zbt7",
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ]
+    },
+    {
+      "id": "lakewood-kokomo",
+      "name": "Lakewood Kokomo",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-kokomo/reason-for-visit",
+      "googleMapsUrl": "https://maps.app.goo.gl/9R9FAPmc3heG9wzG8",
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "Emergency Exam",
+        "New Patient Exam & Cleaning"
+      ]
+    },
+    {
+      "id": "lakewood-lafayette",
+      "name": "Lakewood Lafayette",
+      "practiceId": "lakewood-family-dental",
+      "websiteUrl": "https://book.modento.io/lakewood-family-dental-lafayette/reason-for-visit",
+      "googleMapsUrl": "https://www.google.com/maps/place/Lakewood+Family+Dental/@40.4183102,-86.84408,17z/data=!3m1!4b1!4m6!3m5!1s0x88131cc7ce237249:0x17536d0c1c4f6d9d!8m2!3d40.4183102!4d-86.84408!16s%2Fg%2F11cjj0072c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+      "expectedAppointmentTypes": [
+        "Existing Patient Exam & Cleaning",
+        "New Patient Exam & Cleaning",
+        "Emergency Exam"
+      ]
+    }
+  ]
+}

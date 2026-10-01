@@ -30,6 +30,8 @@ const { execFileSync } = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const DATA_PATH = path.join(ROOT, "data", "audits.json");
 const LOCK_PATH = path.join(ROOT, "data", "registry-lock.json");
+const RETIRED_PATH = path.join(ROOT, "data", "retired-registry.json");
+let retired = { locations: [] };
 
 const errors = [];
 function fail(msg) { errors.push(msg); }
@@ -73,8 +75,12 @@ function validateEntry(entry, idx, validLocationIds) {
   }
   if (!isNonEmptyString(entry.auditId)) fail(`${where}: "auditId" must be a non-empty string`);
   if (!isNonEmptyString(entry.locationId)) fail(`${where}: "locationId" must be a non-empty string`);
-  else if (!validLocationIds.has(entry.locationId)) fail(`${where}: locationId "${entry.locationId}" does not match any location in the registry`);
+  else if (!validLocationIds.has(entry.locationId)) fail(`${where}: locationId "${entry.locationId}" does not match any active or retired location in the registry`);
   if (!isIsoDate(entry.checkedAt)) fail(`${where}: "checkedAt" must be an ISO 8601 timestamp`);
+  if ((retired && retired.locations || []).some((l) => l.id === entry.locationId) &&
+      retired.retiredAt && isIsoDate(entry.checkedAt) && new Date(entry.checkedAt) >= new Date(retired.retiredAt)) {
+    fail(`${where}: location "${entry.locationId}" was retired on ${retired.retiredAt} and must not receive new audits`);
+  }
   if (!isNonEmptyString(entry.auditedBy)) fail(`${where}: "auditedBy" must be a non-empty string`);
   if (!AUDIT_SOURCES.includes(entry.auditSource)) fail(`${where}: "auditSource" must be one of ${JSON.stringify(AUDIT_SOURCES)}`);
   if (!WEBSITE_STATUSES.includes(entry.websiteSchedulerStatus)) fail(`${where}: "websiteSchedulerStatus" must be one of ${JSON.stringify(WEBSITE_STATUSES)}`);
@@ -133,7 +139,13 @@ function validateShape(data) {
   if (!Array.isArray(data.locations)) { fail(`root: "locations" must be an array`); }
   if (!Array.isArray(data.auditHistory)) { fail(`root: "auditHistory" must be an array`); return; }
 
-  const validLocationIds = new Set((data.locations || []).map((l) => l && l.id));
+  // Retired locations remain valid only for preserved historical entries.
+  const activeIds = new Set((data.locations || []).map((l) => l && l.id));
+  const retiredLocations = (retired && retired.locations) || [];
+  retiredLocations.forEach((l) => {
+    if (activeIds.has(l.id)) fail(`retired registry: location "${l.id}" is also active`);
+  });
+  const validLocationIds = new Set([...activeIds, ...retiredLocations.map((l) => l.id)]);
   const seenAuditIds = new Set();
   data.auditHistory.forEach((entry, idx) => {
     validateEntry(entry, idx, validLocationIds);
@@ -167,7 +179,7 @@ function validateRegistryLock(data, lock) {
 // ---------------------------------------------------------------------
 
 function getPreviousVersion() {
-  const relPath = path.relative(ROOT, DATA_PATH);
+  const relPath = path.relative(ROOT, DATA_PATH).split(path.sep).join("/");
   const refsToTry = [];
   if (process.env.GITHUB_BASE_REF) {
     refsToTry.push(`origin/${process.env.GITHUB_BASE_REF}`);
@@ -212,6 +224,7 @@ function validateAppendOnly(data) {
 function main() {
   const data = loadJson(DATA_PATH, "data/audits.json");
   const lock = loadJson(LOCK_PATH, "data/registry-lock.json");
+  retired = fs.existsSync(RETIRED_PATH) ? loadJson(RETIRED_PATH, "data/retired-registry.json") : { locations: [] };
 
   if (data) {
     validateShape(data);

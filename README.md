@@ -1,7 +1,7 @@
 # Online Scheduler Audit
 
 A public, read-only dashboard that tracks weekly audits of the public
-website scheduler for 42 dental office locations across 20 practice groups.
+website scheduler for 39 active dental office locations across 21 practice groups.
 
 It's a static site — no server, no database, no login. All shared state
 lives in one JSON file, [`data/audits.json`](data/audits.json), which this
@@ -35,7 +35,7 @@ docs/
 ## How the data model works
 
 - **`practices` and `locations`** in `data/audits.json` are the *protected
-  registry* — the 19 practice groups, 41 locations, their scheduler/Google URLs,
+  registry* — the active practice groups and locations, their scheduler/Google URLs,
   and each location's expected appointment types. This almost never
   changes, and `data/registry-lock.json` is a frozen copy of it that CI
   checks against on every change, so a routine audit update can't
@@ -129,13 +129,19 @@ Either way: once the change is committed to `main` (directly, or via a
 merged, CI-passing PR), GitHub Pages redeploys automatically and every
 viewer sees the update — no separate publish step.
 
+## Retired locations
+
+Lakewood Family Dental was removed from the active registry on October 1, 2026.
+Its five locations are no longer displayed or included in future audits. Their
+registry metadata is preserved in `data/retired-registry.json`, and all prior
+audit history remains unchanged.
+
 ## Failure email alerts
 
-When a commit to `main` adds an audit entry with a broken website scheduler
-or an appointment type that explicitly reports no availability, the
-`Email scheduler failures` workflow prepares an alert for
-`jean@Independencedso.com`. The email includes the failed location,
-appointment types, reasons, and direct scheduler links.
+Emails are sent only by manually running the **Send approved scheduler audit email**
+workflow after reviewing the results. Merging an audit PR does not send email.
+Choose **Send to me only** for Jean, or **Send to Valerie (BCC me)** for the boss.
+Retired locations are excluded from the report.
 
 Add these GitHub Actions repository secrets once to enable delivery:
 

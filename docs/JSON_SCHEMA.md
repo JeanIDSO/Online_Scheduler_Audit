@@ -34,7 +34,7 @@ locations on the dashboard.
 
 ## `locations` — protected
 
-The 14-location registry: each location's id, display name, practice, the
+The active location registry: each location's id, display name, practice, the
 public website scheduler URL, the Google Maps listing URL, and an
 **expected appointment types** list.
 
@@ -51,6 +51,14 @@ locked in [`data/registry-lock.json`](../data/registry-lock.json), and
 genuinely needs to change, update `data/registry-lock.json` **and**
 `data/audits.json` together in a deliberate, human-reviewed commit or PR —
 never as a side effect of a routine audit.
+
+## Retired registry
+
+`data/retired-registry.json` preserves registry metadata for locations removed
+from the active dashboard and future audits. Lakewood Family Dental was retired
+on October 1, 2026. Existing `auditHistory` records remain unchanged; the validator
+accepts their retired location IDs. The dashboard and approved email report use
+only active locations. No new audit is required for retired locations.
 
 ## `auditHistory` — append-only
 
